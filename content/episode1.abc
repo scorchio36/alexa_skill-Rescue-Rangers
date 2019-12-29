@@ -1,0 +1,240 @@
+@startEpisode1
+  *say
+    [sfx alice_open.mp3]
+    
+    Hi there! Good to see a fresh new face around here. I am Alice.
+    You may have heard of my twin sister Alexa. She is very famous now.
+    <break time="0.5s" />
+    
+    I work as a virtual assistant for the Animal Rescue Rangers. The Animal Rescue Rangers are a group of people determined to help animals all over the world. Whenever there is an animal in need, the Rescue Rangers will be there to save the day.
+    <break time="0.3s" />
+    
+    In this game, you are a ranger who is training to become part of the Animal Rescue Rangers. You have been paired up with a top-notch Rescue Ranger named Olive. She is going to tell you everything you need to know. I will also be with you at all times. So if you need help at any time, you can say help.
+    <break time="0.5s" />
+    
+    If you are ready for adventure, you can say play the game. Otherwise you can say quit.
+    
+  *reprompt
+    You can say play the game or you can say quit.
+  *then
+    hear play the game, play, let's play, I'm ready for adventure {
+      -> Episode1-Adventure Awaits
+    }
+    hear quit, I don't want to play {
+    }
+    
+@Episode1-Adventure Awaits
+  *say
+    Episode 1.
+    <break time="0.4s" />
+    A New Adventure Awaits.
+    <break time="0.7s" />
+    
+    Alright Ranger. I will now be teleporting you to the Animal Rescue Rangers headquarters. Hold on tight and good luck with your training. You are going to do great.
+    <break time="0.5s" />
+    
+    //Olive introduces herself to the player. She also gives the player their Field Guide Gadget.
+    [sfx olive_intro.mp3]
+    Item Obtained.
+    <break time="0.2s" />
+    It's a Field Guide Gadget.
+    
+    //Olive introduces the player to Alice, the Rescue Rangers Virtual Assistant.
+    [sfx olive_intro2.mp3]
+    Hi again, Ranger.
+    
+    //Olive tells player about the FGG's Teleportation command and prompts the user to teleport to France.
+    [sfx olive_intro3.mp3]
+    
+  *reprompt
+    Say teleport to France, to try out your Field Guide Gadget's teleportation capabalities.
+
+  *then
+    set context as 'tutorial - teleport'
+    //dummy_intent used to pause flow so player can call global commands
+    hear dummy_intent {
+    }
+    
+@Episode1-Player Teleports to France
+  *say
+    //Olive tells the player that they did not actually teleport. She then talks about the FGG's ability to give you information about any animal and prompts the player to ask the FGG to tell him/her about Giraffes.
+    [sfx olive_intro4.mp3]
+    
+  *then
+    hear dummy_intent {
+    }
+    
+@Episode1-Animal Info about Giraffes
+*say
+  //Olive tells the user about the FGG's scan command and then prompts the player to user the scan command.
+  [sfx olive_intro5.mp3]
+  
+*reprompt
+  Try saying scan to use the Field Guide Gadget's scan command.
+  
+*then
+  hear dummy_intent {
+  }
+  
+
+@Episode1-Animal Alert Call
+  *say
+    //Olive compliments the player on using scan and then gives the player a Ranger Pack
+    [sfx olive_intro6.mp3]
+  
+    [sfx item_found_sound.mp3]
+    Item obtained. It's a ranger pack. Nice!
+  
+    //Olive tells the player about the Rescue Pack and then is interrupted by an Animal Alert
+    [sfx olive_intro7.mp3]
+  
+    Right away.
+    <break time="0.75s"/>
+    Call is ready. <break time="0.5s"/> I just need our new ranger to say <break time="0.2s"/> confirm <break time="0.2s"/> to open the call. Say confirm if you are ready for the call ranger.
+  
+  *then
+    hear confirm {
+      -> Episode1-Player Accepts Animal Alert Call
+    }
+    
+@Episode1-Player Accepts Animal Alert Call
+  *say
+    Connection opened.
+    //Call with Mr. Wei. 
+    [sfx olive_intro8.mp3]
+    Connection terminated.
+  
+    //Olive tells the player that they need to get to China then prompts them to do something
+    [sfx olive_intro9_wwyltd_removed.mp3]
+  
+  *then
+    -> Episode1-Prompt Player to Teleport to China
+    
+@Episode1-Prompt Player to Teleport to China
+  *say
+    [sfx wwyltd.mp3]
+    [sfx offer_help1.mp3]
+  *then
+    hear dummy_intent {
+    }
+  
+
+@Episode1-Player Teleports to China
+*say
+  //Player meets Mr. Wei and he introduces the player to the pandas.
+  [sfx china_speech1.mp3]
+  
+  The panda has been added to the field guide gadget animal log. I recommend you ask to learn more about pandas. It may be helpful for you to know more about them. You can do so by saying <break time="0.2s"/> tell me about pandas.
+  
+*then
+  set context as 'episode1 - learning about pandas'
+  hear dummy_intent {
+  }
+
+@Episode1-Animal Info about Pandas
+  *say
+    //Player meets the mother of the lost cub and is prompted to perform an action (scan)
+    [sfx china_speech2_wwyltd_removed.mp3]
+    
+  *then
+    set context as 'episode1 - panda enclosure scan'
+    -> Episode1-Prompt Player for scan in Panda Enclosure
+    
+@Episode1-Prompt Player for scan in Panda Enclosure
+  *say
+    [sfx wwyltd.mp3]
+    [sfx offer_help2.mp3]
+  *then
+    hear dummy_intent {
+    }
+    
+@Episode1-Scan used in Panda Enclosure
+  *say
+    //Olive does a recap on the scan then asks the player what they would like to search
+    [sfx searching_speech1.mp3]
+    
+    To search something, say search and then the thing you would like to search.
+  *then
+    hear tree, the tree, large tree, search the large tree, search the tree {
+      -> Episode1-Panda Enclosure Player Searches Tree
+    }
+    hear bamboo, collection of bamboo, search the bamboo, search the collection of bamboo {
+      -> Episode1-Panda Enclosure Player Searches Bamboo Collection
+    }
+    hear stream of water, search the water, search the stream of water, search the stream {
+      -> Episode1-Panda Enclosure Player Searches Water
+    }
+    hear hole, large hole, search the hole, search the hole at the back of the enclosure {
+      -> Episode1-Panda Enclosure Player Searches Hole
+    }
+    hear pandas, the pandas, search the pandas, search the group of pandas rolling around {
+      -> Episode1-Panda Enclosure Player Searches Pandas
+    }
+    hear can you repeat that {
+      -> Episode1-Panda Enclosure Scan Recap
+    }
+    
+    
+@Episode1-Panda Enclosure Scan Recap
+  *say
+    You can search the tree, the bamboo collection, the stream of water, the hole, or the group of pandas. What would you like to search?
+  *then
+    hear tree, the tree, large tree, search the large tree, search the tree {
+      -> Episode1-Panda Enclosure Player Searches Tree
+    }
+    hear bamboo, collection of bamboo, search the bamboo, search the collection of bamboo {
+      -> Episode1-Panda Enclosure Player Searches Bamboo Collection
+    }
+    hear stream of water, search the water, search the stream of water, search the stream {
+      -> Episode1-Panda Enclosure Player Searches Water
+    }
+    hear hole, large hole, search the hole, search the hole at the back of the enclosure {
+      -> Episode1-Panda Enclosure Player Searches Hole
+    }
+    hear pandas, the pandas, search the pandas, search the group of pandas rolling around {
+      -> Episode1-Panda Enclosure Player Searches Pandas
+    }
+    hear can you repeat that {
+      -> Episode1-Panda Enclosure Scan Recap
+    }
+    
+
+@Episode1-Panda Enclosure Player Searches Tree
+  *say
+    //Olive searches the tree with the player and finds a note. She then prompts user with wwyltd
+    [sfx searching_speech2.mp3]
+    
+  *then
+    -> Episode1-Panda Enclosure Scan Recap
+    
+@Episode1-Panda Enclosure Player Searches Bamboo Collection
+  *say
+    //Olive prompts the user to run another scan within the bamboo collection
+    [sfx searching_speech3.mp3]
+    
+  *then
+    hear scan, run a scan, try a scan {
+      -> Episode1-Scan used in Bamboo Collection
+    }
+
+@Episode1-Panda Enclosure Player Searches Water
+  *say
+    [sfx searching_speech4.mp3]
+    The Koi Fish has been added to the Animal Log Book.
+    [sfx searching_speech5.mp3]
+  *then
+    -> Episode1-Panda Enclosure Scan Recap
+    
+@Episode1-Panda Enclosure Player Searches Hole
+  *say
+    [sfx searching_speech6.mp3]
+  *then
+    -> Episode1-Panda Enclosure Scan Recap
+    
+@Episode1-Panda Enclosure Player Searches Pandas
+  *say
+    [sfx searching_speech7.mp3]
+  *then
+    -> Episode1-Panda Enclosure Scan Recap
+    
+@Episode1-Scan used in Bamboo Collection

@@ -1,0 +1,10 @@
+{
+    "include": [
+        "episode1.abc",
+	"story.abc",
+	"scan.abc",
+	"FGG.abc",
+	"teleport.abc",
+	"animal_info.abc"
+    ]
+}

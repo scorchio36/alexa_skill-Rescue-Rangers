@@ -1,0 +1,11 @@
+{
+  "AvailableCountries": [
+    "France",
+    "China",
+    "Brazil"
+  ],
+  "AvailableAnimals": [
+    "Giraffe",
+    "Panda"
+  ]
+}

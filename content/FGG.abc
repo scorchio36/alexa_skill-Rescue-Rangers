@@ -1,0 +1,17 @@
+@global append
+  *then
+    hear scan {
+      <-> Scan Router
+    }
+    
+    slot country as 'AvailableCountries'
+    hear teleport to {country} {
+    set location as country
+      -> Teleport Router
+    }
+    
+    slot animal as 'AvailableAnimals'
+    hear tell me about {animal} {
+      set info_animal as animal
+      -> AnimalInfo Router
+    }

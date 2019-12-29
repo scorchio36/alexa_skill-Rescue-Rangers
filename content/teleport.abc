@@ -1,0 +1,50 @@
+@Teleport Router
+  *then
+    if (location == 'France') {
+      if (context == 'tutorial - teleport') {
+        set context as 'tutorial - animal info'
+        <-> Teleportation Description
+        -> Teleport to France
+      }
+      else {
+        <-> Prevent Teleport
+      }
+    }
+    if (location == 'China') {
+      if (context == 'episode1 - distress call') {
+        -> Teleport to China
+      }
+      else {
+        <-> Prevent Teleport
+      }
+    }
+    else {
+      >> BACK
+    }
+    
+@Teleportation Description
+  *say
+    [sfx alice_open.mp3]
+    Initiating teleportation. Hold on tight!
+    [sfx teleportation_sound.mp3]
+    
+  *then
+    >> RETURN
+
+@Prevent Teleport
+  *say
+    Sorry, you can't teleport there right now!
+  *then
+    >> BACK
+
+@Teleport to France
+  *say
+    Welcome to France.
+  *then
+    -> Episode1-Player Teleports to France
+    
+@Teleport to China
+  *say
+    Welcome to China.
+  *then
+    -> Episode1-Player Teleports to China

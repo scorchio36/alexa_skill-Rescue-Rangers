@@ -1,0 +1,41 @@
+@Scan Router
+  *then
+    if context is 'tutorial - scan' {
+      set context as 'episode1 - distress call'
+      <-> Scan Description
+      -> Episode1-Scan used for First Time
+    }
+    if context is 'episode1 - panda enclosure scan' {
+      <-> Scan Description
+      -> Episode1-Scan Panda Enclosure
+    }
+    else {
+      -> Prevent Scan
+    }
+
+@Episode1-Scan used for First Time
+  *say
+    You are currently in the Rescue Rangers headquarters. There is not much for me to scan around here since you are still in training mode. You can use scan anytime you want to discover things about your environment.
+  *then
+    -> Episode1-Animal Alert Call
+    
+@Episode1-Scan Panda Enclosure
+  *say
+    We are currently in the Panda Enclosure of the National Zoo of China. There is a large tree in the center of the enclosure. On the right side there is a collection of bamboo. There is a stream of water running through the left side of the enclosure. There is a large hole at the back of the enclosure. Finally, there is a large group of pandas rolling around in a patch of grass.
+  *then
+    -> Episode1-Scan used in Panda Enclosure
+@Scan Description
+  *say
+    Initiating scan.
+    [sfx scan_sound.mp3]
+    Scan complete. Here are your results.
+    <break time="0.5s" />
+    
+  *then
+    >> RETURN
+    
+@Prevent Scan
+  *say
+    I'm sorry. I cannot perform a scan right now.
+  *then
+    >> BACK
