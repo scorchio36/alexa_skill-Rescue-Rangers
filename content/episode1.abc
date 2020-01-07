@@ -213,9 +213,7 @@
     [sfx searching_speech3.mp3]
     
   *then
-    hear scan, run a scan, try a scan {
-      -> Episode1-Scan used in Bamboo Collection
-    }
+    -> Episode1-Prompt Player to Scan Bamboo Collection
 
 @Episode1-Panda Enclosure Player Searches Water
   *say
@@ -238,3 +236,329 @@
     -> Episode1-Panda Enclosure Scan Recap
     
 @Episode1-Scan used in Bamboo Collection
+  *say
+    [sfx searching_speech10_without_toys_and_wwyltd.mp3]
+  *then
+    -> Episode1-Prompt Player for Search in Bamboo Collection
+    
+    
+@Episode1-Prompt Player to Scan Bamboo Collection
+  *say
+    What would you like to do ranger?
+  *then
+    set context as 'episode1 - bamboo collection'
+    hear dummy_intent {
+    }
+    
+@Episode1-Prompt Player for Search in Bamboo Collection 
+  *say
+    You can search the pile of bamboo or the air vent.
+    [sfx wwyltd.mp3]
+    [sfx offer_help1.mp3]
+  *then
+    hear search the bamboo, search the pile, search the bamboo pile, bamboo pile {
+      -> Episode1-Player Searches Bamboo Pile
+    }
+    hear search the air vent, search the vent, air vent {
+      -> Episode1-Player Searches Air Vent
+    }
+    
+@Episode1-Player Searches Bamboo Pile
+  *say
+    //Olive talks about how Pandas love bamboo. Bamboo added to Ranger pack.
+    [sfx searching_speech8.mp3]
+    Item obtained. Bamboo has been added to the Ranger Pack.
+    My sensors also indicate there are panda toys within the pile.
+    
+    //Olive talks about panda toys. Toys added to Ranger pack.
+    [sfx searching_speech11.mp3]
+    Item obtained. A panda toy has been added to the Ranger pack.
+    [sfx searching_speech12_without_wwyltd.mp3]
+  *then
+    -> Episode1-Scan used in Bamboo Collection
+    
+@Episode1-Player Searches Air Vent
+  *say
+    //Olive and the player enter the air vent. She then prompts the player to go right or left.
+    //Simulator breaks if there are no written words. 'Dummy Words' added to prevent this.
+    Dummy Words. 
+    [sfx air_vent_speech1.mp3]
+  *then
+    hear left {
+      -> Episode1-Air Vent CP1 Player Turns Left
+    }
+    hear right {
+      -> Episode1-Air Vent CP1 Player Turns Right
+    }
+    
+@Episode1-Air Vent Restart
+  *say
+    Dummy Words.
+    [sfx air_vent_restart.mp3]
+  *then
+    hear left {
+      -> Episode1-Air Vent CP1 Player Turns Left
+    }
+    hear right {
+      -> Episode1-Air Vent CP1 Player Turns Right
+    }
+
+//CP = Checkpoint
+//CP1 = Just entered the air vents
+//CP2 = Left side, 2-way split
+//CP3 = Right side, 3-way split
+//CP4 = Last 2-way split
+@Episode1-Air Vent CP1 Player Turns Left
+  *say
+    Dummy Words.
+    [sfx air_vent_speech2.mp3]
+  *then
+    hear left {
+      -> Episode1-Air Vent CP2 Player Turns Left
+    }
+    hear right {
+      -> Episode1-Air Vent CP2 Player Turns Right
+    }
+@Episode1-Air Vent CP1 Player Turns Right
+  *say
+    Dummy Words.
+    [sfx air_vent_speech3.mp3]
+  *then
+    hear left {
+      -> Episode1-Air Vent CP3 Player Turns Left
+    }
+    hear right {
+      -> Episode1-Air Vent CP3 Player Turns Right
+    }
+    hear forward {
+      -> Episode1-Air Vent CP3 Player Goes Forward
+    }
+    
+@Episode1-Air Vent CP2 Player Turns Left
+  *say
+    Dummy Words.
+    [sfx air_vent_speech4_without_restart.mp3]
+  *then
+    -> Episode1-Air Vent Restart
+    
+@Episode1-Air Vent CP2 Player Turns Right
+  *say
+    Dummy Words.
+    [sfx air_vent_speech5_without_restart.mp3]
+  *then
+    -> Episode1-Air Vent Restart
+    
+@Episode1-Air Vent CP3 Player Turns Left
+  *say
+    [sfx air_vent_speech6_without_restart.mp3]
+  *then
+    -> Episode1-Air Vent Restart
+    
+    
+@Episode1-Air Vent CP3 Player Turns Right
+  *say
+    [sfx air_vent_speech7_without_restart.mp3]
+  *then
+    -> Episode1-Air Vent Restart
+    
+@Episode1-Air Vent CP3 Player Goes Forward
+  *say
+    [sfx air_vent_speech8.mp3]
+  *then
+    hear left {
+      -> Episode1-Air Vent CP4 Player Turns Left
+    }
+    
+    hear right {
+      -> Episode1-Air Vent CP4 Player Turns Right
+    }
+    
+@Episode1-Air Vent CP4 Player Turns Right
+  *say
+    [sfx air_vent_speech7_without_restart.mp3]
+  *then
+    -> Episode1-Air Vent Restart
+    
+@Episode1-Air Vent CP4 Player Turns Left
+  *say
+    [sfx air_vent_speech9.mp3]
+    [sfx badge_obtained_sound.mp3]
+    You have received your level 1 puzzle solver badge for solving your first puzzle. Congratulations on getting your first Animal Rescue Ranger Badge.
+    [sfx lion_speech1_without_wwyltd.mp3]
+  *then
+    -> Episode1-Prompt Player to Scan Outside Lion Enclosure
+
+@Episode1-Prompt Player to Scan Outside Lion Enclosure
+  *say
+    [sfx wwyltd.mp3]
+    [sfx offer_help2.mp3]
+  *then
+    set context as 'episode1 - outside lion enclosure'
+    hear dummy_intent {
+    }
+    
+@Episode1-Scan Used Outside Lion Enclosure
+  *say
+    [sfx lion_speech2.mp3]
+    To search something, say search and then the thing you would like to search.
+  *then
+    hear trashcan, search the trashcan, search the trash, trash {
+      -> Episode1-Outside Lion Enclosure Player Searches Trash
+    }
+    hear zookeeper manual, manual, search the cart {
+      -> Episode1-Outside Lion Enclosure Player Searches Manual
+    }
+    hear bucket, search the bucket {
+      -> Episode1-Outside Lion Enclosure Player Searches Bucket
+    }
+    hear wall, search the wall {
+      -> Episode1-Outside Lion Enclosure Player Searches Wall
+    }
+    
+@Episode1-Outside Lion Enclosure Scan Recap
+  *say
+    You can search the trashcan, the zookeeper manual, the wall, or the bucket.
+    What would you like to search?
+  *then
+    hear trashcan, search the trashcan, search the trash, trash {
+      -> Episode1-Outside Lion Enclosure Player Searches Trash
+    }
+    hear zookeeper manual, manual, search the cart {
+      -> Episode1-Outside Lion Enclosure Player Searches Manual
+    }
+    hear bucket, search the bucket {
+      -> Episode1-Outside Lion Enclosure Player Searches Bucket
+    }
+    hear wall, search the wall {
+      -> Episode1-Outside Lion Enclosure Player Searches Wall
+    }
+    
+@Episode1-Outside Lion Enclosure Player Searches Trash
+  *say
+    //Olive tells player there is nothing in the trash
+    [sfx lion_search_speech3.mp3]
+    [sfx badge_obtained_sound.mp3]
+    You have received your level 1 curiosity badge. You are such a great explorer that you will even search through the trash for answers. Mad respect.
+  *then
+    -> Episode1-Outside Lion Enclosure Scan Recap
+    
+@Episode1-Outside Lion Enclosure Player Searches Manual
+  *say
+    [sfx lion_search_speech1_without_wwyltd.mp3]
+  *then
+    -> Episode1-Outside Lion Enclosure Scan Recap
+    
+@Episode1-Outside Lion Enclosure Player Searches Bucket
+  *say
+    //Olive tells the player about the meat in the bucket. She tells the user that she will
+    //need their help distracting the lions
+    Dummy Words.
+    [sfx lion_search_speech2_without_listening_for_roars.mp3]
+  *then
+    -> Episode1-Outside Lion Enclosure Listening For Roars
+    
+@Episode1-Outside Lion Enclosure Player Searches Wall
+  *say
+    [sfx lion_search_speech5_without_wwyltd.mp3]
+  *then
+    -> Episode1-Outside Lion Enclosure Scan Recap
+    
+@Episode1-Outside Lion Enclosure Listening For Roars
+  *say
+    //Olive tells the players to count how many lion roars they hear
+    Dummy Words.
+    [sfx lion_search_speech2_listening_for_roars.mp3]
+  *then
+    slot numberOfRoars to 'AMAZON.NUMBER'
+    hear {numberOfRoars}, {numberOfRoars} roars {
+      //There are 7 roars in the sound clip
+      if numberOfRoars is 7 {
+        -> Episode1-Outside Lion Enclosure Player Gives Correct Count
+      }
+      else {
+        -> Episode1-Outside Lion Enclosure Player Gives Wrong Count
+      }
+    }
+    
+@Episode1-Outside Lion Enclosure Player Gives Correct Count
+  *say
+    //Olive throws the correct number of pieces over the wall. The lions are distracted and the player sneaks in through the gate to get to the tree where the panda is. The panda won't come down so they need to take something from the ranger pack.
+    Dummy Words.
+    [sfx lion_tree_speech1_no_food_question.mp3]
+    
+  *then
+    -> Episode1-Lion Enclosure Ask Player What to Feed Panda
+    
+@Episode1-Outside Lion Enclosure Player Gives Wrong Count
+  *say
+    Dummy Words.
+    [sfx lion_tree_speech2_wrong_count_given.mp3]
+  *then
+    -> Episode1-Outside Lion Enclosure Listening For Roars
+    
+@Episode1-Lion Enclosure Ask Player What to Feed Panda
+  *say
+    [sfx lion_tree_speech1_food_question.mp3]
+  *then
+    hear watermelon {
+      -> Episode1-Lion Enclosure Player Guesses Watermelon
+    }
+    hear slice of cheese, cheese {
+      -> Episode1-Lion Enclosure Player Guesses Cheese
+    }
+    hear bamboo, piece of bamboo {
+      -> Episode1-Lion Enclosure Player Guesses Bamboo
+    }
+    hear mushroom {
+      -> Episode1-Lion Enclosure Player Guesses Mushroom
+    }
+    
+@Episode1-Lion Enclosure Player Guesses Watermelon
+  *say
+    Dummy Words.
+    [sfx lion_tree_speech4_without_question.mp3]
+  *then
+    -> Episode1-Lion Enclosure Ask Player What to Feed Panda
+    
+@Episode1-Lion Enclosure Player Guesses Cheese
+  *say
+    Dummy Words.
+    [sfx lion_tree_speech5_without_question.mp3]
+  *then
+    -> Episode1-Lion Enclosure Ask Player What to Feed Panda
+    
+@Episode1-Lion Enclosure Player Guesses Bamboo
+  *say
+    Dummy Words.
+    [sfx lion_tree_speech3_fixed.mp3]
+    To activate the rope, just say activate rope. Hurry Ranger.
+  *then
+    hear activate rope, rope, activate ranger pack rope, activate ranger pack {
+      -> Episode1-Lion Enclosure Player Activates Rope
+    }
+@Episode1-Lion Enclosure Player Guesses Mushroom
+  *say
+    Dummy Words.
+    [sfx lion_tree_speech6_without_question.mp3]
+  *then
+    -> Episode1-Lion Enclosure Ask Player What to Feed Panda
+
+@Episode1-Lion Enclosure Player Activates Rope
+  *say
+    [sfx alice_open.mp3]
+    Activating rescue pack.
+    [sfx activate_rescue_pack.mp3]
+    Launching rope.
+    [sfx rope_launch_sound.mp3]
+    Rope is secure and ready to climb, Ranger.
+    [sfx climb_speech3_without_wwyltd.mp3]
+  *then
+    -> Episode1-Lion Enclosure Player is Prompted to Climb
+    
+@Episode1-Lion Enclosure Player is Prompted to Climb
+  *say
+    [sfx wwyltd.mp3]
+    [sfx offer_help1.mp3]
+  *then
+    hear climb, climb the rope, climb up, use the rope {
+    }

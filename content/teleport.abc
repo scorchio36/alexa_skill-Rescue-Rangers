@@ -12,6 +12,7 @@
     }
     if (location == 'China') {
       if (context == 'episode1 - distress call') {
+        <-> Teleportation Description
         -> Teleport to China
       }
       else {

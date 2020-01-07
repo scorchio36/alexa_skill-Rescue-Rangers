@@ -9,6 +9,14 @@
       <-> Scan Description
       -> Episode1-Scan Panda Enclosure
     }
+    if context is 'episode1 - bamboo collection' {
+      <-> Scan Description
+      -> Episode1-Scan Bamboo Collection
+    }
+    if context is 'episode1 - outside lion enclosure' {
+      <-> Scan Description
+      -> Episode1-Scan Outside Lion Enclosure
+    }
     else {
       -> Prevent Scan
     }
@@ -24,6 +32,7 @@
     We are currently in the Panda Enclosure of the National Zoo of China. There is a large tree in the center of the enclosure. On the right side there is a collection of bamboo. There is a stream of water running through the left side of the enclosure. There is a large hole at the back of the enclosure. Finally, there is a large group of pandas rolling around in a patch of grass.
   *then
     -> Episode1-Scan used in Panda Enclosure
+    
 @Scan Description
   *say
     Initiating scan.
@@ -33,6 +42,18 @@
     
   *then
     >> RETURN
+    
+@Episode1-Scan Bamboo Collection
+  *say
+    We are currently in a bamboo forest surrounded by bamboo trees. There is a pile of chopped bamboo on the left and an open air vent on the right.
+  *then
+    -> Episode1-Scan used in Bamboo Collection
+
+@Episode1-Scan Outside Lion Enclosure
+  *say
+    You are currently outside of the Lion Enclosure. Objects of interest around the enclosure are a trashcan and a cart with a zookeeper manual. There is a bucket next to the cart and you may search the enclosure wall.
+  *then
+    -> Episode1-Scan Used Outside Lion Enclosure
     
 @Prevent Scan
   *say
