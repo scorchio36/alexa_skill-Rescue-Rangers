@@ -1,37 +1,93 @@
 @Scan Router
   *then
-    if context is 'tutorial - scan' {
-      set context as 'episode1 - distress call'
+    if context is 'Tutorial - Scan' {
       <-> Scan Description
       -> Episode1-Scan used for First Time
     }
-    if context is 'episode1 - panda enclosure scan' {
+    if context is 'Episode1 - Headquarters' {
+      <-> Scan Description
+      -> Episode1-Scan used in Headquarters
+    }
+    if context is 'Episode1 - Arrival in China' {
+      <-> Scan Description
+      <-> Episode1-Scan used at Arrival in China
+      >> RETURN
+    }
+    if context is 'Episode1 - Air Vent' {
+      <-> Scan Description
+      <-> Episode1-Scan used in Air Vent
+      
+      //airVentCP1 helps avoid a continuity issue if the player uses scan right when
+      //they enter or restart the maze.
+      if airVentCP1 {
+        -> Episode1-Player uses Scan Inside Air Vent at CP1
+      }
+      else {
+        >> RETURN
+      }
+      
+    }
+    if context is 'Episode1 - Panda Enclosure' {
       <-> Scan Description
       -> Episode1-Scan Panda Enclosure
     }
-    if context is 'episode1 - bamboo collection' {
+    if context is 'Episode1 - Bamboo Collection' {
       <-> Scan Description
       -> Episode1-Scan Bamboo Collection
     }
-    if context is 'episode1 - outside lion enclosure' {
+    if context is 'Episode1 - Outside Lion Enclosure' {
       <-> Scan Description
       -> Episode1-Scan Outside Lion Enclosure
     }
+    if context is 'Episode1 - Lion Enclosure' {
+      <-> Scan Description
+      <-> Episode1-Scan Lion Enclosure
+      >> RETURN
+    }
+    if context is 'Episode1 - Lion Wall' {
+      <-> Scan Description
+      <-> Episode1-Scan at Lion Wall
+      >> RETURN
+    }
+    if context is 'Episode1 - Top of Lion Wall' {
+      <-> Scan Description
+      <-> Episode1-Scan at Top of Lion Wall
+      >> RETURN
+    }
     else {
-      -> Prevent Scan
+      <-> Prevent Scan
+      >> RETURN
     }
 
 @Episode1-Scan used for First Time
   *say
     You are currently in the Rescue Rangers headquarters. There is not much for me to scan around here since you are still in training mode. You can use scan anytime you want to discover things about your environment.
   *then
-    -> Episode1-Animal Alert Call
+    -> Episode1-Ranger Pack Obtained and Call Interrupts Tutorial
+    
+@Episode1-Scan used in Headquarters
+  *say
+    You are currently in the Rescue Rangers headquarters. What an exciting place. So many Rangers and researchers working together to make the world a better place. We are currently in a restricted training area, so nothing of interest came up in my scan.
+  *then
+    -> Episode1-Prompt Player to Teleport to China
+    
+@Episode1-Scan used at Arrival in China
+  *say
+    You are currently in the National Zoo of China in Beijing. We are outside of the Panda enclosure. The scenery around the Zoo is spectacular. Those pandas sure look interesting.
+  *then
+    >> RETURN
     
 @Episode1-Scan Panda Enclosure
   *say
     We are currently in the Panda Enclosure of the National Zoo of China. There is a large tree in the center of the enclosure. On the right side there is a collection of bamboo. There is a stream of water running through the left side of the enclosure. There is a large hole at the back of the enclosure. Finally, there is a large group of pandas rolling around in a patch of grass.
   *then
     -> Episode1-Scan used in Panda Enclosure
+    
+@Episode1-Scan used in Air Vent
+  *say
+    You are currently inside an air vent! It sure is dark in here. Unfortunately, my scan won't be much help here. You will have to follow Ranger Olive's prompts to go left, right, or forward until we find a way out of this maze! Good luck Ranger.
+  *then
+    >> RETURN
     
 @Scan Description
   *say
@@ -51,12 +107,30 @@
 
 @Episode1-Scan Outside Lion Enclosure
   *say
-    You are currently outside of the Lion Enclosure. Objects of interest around the enclosure are a trashcan and a cart with a zookeeper manual. There is a bucket next to the cart and you may search the enclosure wall.
+    You are currently outside of the Lion Enclosure. Objects of interest around the enclosure are a trashcan and a cart with a zookeeper manual. There is also a bucket next to the cart and you can search the wall of the enclosure.
   *then
     -> Episode1-Scan Used Outside Lion Enclosure
+
+@Episode1-Scan Lion Enclosure 
+  *say
+    You are currently inside of a lion enclosure. This may not be the best time to be scanning. You should focus on getting the baby panda out of the lion enclosure before the distracted lions come back. I wouldn't want you to turn into cat food, Ranger.
+  *then
+    >> RETURN
+    
+@Episode1-Scan at Lion Wall
+  *say
+    You are currently at a large wall within the lion enclosure. You need to climb up this wall to escape the hungry lions below. Keep climbing and don't forget to feed and play with the baby panda.
+  *then
+    >> RETURN
+    
+@Episode1-Scan at Top of Lion Wall
+  *say
+    There is nothing around for you to interact with. My sensors indicate we are falling at a rapid rate. Say activate ranger pack to open your parachute. Hurry Ranger!
+  *then
+    >> RETURN
     
 @Prevent Scan
   *say
     I'm sorry. I cannot perform a scan right now.
   *then
-    >> BACK
+    >> RETURN

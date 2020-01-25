@@ -16,15 +16,19 @@
     
   *reprompt
     You can say play the game or you can say quit.
+  *recap
+    You can say play the game or you can say quit.
   *then
     hear play the game, play, let's play, I'm ready for adventure {
       -> Episode1-Adventure Awaits
     }
     hear quit, I don't want to play {
+      -> Player Quits
     }
     
 @Episode1-Adventure Awaits
   *say
+    [sfx alice_open.mp3]
     Episode 1.
     <break time="0.4s" />
     A New Adventure Awaits.
@@ -41,16 +45,24 @@
     
     //Olive introduces the player to Alice, the Rescue Rangers Virtual Assistant.
     [sfx olive_intro2.mp3]
+    [sfx alice_open.mp3]
     Hi again, Ranger.
-    
-    //Olive tells player about the FGG's Teleportation command and prompts the user to teleport to France.
-    [sfx olive_intro3.mp3]
-    
-  *reprompt
-    Say teleport to France, to try out your Field Guide Gadget's teleportation capabalities.
 
   *then
-    set context as 'tutorial - teleport'
+    -> Episode1-Player is Prompted to Teleport to France
+  
+@Episode1-Player is Prompted to Teleport to France  
+  *say
+    //Olive tells player about the FGG's Teleportation command and prompts the user to teleport to France.
+    [sfx olive_intro3.mp3]
+    {empty_string}
+  *reprompt
+    We want to try out your Field Guide Gadget's teleportation abilities. Say teleport to France.
+  *recap
+    We want to try out your Field Guide Gadget's teleportation abilities. Say teleport to France.
+  *then
+    set context as 'Tutorial - Teleport'
+    
     //dummy_intent used to pause flow so player can call global commands
     hear dummy_intent {
     }
@@ -59,25 +71,33 @@
   *say
     //Olive tells the player that they did not actually teleport. She then talks about the FGG's ability to give you information about any animal and prompts the player to ask the FGG to tell him/her about Giraffes.
     [sfx olive_intro4.mp3]
-    
+    {empty_string}
+
+  *reprompt
+    We want to try out your Field Guide Gadget's info abilities. Say tell me about Giraffes.
+  *recap
+    We want to try out your Field Guide Gadget's info abilities. Say tell me about Giraffes.
   *then
+    set context as 'Tutorial - Animal Info'
     hear dummy_intent {
     }
     
 @Episode1-Animal Info about Giraffes
-*say
+  *say
   //Olive tells the user about the FGG's scan command and then prompts the player to user the scan command.
   [sfx olive_intro5.mp3]
+  {empty_string}
   
 *reprompt
-  Try saying scan to use the Field Guide Gadget's scan command.
+    We want to try out your Field Guide Gadget's scan abilities. Try saying scan.
+  *recap
+    We want to try out your Field Guide Gadget's scan abilities. Try saying scan.
+  *then
+    set context as 'Tutorial - Scan'
+    hear dummy_intent {
+    }
   
-*then
-  hear dummy_intent {
-  }
-  
-
-@Episode1-Animal Alert Call
+@Episode1-Ranger Pack Obtained and Call Interrupts Tutorial
   *say
     //Olive compliments the player on using scan and then gives the player a Ranger Pack
     [sfx olive_intro6.mp3]
@@ -90,8 +110,18 @@
   
     Right away.
     <break time="0.75s"/>
+    
+  *then
+    set context as 'Episode1 - Animal Alert'
+    -> Episode1-Animal Alert Call
+    
+@Episode1-Animal Alert Call
+  *say
     Call is ready. <break time="0.5s"/> I just need our new ranger to say <break time="0.2s"/> confirm <break time="0.2s"/> to open the call. Say confirm if you are ready for the call ranger.
-  
+  *reprompt
+    There's an emergency call on the line! Say confirm to accept the call.
+  *recap
+    There's an emergency call on the line! Say confirm to accept the call.
   *then
     hear confirm {
       -> Episode1-Player Accepts Animal Alert Call
@@ -103,10 +133,14 @@
     //Call with Mr. Wei. 
     [sfx olive_intro8.mp3]
     Connection terminated.
-  
+    
+  *then
+    -> Episode1-Player is Prompted to Teleport to China
+
+@Episode1-Player is Prompted to Teleport to China
+  *say
     //Olive tells the player that they need to get to China then prompts them to do something
     [sfx olive_intro9_wwyltd_removed.mp3]
-  
   *then
     -> Episode1-Prompt Player to Teleport to China
     
@@ -114,22 +148,35 @@
   *say
     [sfx wwyltd.mp3]
     [sfx offer_help1.mp3]
+  *reprompt
+    We need to get to China, fast! Maybe we can teleport there? What would you like to do?
+  *recap
+    We need to get to China, fast! Maybe we can teleport there? What would you like to do?
   *then
+    set context as 'Episode1 - Headquarters'
     hear dummy_intent {
     }
   
 
 @Episode1-Player Teleports to China
-*say
-  //Player meets Mr. Wei and he introduces the player to the pandas.
-  [sfx china_speech1.mp3]
-  
-  The panda has been added to the field guide gadget animal log. I recommend you ask to learn more about pandas. It may be helpful for you to know more about them. You can do so by saying <break time="0.2s"/> tell me about pandas.
-  
-*then
-  set context as 'episode1 - learning about pandas'
-  hear dummy_intent {
-  }
+  *say
+    //Player meets Mr. Wei and he introduces the player to the pandas.
+    [sfx china_speech1.mp3]
+    {empty_string}
+  *then
+    -> Episode1-Player is Prompted to Ask About Pandas
+
+@Episode1-Player is Prompted to Ask About Pandas
+  *say
+    The panda has been added to the field guide gadget animal log. I recommend you ask to learn more about pandas. It may be helpful for you to know more about them. You can do so by saying <break time="0.2s"/> tell me about pandas.
+  *reprompt
+    I recommend you learn more about the Panda Bear before moving on with the mission. You can do so by saying tell me about pandas.
+  *recap
+    I recommend you learn more about the Panda Bear before moving on with the mission. You can do so by saying tell me about pandas.
+  *then
+    set context as 'Episode1 - Arrival in China'
+    hear dummy_intent {
+    }
 
 @Episode1-Animal Info about Pandas
   *say
@@ -137,7 +184,7 @@
     [sfx china_speech2_wwyltd_removed.mp3]
     
   *then
-    set context as 'episode1 - panda enclosure scan'
+    set context as 'Episode1 - Panda Enclosure'
     -> Episode1-Prompt Player for scan in Panda Enclosure
     
 @Episode1-Prompt Player for scan in Panda Enclosure
@@ -203,7 +250,7 @@
   *say
     //Olive searches the tree with the player and finds a note. She then prompts user with wwyltd
     [sfx searching_speech2.mp3]
-    
+    {empty_string}
   *then
     -> Episode1-Panda Enclosure Scan Recap
     
@@ -211,8 +258,9 @@
   *say
     //Olive prompts the user to run another scan within the bamboo collection
     [sfx searching_speech3.mp3]
-    
+    {empty_string}
   *then
+    set context as 'Episode1 - Bamboo Collection'
     -> Episode1-Prompt Player to Scan Bamboo Collection
 
 @Episode1-Panda Enclosure Player Searches Water
@@ -220,24 +268,28 @@
     [sfx searching_speech4.mp3]
     The Koi Fish has been added to the Animal Log Book.
     [sfx searching_speech5.mp3]
+    {empty_string}
   *then
     -> Episode1-Panda Enclosure Scan Recap
     
 @Episode1-Panda Enclosure Player Searches Hole
   *say
     [sfx searching_speech6.mp3]
+    {empty_string}
   *then
     -> Episode1-Panda Enclosure Scan Recap
     
 @Episode1-Panda Enclosure Player Searches Pandas
   *say
     [sfx searching_speech7.mp3]
+    {empty_string}
   *then
     -> Episode1-Panda Enclosure Scan Recap
     
 @Episode1-Scan used in Bamboo Collection
   *say
     [sfx searching_speech10_without_toys_and_wwyltd.mp3]
+    {empty_string}
   *then
     -> Episode1-Prompt Player for Search in Bamboo Collection
     
@@ -246,7 +298,6 @@
   *say
     What would you like to do ranger?
   *then
-    set context as 'episode1 - bamboo collection'
     hear dummy_intent {
     }
     
@@ -280,9 +331,23 @@
 @Episode1-Player Searches Air Vent
   *say
     //Olive and the player enter the air vent. She then prompts the player to go right or left.
-    //Simulator breaks if there are no written words. 'Dummy Words' added to prevent this.
-    Dummy Words. 
     [sfx air_vent_speech1.mp3]
+    {empty_string}
+  *then
+    set context as 'Episode1 - Air Vent'
+    flag airVentCP1
+    hear left {
+      -> Episode1-Air Vent CP1 Player Turns Left
+    }
+    hear right {
+      -> Episode1-Air Vent CP1 Player Turns Right
+    }
+    
+// There will be a continuity issue if the player uses scan inside the air vent
+// at CP1. This Scene is just here to compensate for that.
+@Episode1-Player uses Scan Inside Air Vent at CP1
+  *say
+    Would you like to go left or right?
   *then
     hear left {
       -> Episode1-Air Vent CP1 Player Turns Left
@@ -293,9 +358,10 @@
     
 @Episode1-Air Vent Restart
   *say
-    Dummy Words.
     [sfx air_vent_restart.mp3]
+    {empty_string}
   *then
+    flag airVentCP1
     hear left {
       -> Episode1-Air Vent CP1 Player Turns Left
     }
@@ -310,9 +376,10 @@
 //CP4 = Last 2-way split
 @Episode1-Air Vent CP1 Player Turns Left
   *say
-    Dummy Words.
     [sfx air_vent_speech2.mp3]
+    {empty_string}
   *then
+    unflag airVentCP1
     hear left {
       -> Episode1-Air Vent CP2 Player Turns Left
     }
@@ -321,9 +388,10 @@
     }
 @Episode1-Air Vent CP1 Player Turns Right
   *say
-    Dummy Words.
     [sfx air_vent_speech3.mp3]
+    {empty_string}
   *then
+    unflag airVentCP1
     hear left {
       -> Episode1-Air Vent CP3 Player Turns Left
     }
@@ -336,21 +404,22 @@
     
 @Episode1-Air Vent CP2 Player Turns Left
   *say
-    Dummy Words.
     [sfx air_vent_speech4_without_restart.mp3]
+    {empty_string}
   *then
     -> Episode1-Air Vent Restart
     
 @Episode1-Air Vent CP2 Player Turns Right
   *say
-    Dummy Words.
     [sfx air_vent_speech5_without_restart.mp3]
+    {empty_string}
   *then
     -> Episode1-Air Vent Restart
     
 @Episode1-Air Vent CP3 Player Turns Left
   *say
     [sfx air_vent_speech6_without_restart.mp3]
+    {empty_string}
   *then
     -> Episode1-Air Vent Restart
     
@@ -358,12 +427,15 @@
 @Episode1-Air Vent CP3 Player Turns Right
   *say
     [sfx air_vent_speech7_without_restart.mp3]
+    {empty_string}
   *then
     -> Episode1-Air Vent Restart
     
 @Episode1-Air Vent CP3 Player Goes Forward
   *say
+    Dummy words.
     [sfx air_vent_speech8.mp3]
+    {empty_string}
   *then
     hear left {
       -> Episode1-Air Vent CP4 Player Turns Left
@@ -376,24 +448,25 @@
 @Episode1-Air Vent CP4 Player Turns Right
   *say
     [sfx air_vent_speech7_without_restart.mp3]
+    {empty_string}
   *then
     -> Episode1-Air Vent Restart
     
 @Episode1-Air Vent CP4 Player Turns Left
   *say
     [sfx air_vent_speech9.mp3]
-    [sfx badge_obtained_sound.mp3]
     You have received your level 1 puzzle solver badge for solving your first puzzle. Congratulations on getting your first Animal Rescue Ranger Badge.
     [sfx lion_speech1_without_wwyltd.mp3]
   *then
+    set context as 'Episode1 - Outside Lion Enclosure'
     -> Episode1-Prompt Player to Scan Outside Lion Enclosure
 
 @Episode1-Prompt Player to Scan Outside Lion Enclosure
   *say
     [sfx wwyltd.mp3]
     [sfx offer_help2.mp3]
+    {empty_words}
   *then
-    set context as 'episode1 - outside lion enclosure'
     hear dummy_intent {
     }
     
@@ -445,6 +518,7 @@
 @Episode1-Outside Lion Enclosure Player Searches Manual
   *say
     [sfx lion_search_speech1_without_wwyltd.mp3]
+    {empty_string}
   *then
     -> Episode1-Outside Lion Enclosure Scan Recap
     
@@ -452,22 +526,23 @@
   *say
     //Olive tells the player about the meat in the bucket. She tells the user that she will
     //need their help distracting the lions
-    Dummy Words.
     [sfx lion_search_speech2_without_listening_for_roars.mp3]
+    {empty_string}
   *then
     -> Episode1-Outside Lion Enclosure Listening For Roars
     
 @Episode1-Outside Lion Enclosure Player Searches Wall
   *say
     [sfx lion_search_speech5_without_wwyltd.mp3]
+    {empty_string}
   *then
     -> Episode1-Outside Lion Enclosure Scan Recap
     
 @Episode1-Outside Lion Enclosure Listening For Roars
   *say
     //Olive tells the players to count how many lion roars they hear
-    Dummy Words.
     [sfx lion_search_speech2_listening_for_roars.mp3]
+    {empty_string}
   *then
     slot numberOfRoars to 'AMAZON.NUMBER'
     hear {numberOfRoars}, {numberOfRoars} roars {
@@ -483,10 +558,11 @@
 @Episode1-Outside Lion Enclosure Player Gives Correct Count
   *say
     //Olive throws the correct number of pieces over the wall. The lions are distracted and the player sneaks in through the gate to get to the tree where the panda is. The panda won't come down so they need to take something from the ranger pack.
-    Dummy Words.
     [sfx lion_tree_speech1_no_food_question.mp3]
+    {empty_string}
     
   *then
+    set context as 'Episode1 - Lion Enclosure'
     -> Episode1-Lion Enclosure Ask Player What to Feed Panda
     
 @Episode1-Outside Lion Enclosure Player Gives Wrong Count
@@ -499,6 +575,7 @@
 @Episode1-Lion Enclosure Ask Player What to Feed Panda
   *say
     [sfx lion_tree_speech1_food_question.mp3]
+    {empty_string}
   *then
     hear watermelon {
       -> Episode1-Lion Enclosure Player Guesses Watermelon
@@ -515,31 +592,37 @@
     
 @Episode1-Lion Enclosure Player Guesses Watermelon
   *say
-    Dummy Words.
     [sfx lion_tree_speech4_without_question.mp3]
+    {empty_string}
   *then
     -> Episode1-Lion Enclosure Ask Player What to Feed Panda
     
 @Episode1-Lion Enclosure Player Guesses Cheese
   *say
-    Dummy Words.
     [sfx lion_tree_speech5_without_question.mp3]
+    {empty_string}
   *then
     -> Episode1-Lion Enclosure Ask Player What to Feed Panda
     
 @Episode1-Lion Enclosure Player Guesses Bamboo
   *say
-    Dummy Words.
     [sfx lion_tree_speech3_fixed.mp3]
-    To activate the rope, just say activate rope. Hurry Ranger.
+    {empty_string}
   *then
+    -> Episode1-Player is Prompted to Activate Rope
+    
+@Episode1-Player is Prompted to Activate Rope
+  *say
+    The lions are closing in on us. To activate the rope, just say activate rope. Hurry Ranger.
+  *then
+    set context as 'Episode1 - Lion Wall'
     hear activate rope, rope, activate ranger pack rope, activate ranger pack {
       -> Episode1-Lion Enclosure Player Activates Rope
     }
 @Episode1-Lion Enclosure Player Guesses Mushroom
   *say
-    Dummy Words.
     [sfx lion_tree_speech6_without_question.mp3]
+    {empty_string}
   *then
     -> Episode1-Lion Enclosure Ask Player What to Feed Panda
 
@@ -553,12 +636,191 @@
     Rope is secure and ready to climb, Ranger.
     [sfx climb_speech3_without_wwyltd.mp3]
   *then
-    -> Episode1-Lion Enclosure Player is Prompted to Climb
+    //used to decide if climb game variables should be initialized
+    unflag climb_game_active
+    -> Episode1-Lion Enclosure Prompt Player to Climb
     
-@Episode1-Lion Enclosure Player is Prompted to Climb
+@Episode1-Lion Enclosure Prompt Player to Climb
   *say
     [sfx wwyltd.mp3]
     [sfx offer_help1.mp3]
   *then
     hear climb, climb the rope, climb up, use the rope {
+      if !climb_game_active {
+        //set up variables for the climb game
+        unflag panda_hungry
+        unflag panda_bored
+        set climb_step as 0
+        set height as 50
+        flag climb_game_active
+      }
+      
+      -> Episode1-Update Climb Height
     }
+    hear feed panda, feed the baby panda, feed the baby, give baby panda food, give panda food {
+      -> Episode1-Lion Wall Player Feeds Panda
+    }
+    hear play with panda, give panda toy, play with baby panda, play, give panda toy {
+      -> Episode1-Lion Wall Player Plays with Panda
+    }
+    
+@Episode1-Update Climb Height
+  *then
+    decrease height by 10
+    increase climb_step by 1
+    -> Episode1-Lion Wall Player Climbs the Rope
+    
+@Episode1-Lion Wall Player Climbs the Rope
+  *say
+    [sfx climbing_rope.mp3]
+    //50 is the height of the wall in meters
+    //10 is the height, in meters, that the player travels upward with each climb command
+    We are currently {height} meters from the top of the wall.
+  *then
+    //Game is over when player makes 5 climb steps
+    if (climb_step == 5) {
+      -> Episode1-Player Completes Climbing Challenge
+    }
+    else {
+      //if statements are so the panda doesn't get bored and hungry at the same time. Cuz that would just be OP.
+    
+      //If the panda is hungry or bored and the player chose to climb, that means they are risking not feeding or playing with the baby panda. Check if they lose due to that decision.
+      //If panda is neither hungry nor bored, then roll the dice in the else statement to see if the panda becomes hungry or bored.
+      if (panda_hungry || panda_bored) {
+        <-> Episode1-Check if Player Loses
+      }
+      else {
+        <-> Episode1-Check if Panda Hungry
+        if (!panda_hungry) {
+          <-> Episode1-Check if Panda Bored
+        }
+      }
+    
+      //if the panda is hungry or bored then be sure to warn the player
+      if (panda_hungry) {
+        <-> Episode1-Tell Player Panda is Hungry
+      }
+      if (panda_bored) {
+        <-> Episode1-Tell Player Panda is Bored
+      }
+
+      -> Episode1-Lion Enclosure Prompt Player to Climb
+      
+    }
+     
+    
+@Episode1-Check if Player Loses
+  *then
+    //50% chance that player loses climb challenge if they don't feed or play with panda
+    roll 1d2
+      if rollResult == 1 {
+        if (panda_hungry) {
+          -> Episode1-Player Loses because Panda Hungry
+        }
+        else {
+          -> Episode1-Player Loses because Panda Bored
+        }
+      }
+      
+    >> RETURN
+@Episode1-Check if Panda Hungry
+  *then
+    //25% chance that panda is hungry
+    roll 1d4
+      if rollResult == 1 {
+        flag panda_hungry
+      }
+      
+    >> RETURN
+@Episode1-Check if Panda Bored
+  *then
+    //25% chance that panda is bored
+    roll 1d4
+      if rollResult == 1 {
+        flag panda_bored
+      }
+      
+    >> RETURN
+
+@Episode1-Tell Player Panda is Hungry
+  *say
+    [sfx baby_panda_hungry.mp3]
+    My sensors indicate that the panda may be hungry.
+    
+  *then
+    >> RETURN
+    
+@Episode1-Tell Player Panda is Bored
+  *say
+    [sfx baby_panda_bored.mp3]
+    My sensors indicate that the panda may be bored.
+  *then
+    >> RETURN
+    
+@Episode1-Lion Wall Player Feeds Panda
+  *say
+    [sfx feeding_panda.mp3]
+    Sensors indicate that panda is no longer hungry. Nice going Ranger.
+  *then
+    unflag panda_hungry
+    -> Episode1-Lion Enclosure Prompt Player to Climb
+    
+@Episode1-Lion Wall Player Plays with Panda
+  *say
+    [sfx playing_panda.mp3]
+    Sensors indicate that panda is no longer bored. Good job Ranger. Keep climbing!
+  *then
+    unflag panda_bored
+    -> Episode1-Lion Enclosure Prompt Player to Climb
+    
+@Episode1-Player Loses Climb Challenge
+  *then
+    //reset game
+    unflag climb_game_active
+    -> Episode1-Lion Enclosure Prompt Player to Climb
+    
+@Episode1-Player Loses because Panda Hungry
+  *say
+    //Baby panda jumps away bc player did not play with panda
+    [sfx climb_speech2_without_wwyltd.mp3]
+  *then
+    -> Episode1-Player Loses Climb Challenge
+    
+@Episode1-Player Loses because Panda Bored
+  *say
+    //Baby panda jumps away bc player did not feed panda
+    [sfx climb_speech1_without_wwyltd.mp3]
+  *then
+    ->Episode1-Player Loses Climb Challenge
+
+@Episode1-Player Completes Climbing Challenge
+  *say
+    [sfx skydive_speech1.mp3]
+    You have received the Level 1 Crazy Climber Badge. Nice job, Ranger.
+    [sfx skydive_speech2.mp3]
+  *then
+    set context as 'Episode1 - Top of Lion Wall'
+    -> Episode1-Prompt Player to Activate Parachute
+    
+@Episode1-Prompt Player to Activate Parachute
+  *say
+    [sfx wwyltd.mp3]
+    [sfx offer_help1.mp3]
+  *then
+    hear activate ranger pack, activate parchute, open parachute {
+      -> Episode1-Return Panda and Return to HQ
+    }
+    
+@Episode1-Return Panda and Return to HQ
+  *say
+    [sfx final_speech.mp3]
+    [sfx teleportation_sound.mp3]
+  *then
+    -> Episode1-Conclusion
+    
+@Episode1-Conclusion
+  *say
+    Yay you beat episode 1!
+    
+    
+// It might be a cool idea to add an End-of-Mission Recap (Tresures collected and Recap of Journey).

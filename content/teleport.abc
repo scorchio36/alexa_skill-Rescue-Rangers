@@ -1,8 +1,7 @@
 @Teleport Router
   *then
     if (location == 'France') {
-      if (context == 'tutorial - teleport') {
-        set context as 'tutorial - animal info'
+      if (context == 'Tutorial - Teleport') {
         <-> Teleportation Description
         -> Teleport to France
       }
@@ -11,7 +10,7 @@
       }
     }
     if (location == 'China') {
-      if (context == 'episode1 - distress call') {
+      if (context == 'Episode1 - Headquarters') {
         <-> Teleportation Description
         -> Teleport to China
       }
@@ -20,7 +19,7 @@
       }
     }
     else {
-      >> BACK
+      >> RETURN
     }
     
 @Teleportation Description
@@ -36,7 +35,7 @@
   *say
     Sorry, you can't teleport there right now!
   *then
-    >> BACK
+    >> RETURN
 
 @Teleport to France
   *say

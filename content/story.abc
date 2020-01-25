@@ -3,6 +3,8 @@
     //Initialize everything for the game here
     set context as 'init'
     set episode as 0
+    //SFB has a bug where if your say* consists solely of a an SFX snippet then SFB simulator freezes. Inserting an empty string variable into the say* will fix the issue.
+    set empty_string as ' '
     //When initialization is complete, start the game
     -> EpisodeSelect
     
@@ -16,7 +18,7 @@
     
       if episodeNumber == 1 {
         set episode as 1
-        set context as 'tutorial - intro'
+        set context as 'Tutorial - Intro'
         -> startEpisode1
       }
       
@@ -1752,3 +1754,9 @@
     Come back next time so we can finish up your training.
     
     // End of Episode 2
+    
+@Player Quits
+  *say
+    See you next time Ranger!
+  *then
+    >> END

@@ -1,17 +1,49 @@
-@global append
+//@global append
+//    *then
+//        hear help {
+//            -> help
+//        }
+//@help
+//    *say
+//        Here is some help.
+//    *then
+//        >> BACK
+//        
+        
+//@global prepend
+//*then
+//   hear help {
+//      bookmark
+//      <-> help message
+//      -> bookmark
+//   }
+//@help message
+//*say
+//    this is help message.
+//*then
+//    >>RETURN
+
+@global prepend
   *then
+    
     hear scan {
+      bookmark
       <-> Scan Router
+      -> bookmark
     }
     
     slot country as 'AvailableCountries'
     hear teleport to {country} {
     set location as country
-      -> Teleport Router
+      bookmark
+      <-> Teleport Router
+      -> bookmark
     }
     
     slot animal as 'AvailableAnimals'
     hear tell me about {animal} {
       set info_animal as animal
-      -> AnimalInfo Router
+      bookmark
+      <-> AnimalInfo Router
+      -> bookmark
     }

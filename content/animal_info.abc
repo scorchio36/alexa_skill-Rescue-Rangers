@@ -1,29 +1,29 @@
 @AnimalInfo Router
   *then
     if (info_animal == 'Giraffe' || info_animal == 'Giraffes') {
-      if (context == 'tutorial - animal info') {
+      if (context == 'Tutorial - Animal Info') {
         set context as 'tutorial - scan'
         <-> GiraffeInfo
         -> Episode1-Animal Info about Giraffes
       }
       else {
         <-> GiraffeInfo
-        >> BACK
+        >> RETURN
       }
     }
     else if (info_animal == 'Panda' || info_animal == 'Pandas') {
-      if (context == 'episode1 - learning about pandas') {
+      if (context == 'Episode1 - Arrival in China') {
         <-> PandaInfo
         -> Episode1-Animal Info about Pandas
       }
       else {
         <-> PandaInfo
-        >> BACK
+        >> RETURN
       }
     }
     else {
       <-> Animal Not Found
-      >> BACK
+      >> RETURN
     }
     
 @GiraffeInfo
