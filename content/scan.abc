@@ -27,18 +27,35 @@
       }
       
     }
+    
+    // The scan and non-scan state should do the same thing when scan is called. I made separate states because the Help menu needs to discern between whether the player has already scanned or not in order to give the correct help dialogue.
     if context is 'Episode1 - Panda Enclosure' {
       <-> Scan Description
       -> Episode1-Scan Panda Enclosure
     }
+    if context is 'Episode1 - Panda Enclosure Scan Prompt' {
+      <-> Scan Description
+      -> Episode1-Scan Panda Enclosure
+    }
+    
     if context is 'Episode1 - Bamboo Collection' {
       <-> Scan Description
       -> Episode1-Scan Bamboo Collection
     }
+    if context is 'Episode1 - Bamboo Collection Scan Prompt' {
+      <-> Scan Description
+      -> Episode1-Scan Bamboo Collection
+    }
+    
     if context is 'Episode1 - Outside Lion Enclosure' {
       <-> Scan Description
       -> Episode1-Scan Outside Lion Enclosure
     }
+    if context is 'Episode1 - Outside Lion Enclosure Scan Prompt' {
+      <-> Scan Description
+      -> Episode1-Scan Outside Lion Enclosure
+    }
+    
     if context is 'Episode1 - Lion Enclosure' {
       <-> Scan Description
       <-> Episode1-Scan Lion Enclosure

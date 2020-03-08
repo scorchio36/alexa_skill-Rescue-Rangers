@@ -1,0 +1,694 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "intents": [
+                {
+                    "name": "CatchAllSlotIntent",
+                    "samples": [
+                        "tell me about {animal}",
+                        "teleport to {country}",
+                        "play episode {episodeNumber}",
+                        "{numberOfRoars}",
+                        "{numberOfRoars} roars"
+                    ],
+                    "slots": [
+                        {
+                            "name": "animal",
+                            "type": "AvailableAnimals"
+                        },
+                        {
+                            "name": "country",
+                            "type": "AvailableCountries"
+                        },
+                        {
+                            "name": "episodeNumber",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "numberOfRoars",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ]
+                },
+                {
+                    "name": "flexbIntent",
+                    "samples": [
+                        "play the game",
+                        "let's play",
+                        "i'm ready for adventure"
+                    ]
+                },
+                {
+                    "name": "flexcIntent",
+                    "samples": [
+                        "dummyintent"
+                    ]
+                },
+                {
+                    "name": "flexdIntent",
+                    "samples": [
+                        "confirm",
+                        "listen to voicemail",
+                        "confirm voicemail",
+                        "open call",
+                        "open connection"
+                    ]
+                },
+                {
+                    "name": "flexeIntent",
+                    "samples": [
+                        "tree",
+                        "the tree",
+                        "large tree",
+                        "search the large tree",
+                        "search the tree"
+                    ]
+                },
+                {
+                    "name": "flexfIntent",
+                    "samples": [
+                        "bamboo",
+                        "collection of bamboo",
+                        "search the bamboo",
+                        "search the collection of bamboo",
+                        "search the pile",
+                        "search the bamboo pile",
+                        "bamboo pile",
+                        "piece of bamboo"
+                    ]
+                },
+                {
+                    "name": "flexgIntent",
+                    "samples": [
+                        "stream of water",
+                        "search the water",
+                        "search the stream of water",
+                        "search the stream"
+                    ]
+                },
+                {
+                    "name": "flexhIntent",
+                    "samples": [
+                        "hole",
+                        "large hole",
+                        "search the hole",
+                        "search the hole at the back of the enclosure"
+                    ]
+                },
+                {
+                    "name": "flexiIntent",
+                    "samples": [
+                        "pandas",
+                        "the pandas",
+                        "search the pandas",
+                        "search the group of pandas rolling around"
+                    ]
+                },
+                {
+                    "name": "flexjIntent",
+                    "samples": [
+                        "search the air vent",
+                        "search the vent",
+                        "air vent"
+                    ]
+                },
+                {
+                    "name": "flexkIntent",
+                    "samples": [
+                        "left"
+                    ]
+                },
+                {
+                    "name": "flexlIntent",
+                    "samples": [
+                        "trashcan",
+                        "search the trashcan",
+                        "search the trash",
+                        "trash"
+                    ]
+                },
+                {
+                    "name": "flexmIntent",
+                    "samples": [
+                        "zookeeper manual",
+                        "manual",
+                        "search the cart"
+                    ]
+                },
+                {
+                    "name": "flexnIntent",
+                    "samples": [
+                        "bucket",
+                        "search the bucket"
+                    ]
+                },
+                {
+                    "name": "flexoIntent",
+                    "samples": [
+                        "wall",
+                        "search the wall"
+                    ]
+                },
+                {
+                    "name": "flexpIntent",
+                    "samples": [
+                        "watermelon"
+                    ]
+                },
+                {
+                    "name": "flexqIntent",
+                    "samples": [
+                        "slice of cheese",
+                        "cheese"
+                    ]
+                },
+                {
+                    "name": "flexrIntent",
+                    "samples": [
+                        "mushroom"
+                    ]
+                },
+                {
+                    "name": "flexsIntent",
+                    "samples": [
+                        "activate rope",
+                        "rope",
+                        "activate ranger pack rope",
+                        "activate ranger pack",
+                        "activate parchute",
+                        "open parachute"
+                    ]
+                },
+                {
+                    "name": "flextIntent",
+                    "samples": [
+                        "climb",
+                        "climb the rope",
+                        "climb up",
+                        "use the rope"
+                    ]
+                },
+                {
+                    "name": "flexuIntent",
+                    "samples": [
+                        "feed panda",
+                        "feed the baby panda",
+                        "feed the baby",
+                        "give baby panda food",
+                        "give panda food"
+                    ]
+                },
+                {
+                    "name": "flexvIntent",
+                    "samples": [
+                        "play with panda",
+                        "give panda toy",
+                        "play with baby panda"
+                    ]
+                },
+                {
+                    "name": "flexwIntent",
+                    "samples": [
+                        "pink",
+                        "pink jacket"
+                    ]
+                },
+                {
+                    "name": "flexxIntent",
+                    "samples": [
+                        "yellow",
+                        "yellow jacket"
+                    ]
+                },
+                {
+                    "name": "flexyIntent",
+                    "samples": [
+                        "blue",
+                        "blue jacket"
+                    ]
+                },
+                {
+                    "name": "flexzIntent",
+                    "samples": [
+                        "cereal",
+                        "eat cereal"
+                    ]
+                },
+                {
+                    "name": "flexbaIntent",
+                    "samples": [
+                        "muffin",
+                        "a muffin",
+                        "eat a muffin"
+                    ]
+                },
+                {
+                    "name": "flexbbIntent",
+                    "samples": [
+                        "eggs",
+                        "eat eggs"
+                    ]
+                },
+                {
+                    "name": "flexbcIntent",
+                    "samples": [
+                        "teleport to hq",
+                        "teleport to headquarters",
+                        "teleport me to olive"
+                    ]
+                },
+                {
+                    "name": "flexbdIntent",
+                    "samples": [
+                        "teleport me to brazil",
+                        "teleport to brazil",
+                        "teleport to the amazon",
+                        "teleport to rain forest"
+                    ]
+                },
+                {
+                    "name": "flexbeIntent",
+                    "samples": [
+                        "start scan"
+                    ]
+                },
+                {
+                    "name": "flexbfIntent",
+                    "samples": [
+                        "go to control panel",
+                        "search control panel",
+                        "use control panel",
+                        "check the control panel",
+                        "use the control room",
+                        "go through control room door"
+                    ]
+                },
+                {
+                    "name": "flexbgIntent",
+                    "samples": [
+                        "go to the closet",
+                        "search the closet",
+                        "check the closet"
+                    ]
+                },
+                {
+                    "name": "flexbhIntent",
+                    "samples": [
+                        "go through the doorway",
+                        "go to hospital wing",
+                        "go through the door",
+                        "go to hospital"
+                    ]
+                },
+                {
+                    "name": "flexbiIntent",
+                    "samples": [
+                        "search the shelf",
+                        "search the boxes",
+                        "search the boxes on the shelf"
+                    ]
+                },
+                {
+                    "name": "flexbjIntent",
+                    "samples": [
+                        "scan the hospital wing",
+                        "try a scan"
+                    ]
+                },
+                {
+                    "name": "flexbkIntent",
+                    "samples": [
+                        "look at monkey",
+                        "go see monkey",
+                        "look at squirrel monkey",
+                        "see squirrel monkey",
+                        "search the squirrel monkey"
+                    ]
+                },
+                {
+                    "name": "flexblIntent",
+                    "samples": [
+                        "look at macaws",
+                        "go see macaws",
+                        "check out macaws"
+                    ]
+                },
+                {
+                    "name": "flexbmIntent",
+                    "samples": [
+                        "look at giant river otter",
+                        "look at otter",
+                        "look at river otter",
+                        "go see otter"
+                    ]
+                },
+                {
+                    "name": "flexbnIntent",
+                    "samples": [
+                        "go through door",
+                        "go through doorway",
+                        "go to lab",
+                        "go through door to lab",
+                        "go to laboratory"
+                    ]
+                },
+                {
+                    "name": "flexboIntent",
+                    "samples": [
+                        "look in the cabinet",
+                        "check in the cabinet",
+                        "open the cabinet",
+                        "look inside cabinet",
+                        "search the cabinet"
+                    ]
+                },
+                {
+                    "name": "flexbpIntent",
+                    "samples": [
+                        "do a scan",
+                        "run a scan",
+                        "scan the room"
+                    ]
+                },
+                {
+                    "name": "flexbqIntent",
+                    "samples": [
+                        "look at the macaws",
+                        "see macaws",
+                        "search the macaws"
+                    ]
+                },
+                {
+                    "name": "flexbrIntent",
+                    "samples": [
+                        "look at the caiman",
+                        "see the caiman",
+                        "search the caiman"
+                    ]
+                },
+                {
+                    "name": "flexbsIntent",
+                    "samples": [
+                        "look at the lab table",
+                        "search the lab table"
+                    ]
+                },
+                {
+                    "name": "flexbtIntent",
+                    "samples": [
+                        "look at cabinet"
+                    ]
+                },
+                {
+                    "name": "flexbuIntent",
+                    "samples": [
+                        "go through door to hospital wing",
+                        "go to the hospital wing",
+                        "hospital wing"
+                    ]
+                },
+                {
+                    "name": "flexbvIntent",
+                    "samples": [
+                        "i think",
+                        "i think so"
+                    ]
+                },
+                {
+                    "name": "flexbwIntent",
+                    "samples": [
+                        "use a bandage",
+                        "bandages",
+                        "band-aid",
+                        "patch"
+                    ]
+                },
+                {
+                    "name": "flexbxIntent",
+                    "samples": [
+                        "use a cast",
+                        "make a cast",
+                        "cast"
+                    ]
+                },
+                {
+                    "name": "flexbyIntent",
+                    "samples": [
+                        "use the blue medicine",
+                        "give the blue medicine"
+                    ]
+                },
+                {
+                    "name": "flexbzIntent",
+                    "samples": [
+                        "use the green medicine",
+                        "give the green medicine"
+                    ]
+                },
+                {
+                    "name": "flexcaIntent",
+                    "samples": [
+                        "read medical journal",
+                        "open medical journal",
+                        "read paolo's journal"
+                    ]
+                },
+                {
+                    "name": "flexcbIntent",
+                    "samples": [
+                        "keep reading"
+                    ]
+                },
+                {
+                    "name": "flexccIntent",
+                    "samples": [
+                        "stop reading",
+                        "close journal",
+                        "i am done"
+                    ]
+                },
+                {
+                    "name": "flexcdIntent",
+                    "samples": [
+                        "control panel"
+                    ]
+                },
+                {
+                    "name": "flexceIntent",
+                    "samples": [
+                        "scan"
+                    ]
+                },
+                {
+                    "name": "flexcfIntent",
+                    "samples": [
+                        "that is the right camera"
+                    ]
+                },
+                {
+                    "name": "flexcgIntent",
+                    "samples": [
+                        "that is the wrong camera",
+                        "next camera"
+                    ]
+                },
+                {
+                    "name": "flexchIntent",
+                    "samples": [
+                        "duck",
+                        "duck the branch"
+                    ]
+                },
+                {
+                    "name": "flexciIntent",
+                    "samples": [
+                        "turn",
+                        "dodge",
+                        "dodge the animals",
+                        "dodge animals"
+                    ]
+                },
+                {
+                    "name": "flexcjIntent",
+                    "samples": [
+                        "activate rescue pack",
+                        "rescue pack"
+                    ]
+                },
+                {
+                    "name": "flexckIntent",
+                    "samples": [
+                        "fire",
+                        "fire the bazooka",
+                        "fire a water balloon",
+                        "fire the gun",
+                        "fire water balloons",
+                        "fire water balloon bazooka",
+                        "fire bazooka"
+                    ]
+                },
+                {
+                    "name": "flexclIntent",
+                    "samples": [
+                        "teleport back to hq",
+                        "teleport back to headquarters",
+                        "teleport back to base"
+                    ]
+                },
+                {
+                    "name": "flexcmIntent",
+                    "samples": [
+                        "episodes",
+                        "play an episode",
+                        "choose an episode"
+                    ]
+                },
+                {
+                    "name": "flexcnIntent",
+                    "samples": [
+                        "extras",
+                        "look at my extras",
+                        "view my extras"
+                    ]
+                },
+                {
+                    "name": "AMAZON.CancelIntent"
+                },
+                {
+                    "name": "AMAZON.HelpIntent"
+                },
+                {
+                    "name": "AMAZON.LoopOffIntent"
+                },
+                {
+                    "name": "AMAZON.LoopOnIntent"
+                },
+                {
+                    "name": "AMAZON.NextIntent"
+                },
+                {
+                    "name": "AMAZON.NoIntent"
+                },
+                {
+                    "name": "AMAZON.PauseIntent"
+                },
+                {
+                    "name": "AMAZON.PreviousIntent"
+                },
+                {
+                    "name": "AMAZON.RepeatIntent"
+                },
+                {
+                    "name": "AMAZON.ResumeIntent"
+                },
+                {
+                    "name": "AMAZON.ShuffleOffIntent"
+                },
+                {
+                    "name": "AMAZON.ShuffleOnIntent"
+                },
+                {
+                    "name": "AMAZON.StartOverIntent"
+                },
+                {
+                    "name": "AMAZON.StopIntent"
+                },
+                {
+                    "name": "AMAZON.YesIntent"
+                },
+                {
+                    "name": "AMAZON.ScrollUpIntent"
+                },
+                {
+                    "name": "AMAZON.ScrollLeftIntent"
+                },
+                {
+                    "name": "AMAZON.ScrollDownIntent"
+                },
+                {
+                    "name": "AMAZON.ScrollRightIntent"
+                },
+                {
+                    "name": "AMAZON.PageUpIntent"
+                },
+                {
+                    "name": "AMAZON.PageDownIntent"
+                },
+                {
+                    "name": "AMAZON.MoreIntent"
+                },
+                {
+                    "name": "AMAZON.FallbackIntent"
+                }
+            ],
+            "invocationName": "rescue rangers",
+            "types": [
+                {
+                    "name": "AvailableCountries",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "France"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "China"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Brazil"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "AvailableAnimals",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Giraffes"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Giraffe"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Pandas"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Panda"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Koi Fish"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Koi"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lions"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lion"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

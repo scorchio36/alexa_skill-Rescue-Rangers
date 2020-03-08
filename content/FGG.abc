@@ -1,28 +1,3 @@
-//@global append
-//    *then
-//        hear help {
-//            -> help
-//        }
-//@help
-//    *say
-//        Here is some help.
-//    *then
-//        >> BACK
-//        
-        
-//@global prepend
-//*then
-//   hear help {
-//      bookmark
-//      <-> help message
-//      -> bookmark
-//   }
-//@help message
-//*say
-//    this is help message.
-//*then
-//    >>RETURN
-
 @global prepend
   *then
     
@@ -45,5 +20,11 @@
       set info_animal as animal
       bookmark
       <-> AnimalInfo Router
+      -> bookmark
+    }
+    
+    hear help {
+      bookmark
+      <-> Help Router
       -> bookmark
     }

@@ -19,9 +19,9 @@
 
 		"dynamo-db-session-table-name": "rescue-rangers-sessions",
 
-		"s3-domain-name": "s3.amazonaws.com",
+		"s3-domain-name": "christianheckerlambda.s3.amazonaws.com",
 
-		"s3-bucket-name": "alexa-ml",
+		"s3-bucket-name": "rescue_rangers",
 
 		"ask-skill-directory-name": "rescue-rangers",
 

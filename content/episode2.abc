@@ -1,0 +1,1723 @@
+@startEpisode2
+  *say
+    Playing episode 2.
+    
+  *then
+    -> Episode2-Intro
+
+
+@Animal Facts-Squirrel Monkey
+  *say
+    
+
+
+//Episode 2 flow
+@Episode2-Intro
+  *say
+    //alarm clock noise
+    Good morning Ranger. Good to see you again. 
+    
+    I took the liberty of turning on your alarm for you last night. You have another day of
+    training ahead of you today. You don't want to be late.
+    
+    //Alarm turn off noise
+    
+    Why don't we start getting ready?
+    
+    What color jacket would you like to wear? Pink, Yellow, or Blue?
+    
+  *then
+    hear pink, pink jacket {
+      -> Episode2-User Chooses Pink Jacket
+    }
+    
+    hear yellow, yellow jacket {
+      -> Episode2-User Chooses Yellow Jacket
+    }
+    
+    hear blue, blue jacket {
+      -> Episode2-User Chooses Blue Jacket
+    }
+    //pinging noise
+    
+    
+@Episode2-User Chooses Pink Jacket
+  *say
+    //Put on jacket sound
+    Nothing wrong with a little pink. You are looking stylish.
+  *then
+    -> Episode2-Prompt User To Choose Cereal
+    
+@Episode2-User Chooses Yellow Jacket
+  *say
+    //Put on jacket sound
+    Shine like yellow. Looking good.
+  *then
+    -> Episode2-Prompt User To Choose Cereal
+    
+@Episode2-User Chooses Blue Jacket
+  *say
+    //Put on jacket sound
+    Everyone knows blue is the new black. Nice choice.
+  *then
+      -> Episode2-Prompt User To Choose Cereal
+    
+    
+@Episode2-Prompt User To Choose Cereal
+  *say
+    Now let's eat some breakfast!
+    
+    Would you like cereal, a muffin, or eggs?
+    
+  *then
+    hear cereal, eat cereal {
+      -> Episode2-User Chooses Cereal For Breakfast
+    }
+    
+    hear muffin, a muffin, eat a muffin {
+      -> Episode2-User Chooses Muffin For Breakfast
+    }
+    
+    hear eggs, eat eggs {
+      -> Episode2-User Chooses Eggs For Breakfast
+    }
+    
+    
+@Episode2-User Chooses Cereal For Breakfast
+  *say
+    Nothing like some Chocolatey Marshmallow Puffs for breakfast. Yummy!
+    
+    //Eating noises
+  *then
+    -> Episode2-Inform User About Voicemail
+@Episode2-User Chooses Muffin For Breakfast
+  *say
+    That blueberry muffin sure looks tasty. Good choice Ranger.
+    
+    //Eating noises
+  *then
+    -> Episode2-Inform User About Voicemail
+    
+@Episode2-User Chooses Eggs For Breakfast
+  *say
+    Those eggs will give you some good protein for your adventures today.
+
+    //Eating noises
+  *then
+    -> Episode2-Inform User About Voicemail
+
+@Episode2-Inform User About Voicemail
+  *say
+    //Voicemail pinging noise
+    Ranger. It appears you have a voicemail from Ranger Olive. Please say
+    confirm to listen to the voicemail.
+
+  *then
+    hear confirm, listen to voicemail, confirm voicemail {
+      -> Episode2-Voicemail From Olive
+    }
+      
+      
+      
+@Episode2-Voicemail From Olive
+
+  *say
+    //Olive
+    Hi Ranger! It's Olive! Hope you're rested up and ready for another day of training!
+    I will be waiting for you at the Rescue Ranger headquarters. Whenever you are ready
+    to start, just have Alice teleport you to HQ. See you soon!
+    
+    Alright Ranger. What would you like to do?
+    
+  *then
+    hear Teleport to HQ, Teleport to headquarters, Teleport me to Olive {
+      -> Episode2-Teleport to HQ
+    }
+    
+@Episode2-Teleport to HQ
+  *say
+    Initiating teleportation.
+    //teleportation sound
+    Welcome to Rescue rangers HQ. 
+    //Rescue Rangers HQ arrival sound
+    
+    Let's go inside and see if we can find Olive.
+    //Walking sounds
+    //Futuristic door sound
+    
+    //Ambient noises
+    HQ sure is lively today.
+    //Ambient noises
+    
+    //Olive
+    Ranger! 
+    //Running sounds
+    Looks like Alice got you here safe and sound. Glad you could make it! I'm excited
+    for us to get started on some more training! You're getting closer and closer
+    to getting to go off on your own and make the world a better place as an
+    Animal Rescue Ranger.
+    //Pause
+    Rescuing that panda was an awesome training experience for you, but today I thought
+    we could take things a little more slow and talk about another part of the job that
+    is just as important as rescuing animals in need. And that is, caring for injured
+    animals and helping them get back on their feet.
+    
+    //Pause
+    We will be heading down to the Amazon Rain Forest, down in Brazil. There are many
+    beautiful animals in the Amazon, many of which need our help. We have a facility called
+    The Treehouse in the Amazon Rain Forest that specializes in helping injured and sick
+    animals.
+    
+    //Pause
+    Well, sorry for the short visit to HQ. Maybe I'll give you a better tour of the
+    place next time.
+    //Pause
+    I'm going to head over to Brazil now. Whenever you're ready, just ask Alice to teleport
+    you to Brazil. I'll meet you over there.
+    
+    Alice, teleport me to Brazil.
+    
+    Initiating Teleportation.
+    //Teleportation noise
+    
+    //Pause
+    What would you like to do ranger?
+    
+  *then
+    hear Teleport me to Brazil, Teleport to Brazil, Teleport to the Amazon, Teleport to rain forest {
+      -> Episode2-Teleport to Brazil
+    }
+    
+@Episode2-Teleport to Brazil
+  *say
+    Initiating teleportation.
+    //Teleportation sound
+    
+    Welcome to Brazil.
+    //Brazil Sambda/Rainforest sound effect
+    
+    //Olive
+    Ranger! Welcome to Brazil! It is so gorgeous here! We are right in the heart of
+    the Amazon Rain Forest!
+    //Animal sounds
+    
+    //pause
+    Look! Over there! That's the Treehouse!
+    Let's get over there so I can show you around!
+    
+    //Walking sounds
+    Did you know that there are over 10 million species of animals, plants, and
+    insects known to man? Over half of them lives in this rain forest. That's crazy!
+    //Walking sounds
+    
+    Welp, here we are!
+    //The Treehouse intro music
+    You didn't think it was an actual treehouse did you. This is our state of the art
+    research and rehabilitation center. Researchers and doctors come from all over the
+    world to study and help animals here.
+    
+    C'mon! Let's go inside and I will introduce you to the lead researcher, Paolo.
+    //Opening futuristic door noise
+    
+    //Olive
+    Paolo! So nice to see you again!
+    
+    //Paolo
+    Oh Ranger Olive! It is great to see you as well! And who do we have here?
+    
+    //Olive
+    Oh how rude of me! This is our new ranger. We are still training and going through the ropes.
+    We thought you could show us around the Treehouse.
+    
+    //Paolo
+    Oh nice to meet you ranger! I would love to show you guys around! 
+    Dr. Da Silva, please cover for me while I show these Rangers around.
+    
+    //Dr. Da Silva
+    
+    Come on Rangers. Let's go through here first.
+    
+    //Door opening noise.
+    
+    This here is the laboratory. 
+    
+    //Animal sounds (monkeys, birds)
+    
+    //Olive
+    Wow! So many different animals! Are any of them sick?
+    
+    //Paolo
+    Thankfully no. These are animals that have been sick here before. We have been keeping
+    an eye on them. We are doing follow up tests to make sure that they are living
+    normal, healthy lives. We want to learn from them so we can help animals even faster
+    and better than we already do.
+    
+    //Olive
+    That's so great.
+    //Animal noises
+    
+    //Paolo
+    Next through here we have the hospital wing. Here is where we hold our sick
+    and hurt animals.
+    
+    //Olive
+    Oh no! Poor babies!
+    
+    Will they be alright?
+    
+    //Paolo
+    Oh yes! No worries. We will be able to help each and every one of them to get better.
+    We have a large group of medical professionals working to get them patched up.
+    
+    //Animal noises
+    //Ambient noises
+    
+    //Olive
+    That's great! I hope they feel better soon.
+    
+    //Paolo
+    Me too!
+    
+    //Paolo
+    Then right through here is the last room I would like to show you. This is a monitoring
+    slash control room. The control room allows us to controls camera and special robots
+    that we have placed throughout the Amazon rainforest. These cameras and robots help us quickly
+    find any animals that may be hurt or in danger.
+    
+    //Olive
+    That's incredible! We can see everything in the rainforest from right here!
+    
+    //Paolo
+    That's right. We have been able to help so many animals because of this monitoring
+    system. It's fantastic.
+    
+    //Notification noise
+    //Nurse
+    Doctor Rivera. You're needed in the upper deck board room. Pleae report as soon
+    as possible.
+    
+    //Paolo
+    Oh looks like I'm needed. I will have to cut the tour a little short, but please.
+    You rangers feel right at home and feel free to look around. You should explore
+    The Treehouse while you're here.
+    
+    //Olive
+    Will do! Thanks Paolo!
+    
+    //Paolo
+    Anytime.
+    
+  *then
+    -> Episode2-Prompt User To Explore After Tour
+    
+@Episode2-Prompt User To Explore After Tour
+  *say
+    //Olive
+    Well you heard him Ranger. I think it is a good idea for us to explore this place a little
+    more. I'll let you lead the way. Don't forget about the scan command you learned last time.
+    And Alice and your field guide gadget are always there if you have any questions. 
+    What would you like to do ranger?
+    
+  *then
+    hear help {
+      
+    }
+    -> Episode2-Prompt user to scan/search Control Room
+    
+    
+@Episode2-Prompt user to scan/search Control Room
+  *say
+    What would you like to do ranger? You can always say help if you need it.
+    
+  *then
+    hear scan, scan the room, start scan {
+      ->Episode2-Scan the Control Room
+    }
+    hear Go to control panel, search control panel, use control panel, check the control panel {
+      ->Episode2-Search control panel after Control Room scan
+    }
+    hear Go to the closet, search the closet, check the closet {
+      ->Episode2-Search closet after Control Room scan
+    }
+    hear Go through the doorway, go to hospital wing, go through the door, go to hospital {
+      ->Episode2-Go through Hospital Wing door after Control Room scan
+    }
+    hear Search the shelf, search the boxes, search the boxes on the shelf {
+      ->Episode2-Search shelf after Control Room scan
+    }
+    
+
+@Episode2-Scan the Control Room
+
+  *say
+    Initializing scan.
+    //Scan sound.
+    You are in the control room of a Rescue Rangers facility, The Treehouse.
+    There is a control panel, a closet, a doorway to the hospital wing, and a
+    shelf filled with boxes. Maybe we can go through the doorway to the hospital
+    wing or search either the control panel, the closet, or the shelf.
+    
+  *then
+    ->Episode2-Prompt user to scan/search Control Room
+
+ 
+@Episode2-Search control panel after Control Room scan
+  *say
+    The control panel contains various complicated looking controls
+    and buttons. It looks like they control the robots and the cameras
+    shown on the screen. Maybe this will come in handy if we need to find something
+    in the rainforest. 
+    
+  *then
+    -> Episode2-Prompt user to scan/search Control Room
+    
+    
+@Episode2-Search closet after Control Room scan
+  *say
+    There's nothing much in this closet. Just a bunch of old brooms and a mop.
+  *then
+    -> Episode2-Prompt user to scan/search Control Room
+    
+@Episode2-Search shelf after Control Room scan
+  *say
+    It is a very dusty shelf. The workers must be too focused on saving animals to dust
+    once in a while. There is something shiny in one of the boxes on the shelf.
+    //Item obtained sound
+    You found an old key! Better keep it for now. Maybe it will unlock something
+    important later on.
+    
+  *then
+    -> Episode2-Prompt user to scan/search Control Room
+  
+  @Episode2-Go through Hospital Wing door after Control Room scan
+  *say
+    Alright let's go into the hospital wing.
+    //Next room sound
+    //Animal sounds
+    //Olive
+    Oh these poor animals. I'm glad that Paolo and his team are here to take
+    care of them.
+    
+    *then
+      ->Episode2-Prompt user to scan/search Hospital Wing
+  
+  
+@Episode2-Prompt user to scan/search Hospital Wing
+  *say
+    What would you like to do ranger?
+  
+  *then
+    hear scan the hospital wing, scan the room, scan, do a scan, try a scan {
+      -> Episode2-Scan the Hospital Wing
+    }
+    hear Look at Monkey, go see Monkey, Look at Squirrel Monkey {
+      ->Episode2-Monkey after Hospital Wing scan
+    }
+    hear Look at Macaws, go see Macaws, Check out Macaws {
+      ->Episode2-Macaws after Hospital Wing scan
+    }
+    hear Look at Giant River Otter, look at Otter, look at River Otter, go see Otter {
+      ->Episode2-Otter after hospital Wing scan
+    }
+    hear go through door, go through doorway, go to lab, go through door to lab, go to laboratory {
+      ->Episode2-Go through Lab door after Hospital Wing Scan
+    }
+    hear look in the cabinet, check in the cabinet, open the cabinet {
+      ->Episode2-Cabinet after Hospital Wing scan
+    }
+    
+    
+@Episode2-Scan the Hospital Wing
+  *say
+    Initiating scan.
+    //Scan sound
+    You are in the Hospital Wing of the Rescue Rangers facility, The Treehouse.
+    This is for animals who are sick or injured. There is a doorway to the lab,
+    a Squirrel Monkey, a collection of Macaws, a Giant River Otter and a cabinet.
+  *then
+    -> Episode2-Prompt user to scan/search Hospital Wing
+    
+@Episode2-Monkey after Hospital Wing scan
+  *say
+    //Olive
+    Wow what a cute Squirrel Monkey! This tag here says, Sorriso. That must be his
+    name! Hi Sorriso! They are so little!
+    //Orangutang sound
+    Wow he sure looks happy to see us!
+    //Pause
+    Aww poor baby. It looks like he broke his arm. Maybe he had an accident while trying
+    to climb. I'm glad Paolo and his team managed to bandage Sorriso up. Remember you can
+    always ask your field guide gadget to tell you about any animal you see.
+    //Pause
+    
+    *then
+      -> Episode2-Prompt user to scan/search Hospital Wing
+      
+
+@Episode2-Macaws after Hospital Wing scan
+  *say
+  //Olive
+  These Macaws are such beautiful birds. 
+  //Macaw sounds
+  The poor things have scratches and bandages
+  all over them. It looks like they were attacked in the jungle. I'm glad they are safe
+  now.
+  //Pause
+  Remember you can always ask your field guide gadget about any animal you may see.
+  
+  *then
+    ->Episode2-Prompt user to scan/search Hospital Wing
+    
+    
+@Episode2-Otter after hospital Wing scan
+  *say
+    Oh what a good little Otter. Hi sweetie.
+    //Otter sounds
+    This tag here says Linda. That must be the Otter's name.
+    Hi Linda!
+    //Otter sounds
+    She looks a little under the weather. I hope she feels better soon.
+    //Pause.
+    Remember you can always ask your field guide gadget about any animal you see.
+  
+  *then
+    -> Episode2-Prompt user to scan/search Hospital Wing
+    
+    
+@Episode2-Cabinet after Hospital Wing scan
+  *say
+    It is a cabinet filled with medical supplies. It has bandages, medicine, and
+    first aid. These supplies used by the staff here to help the animals feel better.
+  
+  *then
+    -> Episode2-Prompt user to scan/search Hospital Wing
+    
+  
+  @Episode2-Go through Lab door after Hospital Wing Scan
+  *say
+    Alright. Let's go into the lab.
+    //Next room sound
+    //Animal sounds
+  
+   //Olive
+   This place is fancy! They must learn a lot about animals here.
+   
+   *then
+     -> Episode2-Prompt user to scan/search Lab
+     
+
+@Episode2-Prompt user to scan/search Lab
+  *say
+    What would you like to do ranger?
+  
+  *then
+    hear scan, do a scan, run a scan, scan the room {
+      -> Episode2-Scan the Lab
+    }
+    hear Look at the Macaws, see Macaws, search the Macaws {
+      -> Episode2-Macaws after Lab scan
+    }
+    hear Look at Squirrel Monkey, see squirrel Monkey, search the Squirrel Monkey {
+      -> Episode2-Monkey after Lab scan
+    }
+    hear Look at the Caiman, see the Caiman, search the Caiman {
+      ->Episode2-Caiman after Lab scan
+    }
+    hear Look at the Lab Table, search the Lab Table {
+      ->Episode2-Lab table after Lab scan
+    }
+    hear Look at cabinet, open the cabinet, look inside cabinet, search the cabinet {
+      ->Episode2-Cabinet after Lab scan
+    }
+    hear Go through door to hospital wing, go to the hospital wing, hospital wing {
+      -> Episode2-Go through Hospital Wing door after Lab
+    }
+    
+@Episode2-Scan the Lab
+  *say
+    Initiating scan.
+    //Scan noise
+    Scan complete.
+    You are in the Laboratory of the Rescue Rangers facility, the Treehouse. There
+    are more Macaws, another Squirrel Monkey, a Caiman, a lab table, and a cabinet. There
+    is also a door back to the hospital wing.
+  
+  *then
+    -> Episode2-Prompt user to scan/search Lab
+    
+@Episode2-Macaws after Lab scan
+  *say
+    //Olive
+    Hey! More Macaws! Hi pretty birds! Hmmm. These lab notes say that they are
+    monitoring how different foods are affecting the birds. Apparently, some bords have
+    been falling ill and they are trying to figure out what food is causing it. Hope they
+    find it!
+    //Bird sounds
+    
+  *then
+    -> Episode2-Prompt user to scan/search Lab
+    
+    
+@Episode2-Monkey after Lab scan
+  *say
+    Another squirrel monkey! So cute!
+    //Monkey sounds
+    //Running sounds
+    He's running on that little treadmill so fast!
+    Hmmm. These lab notes say that they are having the monkey perform cardiovascular
+    exercises in order to monitor their stamina and health levels. Cardiovascular means
+    heart, so that means they are exercising to monitor how strong the monkey's heart is.
+    Look at him go! What a fast little guy!
+  
+  *then
+    -> Episode2-Prompt user to scan/search Lab
+    
+    
+@Episode2-Caiman after Lab scan
+  *say
+    Oh my! It's a Caiman. It's like a tiny little baby alligator. Those eyes are out
+    of this world. Hmmm. The lab notes say that they are studying how different water
+    temperatures affect how the Caimans grow and eat. Variations in temperatues may
+    have negative impacts on the lifestyles of these tiny crocs.
+    Watch out for this one ranger! He's got some snapper teeth.
+  
+  *then
+    -> Episode2-Prompt user to scan/search Lab
+    
+    
+@Episode2-Lab table after Lab scan
+  *say
+    Whoa. So many science things here. There's test tubes, beakers, health monitoring
+    equipment. I don't even know where to look. Hmmm. The notes say they are working
+    on developing chemicals that can help trees in the Amazon get nutrients faster. That
+    would be amazing!
+    
+  *then
+    -> Episode2-Prompt user to scan/search Lab
+    
+@Episode2-Cabinet after Lab scan
+  *say
+    
+@Episode2-Go through Hospital Wing door after Lab
+  *say
+      //Walk through door noises
+      //Olive
+      I love exploring! That was so fun! This really is an awesome place. Now that we
+      have looked around a bit, we can learn about how to perform some first aid on
+      animals.
+      
+      //Paolo
+      Rangers! I have to run. There was a disturbance in the Amazon and I have to go
+      investigate to see if any animals got hurt. Unfortunately, we are very short staffed
+      today and some new animals that are hurt and sick have just been brought in.
+      
+      Would you be able to patch these animals up while I am away?
+      
+      //Olive
+      Paolo. You can count on us. The Rescue Rangers will always be there when you are in need.
+      
+      //Paolo
+      Oh thank you so much Rescue Rangers. Everything that you need to know about taking care
+      of these hurt animals is in my Journal. Here you are.
+      //Item obtained sound
+      //Alice
+      Item obtained. It's Paolo's Medical Journal.
+      
+      //Paolo
+      If a sick or injured animals comes in, all you have to do is look in my notebook to
+      figure out how to help them. Can you handle that?
+      
+      //Olive
+      Absolutely, sir. We got this.
+      
+      //Paolo
+      Once again, thank you so much. Now I must run. Good luck!
+      
+      //Exit noises
+      //Pause
+      //Olive
+      Alright Ranger. You heard him.
+      
+    *then
+      -> Episode2-Journal Explanation
+      
+
+@Episode2-Journal Explanation
+  *say
+    We've got some animals that need our help. All
+    you have to do is use Paolo's journal to figure out what we need to do. To open
+    Paolo's journal, say open Paolo's Journal. To go to the next page in the Journal
+    say, next page. To go to the previous page in the Journal, say previous page. To
+    close the journal say, close journal.
+    
+  *then
+    ->Episode2-Confirmation of Journal Explanation
+    
+    
+@Episode2-Confirmation of Journal Explanation
+  *say
+    Does that make sense ranger?
+    
+  *then
+    hear yes, I think, I think so, definitely {
+      ->Episode2-Hospital Challenge 1st Animal
+    }
+    hear no, I don't think so {
+      -> Episode2-Journal Explanation
+    }
+    
+//The following 4 scenes (not including the 'complete' portion of the pairs) tell you about the animal's injury then will forward control to User Action Handler scene to determine how to respond to user's choice.
+@Episode2-Hospital Challenge 1st Animal 
+  *say 
+    //Olive
+    Alright! Let's get to it! Look. Here comes the first Animal that we need to take care of.
+    //Macaw sounds
+    It's a Macaw!
+    It looks like it has been scratched and hurt really badly.
+    
+  *then
+    set currentHospitalAnimal as 1
+    -> Episode2-Hospital Challenge Handle User Action
+    
+//The corresponding 'complete' method is just Olive congratulating the user on helping the animal
+@Episode2-Hospital Challenge 1st Animal complete
+  *say
+    //Olive
+    Yay! Great job helping the Macaw. Looks like it is feeling better already!
+  *then
+    ->Episode2-Hospital Challenge 2nd Animal
+    
+@Episode2-Hospital Challenge 2nd Animal
+  *say
+    //Olive
+    The next animal is a Toucan. 
+    //Toucan sounds
+    Oh no! It's beak is broken. We need something strong to hold it in place.
+    
+  *then
+    set currentHospitalAnimal as 2
+    -> Episode2-Hospital Challenge Handle User Action
+    
+@Episode2-Hospital Challenge 2nd Animal complete
+  *say
+    //Olive
+    That toucan is looking so much better. Nice going! Keep it up Ranger!
+  *then
+    ->Episode2-Hospital Challenge 3rd Animal
+    
+@Episode2-Hospital Challenge 3rd Animal
+  *say
+    //Howler Monkey sounds
+    //Olive
+    It's a Howler Monkey! He looks like he is in a lot of pain.
+    //Howler monkey sounds
+    We need some sort of medicine to stop the pain. But which one should we give him?
+    
+  *then
+    set currentHospitalAnimal as 3
+    -> Episode2-Hospital Challenge Handle User Action
+    
+@Episode2-Hospital Challenge 3rd Animal complete
+  *say
+    //Olive
+    The Howler Monkey calmed down. It's not in pain anymore. Fantiastic job Ranger!
+    //Pause
+    This is the last animal, Ranger! Almost there. Oh my!
+  *then
+    ->Episode2-Hospital Challenge 4th Animal
+    
+@Episode2-Hospital Challenge 4th Animal
+  *say
+
+    //Anteater sounds
+    It's an anteater! He is covered in spots. Poor baby. Maybe we need to give it some
+    medicine.
+    
+  *then
+    set currentHospitalAnimal as 4
+    -> Episode2-Hospital Challenge Handle User Action
+    
+    
+// Used by the Read journal methods to get an animal description when user is done reading journal. 
+// This is so the user doesn't have to remember what animal they were on after reading.
+@Episode2-Hospital Challenge Give Animal Description
+  *then
+    if currentHospitalAnimal == 1 {
+      -> Episode2-Hospital Challenge 1st Animal
+    }
+    if currentHospitalAnimal == 2 {
+      -> Episode2-Hospital Challenge 2nd Animal
+    }
+    if currentHospitalAnimal == 3 {
+      -> Episode2-Hospital Challenge 3rd Animal
+    }
+    if currentHospitalAnimal == 4 {
+      -> Episode2-Hospital Challenge 4th Animal
+    }
+    
+//Handler determines if user action is correct and how to act based on user action
+@Episode2-Hospital Challenge Handle User Action
+  *say
+    What would you like to do Ranger?
+    
+  *then
+    hear use a bandage, bandages, band-aid, patch {
+      if currentHospitalAnimal == 1 {
+        -> Episode2-Hospital Challenge 1st Animal complete
+      }
+      else {
+        -> Episode2-Hospital Challenge Failed
+      }
+    }
+    
+    hear use a cast, make a cast, cast {
+      if currentHospitalAnimal == 2 {
+        -> Episode2-Hospital Challenge 2nd Animal complete
+      }
+      else {
+        -> Episode2-Hospital Challenge Failed
+      }
+    }
+    
+    hear use the blue medicine, give the blue medicine {
+      if currentHospitalAnimal == 3 {
+        -> Episode2-Hospital Challenge 3rd Animal complete
+      }
+      else {
+        -> Episode2-Hospital Challenge Failed
+      }
+    }
+    
+    hear use the green medicine, give the green medicine {
+      if currentHospitalAnimal == 4 {
+        -> Episode2-Hospital Challenge Complete
+      }
+      else {
+        -> Episode2-Hospital Challenge Failed
+      }
+    }
+      
+    hear read medical journal, open medical journal, read Paolo's Journal {
+      <-> Episode2-Read Medical Journal Page 1
+      -> Episode2-Hospital Challenge Handle User Action
+    }
+    
+@Episode2-Hospital Challenge Failed
+  *say
+    Oh no! Looks like you did the wrong thing to help the animal.
+    Remember you can use Paolo's notebook if you are unsure about
+    what to do  for an animal. Let's try this again.
+    //Restart noise
+  *then
+    -> Episode2-Hospital Challenge 1st Animal
+    
+    
+@Episode2-Read Medical Journal Page 1
+  *say
+    If the Animal is sick and has spots, make sure to give it the green medicine.
+    //Pause
+    Would you like to keep reading?
+  *then
+    hear yes, sure, keep reading, next page {
+      -> Episode2-Read Medical Journal Page 2
+    }
+    hear no, stop reading, no thanks, close journal, I am done {
+      -> Episode2-Hospital Challenge Give Animal Description
+    }
+    
+@Episode2-Read Medical Journal Page 2
+  *say
+    If the Animal is scratched, use the bandages to patch it up.
+    //Pause
+    Would you like to keep reading?
+  *then
+    hear yes, sure, keep reading, next page {
+      -> Episode2-Read Medical Journal Page 3
+    }
+    hear no, stop reading, no thanks, close journal, I am done {
+      -> Episode2-Hospital Challenge Give Animal Description
+    }
+    
+@Episode2-Read Medical Journal Page 3
+  *say
+    If the animal is sick and can't move, make sure to give it the red medicine.
+    //Pause
+    Would you like to keep reading?
+  *then
+    hear yes, sure, keep reading, next page {
+      -> Episode2-Read Medical Journal Page 4
+    }
+    hear no, stop reading, no thanks, close journal, I am done {
+      -> Episode2-Hospital Challenge Give Animal Description
+    }
+    
+@Episode2-Read Medical Journal Page 4
+  *say
+    If the animal is in pain, try and give it some blue medicine.
+    //Pause
+    Would you like to keep reading?
+  *then
+    hear yes, sure, keep reading, next page {
+      -> Episode2-Read Medical Journal Page 5
+    }
+    hear no, stop reading, no thanks, close journal, I am done {
+      -> Episode2-Hospital Challenge Give Animal Description
+    }
+    
+@Episode2-Read Medical Journal Page 5
+  *say
+    If the animal has a broken limb or wing, make a cast to keep the injury safe.
+    //Pause
+    That is the end of the journal.
+  *then
+    -> Episode2-Hospital Challenge Give Animal Description
+  
+  
+  
+@Episode2-Hospital Challenge Complete
+  *say
+   //Olive
+    You did it Ranger! We helped all of the animals! 
+    //Challenge complete sound
+    Paolo is going to be so proud of you. Let me just let him.
+    //Animal Alert
+    The Animal Alert! What could be happening?
+    
+    //Alice
+    You have an incoming call.
+    Say confirm to open the connection.
+    
+  *then
+    hear confirm, open call, open connection {
+      -> Episode2-Emergency Call
+    }
+    
+    
+    
+@Episode2-Emergency Call
+  *say
+  
+    //Connection opened sound
+    Connection Opened.
+    //Paolo
+    Rangers! Are you there? Can you hear me?
+    
+    //Olive
+    Paolo hi yes we can hear you! Is everything alright?
+    
+    //Paolo
+    Unfortunately no. The disturbance in the forest that I was investigating.
+    It ended up being a massive forest fire. It is blazing through the Amazon
+    rainforest rapidly. It is destroying large parts of the forest, hurting
+    animals and forcing them out of their homes.
+    
+    //Fire sounds
+    //Olive
+    Oh no! Paolo! That's terrible!
+    
+    //Paolo
+    There was a family of Squirrel Monkeys that was trapped. I jumped in to
+    try and rescue them, but a tree trunk fell and then I got trapped as well.
+    The Monkeys and I are trapped and the fire is on its way. You are the only
+    people who can help us. We need you Rangers!
+    
+    //Olive
+    We will help Paolo! That's what we do best.
+    
+    //Paolo
+    I knew I could count on you, Rangers! You need to find me in the forest
+    first. Once you do, take one of the Treehouse jungle cars to come and get
+    us. Please hurry. The fire is coming!
+    
+    //Olive
+    On our way Paolo! Hold on!
+    
+    //Paolo
+    Thank you Rangers. Paolo, out.
+    
+    //Connection terminated sound
+    Connection Terminated.
+    
+    //Olive
+    Ranger! Paolo and the family of Squirrel Monkeys are in trouble. We need to
+    hurry and rescue them. They don't have much time. But we have no idea where in
+    the forest they could be. We need to use something in the Treehouse to find them
+    in the forest. But what could we use?
+    
+  *then
+    -> Episode2-Prompt user after Emergency call
+    
+@Episode2-Prompt user after Emergency call
+  *say
+    What should we do ranger? You can always say help if you are not sure.
+    
+  *then
+    hear control panel, use control panel, use the control room, go through control room door {
+      -> Episode2-Use Control Room to find Paolo
+    }
+    
+    hear scan {
+      -> Episode2-Scan after Emergency Call
+    }
+    
+@Episode2-Scan after Emergency Call
+  *say
+    Initiating scan.
+    //Scanning noise
+    Scan complete.
+    You are currently in the Hospital Wing of the Rescue Rangers facility, the Treehouse.
+    All of the animals have quieted down and seem to be feeling much better.
+    There is a doorway to the control room, a doorway to the Lab, and open cabinet.
+    
+  *then
+    -> Episode2-Prompt user after Emergency call
+    
+@Episode2-Use Control Room to find Paolo
+  *say
+    That's right! The forest is filled with cameras that we can use to find Paolo.
+    We can control the cameras using the control panel in the Treehouse control room.
+    Let's go!
+    
+    //Walking noise
+    
+    Alright let me see if I can figure out how to work this thing.
+    
+    //Button presses
+    Hmm.
+    
+    Alright Ranger. There are tons of cameras throughout the forest. We are looking for
+    a fire. Unfortunately, we can't be sure that any of the cameras will be pointing
+    to the fire, but we still have sound. 
+    //Pause
+    I am going to cycle through all of the cameras. If we get to one and you hear a blazing
+    fire then we know that's where Paolo will be. Let's do this Ranger. They're counting on
+    us.
+    
+  *then
+    set currentCamera as 1
+    -> Episode2-Camera Challenge description
+    
+    
+@Episode2-Camera Challenge description
+  *then
+    if currentCamera == 1 {
+      -> Episode2-Camera Challenge Camera 1
+    }
+    if currentCamera == 2 {
+      -> Episode2-Camera Challenge Camera 2
+    }
+    if currentCamera == 3 {
+      -> Episode2-Camera Challenge Camera 3
+    }
+    if currentCamera == 4 {
+      -> Episode2-Camera Challenge Camera 4
+    }
+    if currentCamera == 5 {
+      -> Episode2-Camera Challenge Camera 5
+    }
+    if currentCamera == 6 {
+      -> Episode2-Camera Challenge Camera 6
+    }
+    
+@Episode2-Camera Challenge Camera 1
+  *say
+    //sounds
+    Is this the right camera?
+  *then
+    hear yes, yeah, that is the right camera {
+      <-> Episode2-Camera Challenge Wrong Guess
+    }
+    hear no, I don't think so, that is the wrong camera, next camera {
+      <-> Episode2-Camera Challenge Keep Guessing
+    }
+    
+    set currentCamera as 2
+    -> Episode2-Camera Challenge description
+    
+@Episode2-Camera Challenge Camera 2
+  *say
+    //sounds
+    What about this camera ranger? Do you hear the fire?
+  *then
+    hear yes, yeah, that is the right camera {
+      <-> Episode2-Camera Challenge Wrong Guess
+    }
+    hear no, I don't think so, that is the wrong camera, next camera {
+      <-> Episode2-Camera Challenge Keep Guessing
+    }
+    
+    set currentCamera as 3
+    -> Episode2-Camera Challenge description
+@Episode2-Camera Challenge Camera 3
+  *say
+    //sounds
+    Maybe this is the right camera. What do you think Ranger? Is this the one?
+  *then
+    hear yes, yeah, that is the right camera {
+      <-> Episode2-Camera Challenge Wrong Guess
+    }
+    hear no, I don't think so, that is the wrong camera, next camera {
+      <-> Episode2-Camera Challenge Keep Guessing
+    }
+    
+    set currentCamera as 4
+    -> Episode2-Camera Challenge description
+    
+@Episode2-Camera Challenge Camera 4
+  *say
+    //forest fire sounds
+    Listen for this camera. Hear any fire?
+  *then
+    hear yes, yeah, that is the right camera {
+      -> Episode2-Camera Challenge Correct Guess
+    }
+    hear no, I don't think so, that is the wrong camera, next camera {
+      <-> Episode2-Camera Challenge Keep Guessing
+    }
+    
+    set currentCamera as 5
+    -> Episode2-Camera Challenge description
+@Episode2-Camera Challenge Camera 5
+  *say
+    //sounds
+    This could be it. Do you hear any fire Ranger?
+  *then
+    hear yes, yeah, that is the right camera {
+      <-> Episode2-Camera Challenge Wrong Guess
+    }
+    hear no, I don't think so, that is the wrong camera, next camera {
+      <-> Episode2-Camera Challenge Keep Guessing
+    }
+    
+    set currentCamera as 6
+    -> Episode2-Camera Challenge description
+    
+@Episode2-Camera Challenge Camera 6
+  *say
+    //sounds
+    Let's try this camera then. Do you hear any blazing fires?
+  *then
+    hear yes, yeah, that is the right camera {
+      <-> Episode2-Camera Challenge Wrong Guess
+    }
+    hear no, I don't think so, that is the wrong camera, next camera {
+      <-> Episode2-Camera Challenge Keep Guessing
+    }
+    
+    set currentCamera as 1
+    -> Episode2-Camera Challenge description
+
+@Episode2-Camera Challenge Keep Guessing
+  *say
+    Alright. Switching to the next camera.
+  *then
+    >> RETURN
+@Episode2-Camera Challenge Wrong Guess
+  *say
+    Oh no, I don't think that is the right camera!
+    I don't hear any fire. Let's keep looking.
+  *then
+    >> RETURN
+    
+@Episode2-Camera Challenge Correct Guess
+  *say
+  
+    //Olive
+    Yes! I think you are right. Let me just move the camera angle a little bit and.
+    //Camera sounds
+    There we go! There's Paolo!
+    Perfect!
+    Awesome job Ranger. You found them!
+    
+    Alice. Can you please upload this camera's location to the GPS on the jungle
+    car?
+    
+    //Alice
+    Uploading data.
+    //Data upload sounds
+    Upload complete. 
+    
+    //Olive
+    Thanks Alice!
+    Let's hurry to that Jungle Car ranger. They don't have much time.
+    //scene transition sounds
+    
+    
+    //Jungle car starting up
+    //Olive
+    Hang on Ranger. It's gonna be a bumpy ride!
+    //Jungle car driving sounds
+    
+    //Alice branch warning sounds.
+    Rangers. My sensors indicate low hanging branches up ahead. Unfortunately,
+    I can't tell how far they are. So you may have to duck multiple times before
+    the branch arrives. If the branch sensor is active, I recommend ducking.
+    
+    //Olive
+    Understood. Thank you Alice. Ranger, if you would like to duck all you have
+    to do is say duck. There is a branch coming up. Say duck to avoid hitting
+    the branch!
+    
+  *then
+    hear duck, duck the branch {
+      -> Episode2-Jungle Car Tutorial Duck Response
+    }
+    
+@Episode2-Jungle Car Tutorial Duck Response
+  *say
+    //Ducking from branch sound
+    //Olive
+    Woo! Nice duck Ranger! While we are in the jungle car you can duck at anytime.
+    
+    //Alice animal rush sounds
+    Rangers. My sensors indicate that a group of animals is running through the
+    forest up ahead. I recommend turning to avoid hitting the animals.
+    
+    //Olive
+    Sound good. Thanks for the warning Alice. Let us know if you see anymore
+    animals.
+    //Pause
+    You heard her ranger. If Alice warns you that there are animals in our path up ahead I need
+    you to let me know. To dodge the animals, just yell out turn. We are coming up to the animals.
+    Say turn right now to dodge the animals.
+    
+  *then
+    hear turn, dodge, dodge the animals {
+      ->Episode2-Jungle Car Tutorial Turn Response
+    }
+    
+    
+@Episode2-Jungle Car Tutorial Turn Response
+  *say
+    //jungle car turn sound
+    //Olive
+    That was a close one! Thanks for telling me to turn ranger.
+    
+    //Pause
+    Alright Ranger. Remember you can say, duck, to avoid branches and tell me to turn
+    by saying, turn. 
+    
+    //Wait a bit
+    //Jungle car sounds
+    
+    I love these Jungle Cars Ranger. I haven't driven one of these since my training days.
+    The handling on them is.
+    
+    //Rock hits the jungle car and makes a noise
+    Whoa! What was that?
+    
+    //Another Rock smacks into the car.
+    Ranger someone is throwing rocks at us!
+    
+    //Motorcycle sounds
+    //Bad guys
+    Get out of here you spoiled brats!
+    
+    //Olive
+    Ranger there are guys on motorcycles chasing after us! Who are they?
+    
+    //Rock noise hitting jeep
+    Whoa! It doesn't matter who they are right now. I'm gonna lose control of this thing and
+    crash if they keep hitting us with rocks!
+    
+    Ranger you have to do something.
+    
+    I have an idea. Our Rescue Packs come equipped with water balloon bazookas! You can use the
+    water balloon bazooka to knock those bad guys off of their bikes!
+    
+    To get the water bazooka all you have to say is Activate Rescue pack! Come on ranger.
+    Say Activate Rescue Pack!
+    
+  *then
+    hear activate Rescue Pack, Rescue Pack {
+      ->Episode2-Jungle Car Tutorial Rescue Pack Response
+    }
+    
+@Episode2-Jungle Car Tutorial Rescue Pack Response
+  *say
+    //Rescue pack activated noise
+    Initializing rescue pack.
+    Water balloon bazooka is online and ready for you ranger.
+    //Water bazooka load sound
+    
+    To use the water baloon bazooka just say fire.
+    
+    //Olive
+    Great! Those bad guys are still on my tail so let's give that
+    bazooka a whirl Ranger. Aim and say fire!
+    
+  *then
+    hear fire, fire the bazooka, fire a water balloon, fire the gun {
+      -> Episode2-Jungle Car Tutorial Water Bazooka Fired Response
+    }
+
+    
+@Episode2-Jungle Car Tutorial Water Bazooka Fired Response
+  *say
+    //Bazooka boom sound
+    //Guy getting hit and falling sound
+    Oh man! You got him! Nice shot ranger!
+   
+    Alright. I need you to cover me while I drive. If we get hit with too many rocks I will
+    lose control of the car. So take care of those jerks for me. Remember. Duck. Turn. Fire.
+   
+    Let's do this!
+
+  *then
+    
+    <-> Episode2-Jungle Car Chase set up Variables
+    
+    -> Episode2-Jungle Car Chase Random Alarm Generator
+
+@Episode2-Jungle Car Chase Random Alarm Generator
+  *then
+    
+    //20% chance that a branch alarm will activate if not already active
+    if branchAlarm == 0 {
+      roll 1d5
+      if rollResult == 1 {
+        <-> Episode2-Jungle Car Chase Branch Alarm on
+      }
+    }
+
+    //20% chance that an animal alarm will activate if not already active
+    if animalAlarm == 0 {
+      roll 1d5
+      if rollResult == 1 {
+        <-> Episode2-Jungle Car Chase Animal Alarm on
+      }
+    }
+    
+    //30% chance that another bad guy will appear
+    if badGuyCount < 3 {
+      roll 1d3
+      if rollResult == 1 {
+          <-> Episode2-Jungle Car Chase Bad Guy Count increased
+      }
+    }
+    
+    //If there is an action to be performed then prompt the user. Otherwise
+    //the user will have nothing to do on their turn. If there are no actions
+    //then just decrement distance to goal and tell user.
+    if animalAlarm == 1 || branchAlarm == 1 || badGuyCount > 0 {
+      -> Episode2-Jungle Car Chase Prompt User for Action
+    }
+    else {
+      -> Episode2-Jungle Car Chase No User Action Required
+    }
+    
+@Episode2-Jungle Car Chase Prompt User for Action
+  *say
+    What would you like to do Ranger?
+    
+  *then
+    hear turn, dodge animals {
+      if animalAlarm {
+        <-> Episode2-Jungle Car Chase Turn Response with alarm
+      }
+      else {
+        -> Episode2=Jungle Car Chase Turn Response without alarm
+      }
+    }
+    hear duck {
+      if branchAlarm {
+        <-> Episode2-Jungle Car Chase Duck Response with alarm
+      }
+      else {
+        -> Episode2-Jungle Car Chase Duck Response without alarm
+      }
+    }
+    hear fire, fire water balloons, fire water balloon bazooka, fire bazooka {
+      if badGuyCount > 0 {
+        <-> Episode2-Jungle Car Chase Water Bazooka Fired Response with Bad Guys
+      }
+      else {
+        -> Episode2-Jungle Car Chase Water Bazooka Fired Response without Bad Guys
+      }
+    }
+    
+    <-> Episode2-Jungle Car Chase Check if user loses a life
+    <-> Episode2-Jungle Car Chase Decrement distance from Paolo
+    -> Episode2-Jungle Car Chase Handle End of User Turn
+    
+@Episode2-Jungle Car Chase Handle End of User Turn
+  *say
+    //jungle car driving noises
+    You are doing great Ranger!
+    We are currently {distanceFromPaolo} miles away from Paolo.
+    
+  *then
+    if distanceFromPaolo == 0 {
+      -> Episode2-Jungle Car Chase Paolo found
+    }
+    else {
+      -> Episode2-Jungle Car Chase Random Alarm Generator
+    }
+  
+@Episode2-Jungle Car Chase Turn Response with alarm
+  *say
+    Turning!
+    //Turning the Jungle car sounds
+    Animal alarm has been turned off.
+  *then
+    set animalAlarm as 0
+    >> RETURN
+    
+@Episode2=Jungle Car Chase Turn Response without alarm
+  *say
+    My sensors do not indicate that there are any animals nearby. Try
+    something else.
+  *then
+    -> Episode2-Jungle Car Chase Prompt User for Action
+    
+
+//ducking is different from turning. With turning we can just turn and the
+//alarm is disabled, but with ducking we need to calculate whether or not
+//we passed the branch yet and whether we dodged it with the duck command
+@Episode2-Jungle Car Chase Duck Response with alarm
+  *then
+    roll 1d5
+      if rollResult == 1 || rollResult == 2 || rollResult == 3 || rollResult == 4  {
+        <-> Episode2-Jungle Car Chase Branch Ducked
+      }
+      else {
+        <-> Episode2-Jungle Car Chase Branch still active after Duck
+      }
+      
+    >> RETURN
+ 
+@Episode2-Jungle Car Chase Branch Ducked
+  *say
+    //Ducking sound
+    Wow nice duck! We barely missed that branch.
+    Branch alarm has been turned off.
+  *then
+    set branchAlarm as 0
+    >> RETURN
+
+@Episode2-Jungle Car Chase Branch still active after Duck
+  *say
+    //Ducking sound
+    Nice duck! But there was no branch low enough to hit us yet.
+    The branch alarm is still active.
+  *then
+    >> RETURN
+    
+@Episode2-Jungle Car Chase Duck Response without alarm
+  *say
+    My sensors do not indicate that there are any low hanging branches nearby. Try
+    something else.
+  *then
+    -> Episode2-Jungle Car Chase Prompt User for Action
+    
+    
+@Episode2-Jungle Car Chase Water Bazooka Fired Response with Bad Guys
+  *say
+    //Water balloon bazooka fire noise
+    Nice shot! Direct hit ranger.
+  *then
+    <-> Episode2-Jungle Car Chase Decrement number of Bad Guys
+    >> RETURN
+    
+@Episode2-Jungle Car Chase Water Bazooka Fired Response without Bad Guys
+  *say
+    There are not any bad guys behind us. Try something else.
+  *then
+    ->Episode2-Jungle Car Chase Prompt User for Action
+    
+@Episode2-Jungle Car Chase No User Action Required  
+  *then
+    <-> Episode2-Jungle Car Chase Decrement distance from Paolo
+    -> Episode2-Jungle Car Chase Handle End of User Turn
+    
+@Episode2-Jungle Car Chase Decrement distance from Paolo
+  *then
+    decrease distanceFromPaolo by 1
+    >> RETURN
+    
+@Episode2-Jungle Car Chase Decrement number of Bad Guys
+  *then
+    decrease badGuyCount by 1
+    increase badGuyKills by 1
+    >> RETURN
+    
+@Episode2-Jungle Car Chase Branch Hit
+  *say
+    //Getting hit by branch noise
+    Ouch! That one hurt! We got hit in the head with the branch!
+    The car can only take {livesLeft - 1} more hits. Watch out!
+  *then
+    decrease livesLeft by 1
+    set branchAlarm as 0
+    >> RETURN
+    
+@Episode2-Jungle Car Chase Animal hit
+  *say
+    //Getting hit by animals noise
+    Oh no! We crashed into a bunch of animals that were running
+    through the forest!
+    The car can only take {livesLeft - 1} more hits. Watch out!
+  *then
+    decrease livesLeft by 1
+    set animalAlarm as 0
+    >> RETURN
+    
+@Episode2-Jungle Car Chase get hit by rock
+  *say
+    //Getting hit by rock noise
+    Whoa! We got hit by a rock! Those bad guys have some killer aim.
+    If we keep getting hit by those rocks I will lose control over the car.
+    The car can only take {livesLeft - 1} more hits. Watch out!
+  *then
+    decrease livesLeft by 1
+    >> RETURN
+    
+@Episode2-Jungle Car Chase Branch Alarm on
+  *say
+    //Branch Alarm noise
+    There are low hanging tree branches up ahead.
+  *then
+    set branchAlarm as 1
+    >> RETURN
+@Episode2-Jungle Car Chase Animal Alarm on
+  *say
+    //Animal Alarm noise 
+    There is a herd of animals up ahead.
+  *then
+    set animalAlarm as 1
+    >> RETURN
+@Episode2-Jungle Car Chase Bad Guy Count increased
+  *say
+    Oh no! There's another bad guy that just started chasing us.
+  *then
+    increase badGuyCount by 1
+    >> RETURN
+    
+@Episode2-Jungle Car Chase set up Variables
+   *then
+      set branchAlarm as 0
+      set animalAlarm as 0
+      set badGuyCount as 0
+      set badGuyKills as 0
+      set livesLeft as 3
+      set distanceFromPaolo to 15
+      
+      //Meanings of the above variables
+      //alarm letting you know you are in low-hanging area
+      //alarm letting you know animals are up ahead
+      //how many bad guys are currently in view
+      //how many bad guys you have hit with a water balloon
+      //how many times you can get hit by a rock and still be ok
+      
+      >> RETURN
+      
+
+@Episode2-Jungle Car Chase Check if user loses a life
+  *then
+    //50% chance that an animal will come out of the woods
+    if animalAlarm == 1 {
+      roll 1d2
+      if rollResult == 1 {
+        <-> Episode2-Jungle Car Chase Animal hit
+      }
+      else {
+        <-> Episode2-Jungle Car Chase tell user Animal Alarm is still active
+      }
+    }
+    
+    //50% chance that a branch will hit user
+    if branchAlarm == 1 {
+      roll 1d2
+      if rollResult == 1 {
+        <-> Episode2-Jungle Car Chase Branch hit
+      }
+      else {
+        <-> Episode2-Jungle Car Chase tell user Branch Alarm is still active
+      }
+    }
+    
+    //30% chance that a rock take a life away from the jungle car
+    if badGuyCount > 0 && badGuyCount <= 3 {
+      roll 1d3
+      if rollResults == 1 {
+        <-> Episode2-Jungle Car Chase get hit by rock
+      }
+      else {
+        <-> Episode2-Jungle Car Chase tell user Bad Guys are still active
+      }
+    }
+    
+    if livesLeft == 0 {
+      -> Episode2-Jungle Car Chase Game Over
+    }
+    else {
+      -> Episode2-Jungle Car Chase Random Alarm Generator
+    }
+    
+@Episode2-Jungle Car Chase tell user Animal Alarm is still active
+  *say
+    The animal alarm is still active.
+  *then
+    >> RETURN
+    
+@Episode2-Jungle Car Chase tell user Branch Alarm is still active
+  *say
+    The branch alarm is still active.
+  *then
+    >> RETURN
+    
+@Episode2-Jungle Car Chase tell user Bad Guys are still active
+  *say
+    There are still {badGuyCount} bad guys behind us!
+  *then
+    >> RETURN
+    
+@Episode2-Jungle Car Chase Game Over
+  *say
+    //Game over sound
+    Oh no. We got hit one too many times. Try and avoid getting hit
+    so much ranger. Better luck next time. Let's start from the top.
+    //Restart sound
+  *then
+    -> Episode2-Jungle Car Chase Random Alarm Generator
+   
+   
+   
+@Episode2-Jungle Car Chase Paolo found
+  *say
+    Paolo has been located.
+    
+    //Olive
+    There he is! We found Paolo!
+    Oh no! They are really trapped behind that tree. We gotta get closer Ranger.
+    
+    //Jungle car noises
+    
+    //Paolo
+    Rangers!
+    
+    //Olive
+    Paolo! We are here to help! Hang on!
+    
+    We gotta get this tree trunk out of the way Ranger.
+    
+    //Fire noises
+    Oh no! The fire is coming fast too. Ranger. I will take care of the tree.
+
+    Try and hold back that fire with the Water Balloon Bazooka.
+    
+    To activate the Bazooka just say Activate Rescue Pack!
+    
+    Go Ranger Go!
+    
+  *then
+    hear Activate rescue pack {
+      -> Episode2-Rescuing Paolo activate Rescue Pack
+    }
+    
+@Episode2-Rescuing Paolo activate Rescue Pack
+  *say
+    //Rescue pack activated noise
+    Initializing rescue pack.
+    Water balloon bazooka is online and ready for you ranger.
+    
+  *then
+    hear fire, fire the bazooka, fire a water balloon, fire the gun {
+      -> Episode2-Rescuing Paolo Water Bazooka Fired Response
+    }
+    
+@Episode2-Rescuing Paolo Water Bazooka Fired Response
+  *say
+    //Bazooka shots
+    //Fire sounds
+    
+    It looks like your water balloons are pushing the fire back, Ranger.
+    Good work!
+    
+    //Bazooka shots
+    //Fire sounds
+    
+    //Pause
+    
+    //Tree sounds
+    Ranger I got them out!
+    
+    //Paolo
+    Rangers I am so glad to see you. I thought I was gone for sure.
+    
+    //Olive
+    That tree and that fire didn't stand a chance with the Rescue Rangers here!
+    We are so glad you and the monkeys are safe.
+    
+    //Paolo
+    Thank you so much Rangers. We need to get these Monkey's back to the Treehouse. They need medical attention.
+    
+    //Olive
+    Right! Let's get to the jungle car!
+    
+    //Walking noises
+    //Jungle Car noises
+    
+    So Paolo. While we were driving here, some bad guys were chasing us on motorcycles
+    and throwing rocks at our car. Do you have any idea who they might be?
+    
+    //Paolo
+    Oh no. They must have been members of the Double Trouble Squad. I was hoping the squad
+    wasn't serious but it looks like they are getting more and more members. They have various
+    plans to take over the world and find rare animals to steal from nature to sell.
+    
+    They are bad news. I am so sorry you had to run into them. Hopefully you won't ever see
+    them again.
+    
+    //More Jungle car driving noises
+    
+  *then
+    ->Episode2-Returning back to Treehouse from Rescue
+    
+    
+@Episode2-Returning back to Treehouse from Rescue
+  *say
+    //Paolo
+    Rangers. I want to thank you from the bottom of my heart for saving me.
+    
+    //Olive
+    We are so glad we could help Paolo.
+    
+    //Paolo
+    Well, the monkeys are in the Treehouse right now being cared for by my
+    medical staff. And last I heard the forest fire front is dying down. 
+    
+    //Olive
+    That's great news. Looks like we aren't needed here anymore. We should probably
+    head back to headquarters. It was so great to meet you and your animals Paolo.
+    
+    //Paolo
+    You as well Rangers. Please take care. Once again. Thank you.
+    
+    //Olive
+    Alright Ranger let's get back to headquarters. You can do the honors.
+    
+  *then
+    hear teleport back to HQ, teleport back to headquarters, teleport back to base {
+      -> Episode2-Teleport back to headquarters
+    }
+ 
+ 
+@Episode2-Teleport back to headquarters
+  *say
+    //Teleportation noises
+    Welcome back to Rescue Rangers Headquarters.
+    
+    //Olive
+    Thanks Alice. And thank you Ranger. I couldn't have done it without you.
+    You were amazing out there today.
+    
+    Here is a reward.
+    
+    //insert item or badge here
+    
+    Well looks like your training is finished for today.
+    
+    Come back next time so we can finish up your training.
+    
+    // End of Episode 2

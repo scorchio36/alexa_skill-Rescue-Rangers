@@ -11,7 +11,7 @@
         >> RETURN
       }
     }
-    else if (info_animal == 'Panda' || info_animal == 'Pandas') {
+    if (info_animal == 'Panda' || info_animal == 'Pandas') {
       if (context == 'Episode1 - Arrival in China') {
         <-> PandaInfo
         -> Episode1-Animal Info about Pandas
@@ -21,6 +21,11 @@
         >> RETURN
       }
     }
+    if (info_animal == 'Koi Fish' || info_animal == 'Koi') {
+      <-> KoiFishInfo
+      >> RETURN
+    }
+      
     else {
       <-> Animal Not Found
       >> RETURN
@@ -28,9 +33,9 @@
     
 @GiraffeInfo
   *say
-    Giraffes are the tallest mammals on Earth and are native to Africa. They can grow up to 18 feet tall. That is as tall as a two story house! <break time="0.5s" /> 
+    Giraffes are native to Africa and are known for being the tallest mammals on Earth. They can grow up to 18 feet tall. That is as tall as a two story house! <break time="0.5s" /> 
   
-    Giraffes are very strange animals because most of their lives standing up. They eat standing up. They sleep standing up. They even give birth standing up. these creatures are vegetarians That means they do not eat meat. Giraffes usually like to pick their food from the top of trees and bushes using their long necks. <break time="0.5s" />
+    Giraffes are very strange animals because they spend most of their lives standing up. They eat standing up. They give birth standing up. They even sleep standing up! These creatures are vegetarians. That means they do not eat meat. Giraffes usually like to pick their food from the top of trees and bushes using their long necks. <break time="0.5s" />
   
     Giraffes are covered in spots. No two of these spot patterns are alike. It is like how every human has a unique fingerprint. End of description. <break time="1s" />
   
@@ -39,15 +44,32 @@
     
 @PandaInfo
   *say
-    The Giant Panda bear is an animal native to China and they have lived in China for thousands of years. They are the only bear species known to survive only on a vegetarian diet. They love to eat bamboo. It is their favorite food. They love it so much that they can eat 40 pounds of bamboo a day. <break time="0.5s" />
+    The Giant Panda bear is an animal native to China and they have lived in China for thousands of years. They are the only bear species known to survive only on a vegetarian diet. They love to eat bamboo. It is their favorite food. They love it so much that they can eat 40 pounds of bamboo a day. I wish I could eat 40 pounds of tacos! <break time="0.5s" />
+    
     Adult pandas weigh between 200 and 300 pounds. Mothers are 900 times bigger than their cubs when the cubs are born. Because cubs are so tiny, they can be tricky to keep track of sometimes. <break time="0.5s" />
-    Many panda habitats, where the animals live, have been destroyed by human activity. This has resulted in a drop of the number of pandas still living on Earth. <break time="0.5s"/>
+    
+    Many panda habitats, <break time="0.2s" /> where the animals live, have been destroyed by human activity. This has resulted in a drop of the number of pandas still living on Earth. <break time="0.5s"/>
     End of description.
   *then
     >> RETURN
+    
+@KoiFishInfo
+  *say
+    Koi Fish are descendants of Carp Fish that were raised in Chinese rice fields during the Jin Dynasty, 1700 years ago. In the early 19th century, these Carp fish began being bred for variations in color. They eventually became what we know today as the Koi fish. Koi Fish have beautiful colors and can have colorful spots and patterns. These pretty fish can have white, black, red, cream, yellow, blue, and orange. <break time="0.5s"/>
+    
+    Some Koi fish can grow up to be 3 feet long. They are omnivores. That means that they will eat meat and eat plants. They will eat insects, other fish, peas, lettuce, and even watermelon. A lot of owners will feed Koi Fish food that floats so that the fish will come to the surface and show off their pretty color patterns. Because Koi Fish are smart. they also learn to recognize their owners when they come up and look above the water during feeding time. <break time="0.5s"/>
+    
+    Koi Fish typically live an average of 50 years. However, some Koi Fish have lived over 200 years! A Koi Fish in Japan, named Hanako, lived to be 226 years old. That's definitely older than Grandma. <break time="0.5s"/>
+    
+    End of Description.
+
+  *then
+    >> RETURN
+    
+    
 @Animal Not Found
   *say
-    I'm sorry. I was not able to find the {info_animal} in the animal log book.
+    I'm sorry. I was not able to find {info_animal} in the animal log book.
     
   *then
     >> RETURN

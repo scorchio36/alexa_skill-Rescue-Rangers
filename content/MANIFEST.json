@@ -1,10 +1,13 @@
 {
     "include": [
         "episode1.abc",
+	"episode2.abc",
 	"story.abc",
 	"scan.abc",
 	"FGG.abc",
+	"help.abc",
 	"teleport.abc",
-	"animal_info.abc"
+	"animal_info.abc",
+	"general_re-usables.abc"
     ]
 }

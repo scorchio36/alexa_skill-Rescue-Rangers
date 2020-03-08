@@ -1,0 +1,246 @@
+@Help Router
+  *then
+    if context is 'init' {
+      <-> Help-Init
+      >> RETURN
+    }
+    if context is 'Episode1 - Play the Game' {
+      <-> Help-Episode1 - Play the Game
+      >> RETURN
+    }
+    if context is 'Main Menu' {
+      <-> Help-Main Menu
+      >> RETURN
+    }
+    if context is 'Episode Select Menu' {
+      <-> Help-Episode Select Menu
+      >> RETURN
+    }
+    if context is 'Extras Menu' {
+      <-> Help-Extras Menu
+      >> RETURN
+    }
+    if context is 'Tutorial - Teleport' {
+      <-> Help-Teleport to France
+      >> RETURN
+    }
+    if context is 'Tutorial - Animal Info' {
+      <-> Help-Giraffe Info
+      >> RETURN
+    }
+    
+    if context is 'Tutorial - Scan' {
+      <-> Help-Tutorial Scan
+      >> RETURN
+    }
+    
+    if context is 'Episode1 - Headquarters' {
+      <-> Help-In HQ waiting to TP to China
+      >> RETURN
+    }
+    
+    if context is 'Episode1 - Animal Alert' {
+      <-> Help-Animal Alert
+      >> RETURN
+    }
+    if context is 'Episode1 - Arrival in China' {
+      <-> Help-Panda Info
+      >> RETURN
+    }
+    
+    if context is 'Episode1 - Panda Enclosure' {
+      <-> Help-Panda Enclosure
+      >> RETURN
+    }
+    if context is 'Episode1 - Panda Enclosure Scan Prompt' {
+      <-> Help-Panda Enclosure Scan Prompt
+      >> RETURN
+    }
+    
+    if context is 'Episode1 - Bamboo Collection' {
+      <-> Help-Bamboo Collection
+      >> RETURN
+    }
+    if context is 'Episode1 - Bamboo Collection Scan Prompt' {
+      <-> Help-Bamboo Collection Scan Prompt
+      >> RETURN
+    }
+    
+    if context is 'Episode1 - Air Vent' {
+      <-> Help-Air Vent
+      >> RETURN
+    }
+    
+    if context is 'Episode1 - Outside Lion Enclosure' {
+      <-> Help-Outside Lion Enclosure
+      >> RETURN
+    }
+    if context is 'Episode1 - Outside Lion Enclosure Scan Prompt' {
+      <-> Help-Outside Lion Enclosure Scan Prompt
+      >> RETURN
+    }
+    
+    if context is 'Episode1 - Lion Enclosure Listening For Roars' {
+      <-> Help-Lion Enclosure Listening for Roars
+      >> RETURN
+    }
+    
+    if context is 'Episode1 - Lion Enclosure' {
+      <-> Help-Lion Enclosure
+      >> RETURN
+    }
+    
+    if context is 'Episode1 - Lion Wall' {
+      <-> Help-Lion Wall
+      >> RETURN
+    }
+    
+    if context is 'Episode1 - Top of Lion Wall' {
+      <-> Help-Top of Lion Wall
+      >> RETURN
+    }
+    
+@Help-Init
+  *say
+    Action currently not available.
+  *then
+    >> RETURN
+
+@Help-Episode1 - Play the Game
+  *say
+    You are currently on Episode 1. You can say play the game to start playing or you can say quit to leave.
+  *then
+    >> RETURN
+    
+@Help-Main Menu
+  *say
+    This is an adventure game where you can rescue and learn about different animals. You are currently at the main menu. You can choose to play an episode or you can look at your extras. Your extras are the treasures and badges that you have collected and earned across your journeys. You can also quit if you don't want to play.
+  *then
+    >> RETURN
+    
+@Help-Episode Select Menu
+  *say
+    The various Rescue Rangers adventures are split up by episode. To play an episode, just say, play episode followed by the number of the episode you want to play.
+  *then
+    >> RETURN
+    
+@Help-Extras Menu
+  *say
+    Your treasures are the hidden artifacts that you have collected along the way. Your badges are the accomplishment badges that you have earned throughout your adventures for doing amazing things.
+  *then
+    >> RETURN
+    
+
+@Help-Teleport to France
+  *say
+    Rescue rangers use the Field Guide Gadget's teleportation capability to teleport instantly to any place in the world. Olive wants you to try your teleportation out. Say, teleport to France.
+  *then
+    >> RETURN
+    
+@Help-Giraffe Info
+  *say
+    The Field Guide Gadget includes a feature called the Animal Log Book. The Animal Log Book will automatically record interactions we have with animals on our journey. You can get info about any animal. Olive would like you to get information about Giraffes. Say, tell me about Giraffes.
+  *then
+    >> RETURN
+    
+@Help-Tutorial Scan
+  *say
+    The Field Guide Gadget has a nifty ability called scanning. It will scan the current environment and produce a description of all the important things within that environment. Olive would like you to try it out. Say scan.
+
+  *then
+    >> RETURN
+
+@Help-Animal Alert
+  *say
+    That was the Animal Alert! There is an animal in trouble somewhere. There is an emergency call on the line. Say. Confirm. To accept the call and open the line.
+  *then
+    >> RETURN
+    
+@Help-In HQ waiting to TP to China
+  *say
+    A baby panda has run away! We need to get to China as soon as possible so we can try and track down the baby. Let's try using the teleport command to get to China. Say, teleport to China.
+  *then
+    >> RETURN
+
+@Help-Panda Info
+  *say
+    I recommend you learn more about the Panda Bear before moving on with the mission. You can do so by saying tell me about pandas.
+  *then
+    >> RETURN
+    
+@Help-Panda Enclosure
+  *say
+    There are various things that we can search within the enclosure. To search something, just say, search, followed by the thing you want to search. For example, to search the tree. Say, search the tree.
+  *then
+    >> RETURN
+
+@Help-Panda Enclosure Scan Prompt
+  *say
+    We should look around the panda enclosure to see if we can find any clues about where the baby panda ran off to. A scan of the enclosure should be a good starting point. Try saying <break time="0.2s" /> scan.
+  *then
+    >> RETURN
+    
+@Help-Bamboo Collection
+  *say
+    The scan said there is an air vent and a pile of bamboo. Let's search one of those two things. If you want to search the pile of bamboo, say, search the bamboo. If you want to search the air vent, say, search the air vent.
+  *then
+    >> RETURN
+    
+@Help-Bamboo Collection Scan Prompt
+  *say
+    We are now in another part of the panda enclosure. It is a collection of Bamboo trees. Run another scan command to see what we find around here. Say, scan.
+  *then
+    >> RETURN
+    
+@Help-Air Vent
+  *say
+    You are in a dark air vent maze. Follow Olive's prompts to go left, right, or forward in order to find your way out of the maze. The maze shape will never change, even if you get to a dead-end and have to restart. This is a trial and error puzzle.
+  *then
+    >> RETURN
+    
+@Help-Outside Lion Enclosure Scan Prompt
+  *say
+    The baby panda is inside the lion enclosure. Oh no! We need to get some information about this new area that we've stumbled upon. Maybe something around here can help us rescue the panda. Try using your scan command to find things of interest around here. Say scan.
+  *then
+    >> RETURN
+    
+@Help-Outside Lion Enclosure
+  *say
+    There are various things that we can search around here. You can search the wall, the bucket, trash, or the zookeeper cart. To search something, just say, search, followed by the thing you want to search. For example, to search the cart, say search the cart.
+  *then
+    >> RETURN
+    
+@Help-Lion Enclosure Listening for Roars
+  *say
+    Olive has an idea to distract the lions. Count the number of lion roars that you hear. Lion roars sound like this. [sfx distant_lion_roars.mp3] Don't confuse the sounds that other animals make for lion roars.
+    
+    Afterwards, tell Olive the number of lion roars that you heard. She will throw that many pieces over the wall to distract the lions. For example, if you heard 8 roars, then say 8.
+    
+  *then
+    >> RETURN
+    
+@Help-Lion Enclosure
+  *say
+    That baby panda is staying up in the tree and won't come down. We know that he is hungry so let's try and hold out some food for him. Tell Olive what food you want to give to the panda. You can offer a watermelon, bamboo, a mushroom, or a slice of cheese.
+  *then
+    >> RETURN
+    
+@Help-Lion Wall
+  *say
+    We are surrounded by lions. Oh my! The only way out is up. Activate your ranger pack and use the rope to climb to the top of the wall. To start climbing, just say, climb. You need to keep climbing until you reach the top of the wall. The baby panda may get hungry or bored along the way. If you hear this sound. [sfx baby_panda_hungry.mp3]
+    
+    That means that the baby panda is hungry and you need to feed him bamboo. <break time="0.2s" />
+    
+    If you hear this sound. [sfx baby_panda_bored.mp3]
+    
+    That means that the baby panda is bored and you need to give him his toy. If you don't occupy the baby panda he might jump away and escape again. You can climb. Feed the baby panda. Or play with the baby panda. Good luck!
+    
+  *then
+    >> RETURN
+    
+@Help-Top of Lion Wall
+  *say
+    We have jumped off the lion wall and are falling fast. Say, activate parachute, or, activate ranger pack, in order to activate your parachute and slow your fall. I'd hate for us to end up as Ranger pancakes!
+    
+  *then
+    >> RETURN
