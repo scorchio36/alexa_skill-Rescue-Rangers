@@ -11,7 +11,7 @@
         >> RETURN
       }
     }
-    if (info_animal == 'Panda' || info_animal == 'Pandas') {
+    if (info_animal == 'Panda' || info_animal == 'Pandas' || info_animal == 'Panda Bear' || info_animal == 'Panda Bears') {
       if (context == 'Episode1 - Arrival in China') {
         <-> PandaInfo
         -> Episode1-Animal Info about Pandas
@@ -21,11 +21,15 @@
         >> RETURN
       }
     }
-    if (info_animal == 'Koi Fish' || info_animal == 'Koi') {
+    if (info_animal == 'Koi Fish' || info_animal == 'Koi' || info_animal == 'Koi Fishes') {
       <-> KoiFishInfo
       >> RETURN
     }
-      
+    
+    if (info_animal == 'Lion' || info_animal == 'Lions') {
+      <-> LionInfo
+      >> RETURN
+    } 
     else {
       <-> Animal Not Found
       >> RETURN
@@ -61,11 +65,25 @@
     
     Koi Fish typically live an average of 50 years. However, some Koi Fish have lived over 200 years! A Koi Fish in Japan, named Hanako, lived to be 226 years old. That's definitely older than Grandma. <break time="0.5s"/>
     
-    End of Description.
+    End of Description. <break time="0.5s"/>
 
   *then
     >> RETURN
     
+@LionInfo
+  *say
+    Lions are native to sub-Saharan Africa and stand tall as the second largest cat in the entire world. They are very social animals that live together in packs called prides. Male lions can be as long as 7 feet and, on average, weigh 400 pounds. <break time="0.5s"/>
+    
+    The male lion flaunts a beautiful mane and is generally what most people think about when they think about the fear-giving power of a lion. But it is actually the mane-less female lions that do most of the hunting in a pride. The females use well thought-out tactics to capture the necessary 11 pounds of meat that they each need a day, and the 15 pounds of meat each male lion needs per day. <break time="0.5s"/>
+    
+    Lions are blazing fast. In small lengths, they can reach up to 50 miles per hour. I wish I could run that fast. If that isn't scary enough, their powerful roars can be heard from 5 miles away. 
+    
+    <break time="0.5s"/>Despite their menacing stature, lions spend most of their day sleeping. They generally sleep and laze around for 16 to 20 hours. Sounds like me on a weekend. <break time="0.5s"/>
+    
+    End of Description. <break time="0.5s"/>
+    
+  *then
+    >> RETURN
     
 @Animal Not Found
   *say

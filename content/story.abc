@@ -1,23 +1,43 @@
 @start
   *then
-    //Initialize everything for the game here
+  
+    // General initialization of variables for the game
+    if !(has_player_previously_opened_skill) {
+      flag has_player_previously_opened_skill
+    
+      // COLLECTION
+      // treasures
+      unflag treasure_dragon_statue
+      unflag treasure_chinese_yoyo
+      unflag user_has_at_least_one_treasure
+      // badges
+      unflag badge_level_1_puzzle_solver
+      unflag badge_level_1_curiosity
+      unflag badge_level_1_crazy_climber
+      unflag user_has_at_least_one_badge
+      
+    }
+      
     set context as 'init'
     set episode as 0
-    //SFB has a bug where if your say* consists solely of a an SFX snippet then SFB simulator freezes. Inserting an empty string variable into the say* will fix the issue.
-    set empty_string as ' '
     
-    //increment this count variable every time a player guesses the wrong amount of pieces of meat to throw over for the lions. This is to protect the player from getting stuck in an endless loop of guessing wrong.
-    set lion_challenge_fails_count as 0
-    unflag treasure_dragon_statue
-    unflag treaure_chinese_yoyo
+    //SFB has a bug where if your say* consists solely of a an SFX snippet then SFB simulator freezes. Inserting an empty string variable into the say* will fix the issue.
+    //set empty_string as ' '
+    
     //When initialization is complete, start the game
+    -> IntroSound
+    
+@IntroSound
+  *say
+    [sfx rescue_ranger_intro.mp3]
+  *then
     -> MainMenu
     
 @MainMenu
   *say
-    [sfx rescue_ranger_intro.mp3]
     Welcome to Animal Rescue Rangers!
     Would you like to play an episode. Or would you like to look at your collection.
+    
   *then
     hear episodes, play an episode, choose an episode {
       -> EpisodeSelect
@@ -27,7 +47,20 @@
     }
 @Collection
   *say
-    Would you like to view your treasures. Or would you like to view your badges?
+    Would you like to view your treasures. Or would you like to view your badges. You can also return to the main menu by saying <break time="0.2s" /> main menu.
+  *then
+    hear treasures, artifacts, my treasures, my items, view treasures, view artifacts {
+      -> ListTreasures
+    }
+    
+    hear badges, patches, achievements, my badges, view badges, view my badges {
+      -> ListBadges
+    }
+    
+    hear main menu, menu, main {
+      -> MainMenu
+    }
+    
 @EpisodeSelect
   *say
     Currently only 1 episode is available. Would you like to play that one?
@@ -39,16 +72,27 @@
       if episodeNumber == 1 {
         set episode as 1
         set context as 'Tutorial - Intro'
-        -> startEpisode1
+        -> Episode1-Init
       }
       
-      if episodeNumber == 2 {
-      set episode as 2
-      set context as 'intro'
-       -> startEpisode2
+      //Episode 2 is currently in progress. The user should not be able to start it yet.
+      //if episodeNumber == 2 {
+      //set episode as 2
+      //set context as 'intro'
+      // -> startEpisode2
+      //}
+      
+      else {
+        -> EpisodeNotAvailable
       }
     }
     // Only include this if there is only one episode available
-    hear yes, sure, alright {
-      -> startEpisode1
+    hear yes, sure, alright, play {
+      -> Episode1-Init
     }
+    
+@EpisodeNotAvailable
+  *say
+    I'm sorry ranger. That episode is currently not available.
+  *then
+    -> EpisodeSelect

@@ -8,6 +8,7 @@
 	"help.abc",
 	"teleport.abc",
 	"animal_info.abc",
-	"general_re-usables.abc"
+	"general_re-usables.abc",
+  "collection.abc"
     ]
 }

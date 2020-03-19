@@ -546,9 +546,39 @@
                 {
                     "name": "flexcnIntent",
                     "samples": [
-                        "extras",
-                        "look at my extras",
-                        "view my extras"
+                        "collection",
+                        "look at my collection",
+                        "view my collection"
+                    ]
+                },
+                {
+                    "name": "flexcoIntent",
+                    "samples": [
+                        "treasures",
+                        "artifacts",
+                        "my treasures",
+                        "my items",
+                        "view treasures",
+                        "view artifacts"
+                    ]
+                },
+                {
+                    "name": "flexcpIntent",
+                    "samples": [
+                        "badges",
+                        "patches",
+                        "achievements",
+                        "my badges",
+                        "view badges",
+                        "view my badges"
+                    ]
+                },
+                {
+                    "name": "flexcqIntent",
+                    "samples": [
+                        "main menu",
+                        "menu",
+                        "main"
                     ]
                 },
                 {
@@ -684,6 +714,21 @@
                         {
                             "name": {
                                 "value": "Lion"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Panda Bear"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Panda Bears"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Koi Fishes"
                             }
                         }
                     ]

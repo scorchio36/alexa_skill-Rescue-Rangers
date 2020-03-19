@@ -1,0 +1,123 @@
+@ListTreasures
+  *say
+    Here is a list of all the treasures you have picked up on your adventures. 
+    
+    <break time="0.2s"/>
+    
+  *then
+    if treasure_dragon_statue {
+      flag user_has_at_least_one_treasure
+      <-> ListTreasure-Dragon Statue
+    }
+    if treasure_chinese_yoyo {
+      flag user_has_at_least_one_treasure
+      <-> ListTreasure-Chinese Yoyo
+    }
+    
+    if user_has_at_least_one_treasure {
+      <-> ListTreasure-End of List
+    }
+    if !(user_has_at_least_one_treasure) {
+      <-> ListTreasure-No Treasures
+    }
+    
+    
+    -> Collection
+    
+@ListTreasure-Dragon Statue
+  *say
+    You have a dragon statue! It looks like it's made of clay. I wonder how old it is. 
+    
+    <break time="0.2s" />
+  *then
+    >> RETURN
+    
+@ListTreasure-Chinese Yoyo
+  *say
+    You have an old chinese yoyo. I bet some people did some sick tricks with this thing back in the day. 
+    
+    <break time="0.2s" />
+  *then
+    >> RETURN
+    
+@ListTreasure-End of List
+  *say
+    That is all the treasures you have collected so far.
+    
+    <break time="0.2s" />
+  *then
+    >> RETURN
+    
+@ListTreasure-No Treasures
+  *say
+    You currently have not found any treasures. You can find treasures by searching and exploring different places during your adventures.
+  *then
+    >> RETURN
+    
+    
+@ListBadges
+  *say
+    Here is a list of all the badges you currently have recieved.
+  
+  *then
+    if badge_level_1_puzzle_solver {
+      flag user_has_at_least_one_badge
+      <-> ListBadge-Level 1 Puzzle Solver
+    }
+    if badge_level_1_puzzle_solver {
+      flag user_has_at_least_one_badge
+      <-> ListBadge-Level 1 Curiosity
+    }
+    if badge_level_1_puzzle_solver {
+      flag user_has_at_least_one_badge
+      <-> ListBadge-Level 1 Crazy Climber
+    }
+    
+    if user_has_at_least_one_badge {
+      <-> ListBadge-End of List
+    }
+    if !(user_has_at_least_one_badge) {
+      <-> ListBadge-No Badges
+    }
+    
+    -> Collection
+    
+@ListBadge-Level 1 Puzzle Solver
+  *say
+    The Puzzle Solver badge. This badge is awarded for solving tough puzzles during an adventure. This badge is currently at level 1.
+    
+    <break time="0.2s" />
+  *then
+    >> RETURN
+    
+@ListBadge-Level 1 Curiosity
+  *say
+    The Curiosity badge. Only the most curious of Rangers can earn this badge. You are definitely a true explorer at heart. This badge is currently at level 1.
+    
+    <break time="0.2s" />
+  *then
+    >> RETURN
+    
+@ListBadge-Level 1 Crazy Climber
+  *say
+    The Crazy Climber badge. You have to have climbed somewhere very high to get a badge like this. I'm impressed. This badge is currently at level 1.
+    
+    <break time="0.2s" />
+    
+  *then
+    >> RETURN
+    
+@ListBadge-End of List
+  *say
+    That is all of the badges that you have currently received.
+    
+    <break time="0.2s" />
+  *then
+    >> RETURN
+    
+
+@ListBadge-No Badges
+  *say
+    You currently have not received any badges. You can earn badges by solving puzzles and accomplishing tasks during your adventures.
+  *then
+    >> RETURN

@@ -3,3 +3,30 @@
     We already found the item there. Let's try somewhere else.
   *then
    >> RETURN
+   
+   
+@resume
+    *say
+        Welcome back Ranger! Do you want to continue your story from where you last left
+        off?
+    *then
+        hear yes {
+            >> RESUME
+        }
+
+        hear no {
+            -> start
+        }
+
+    
+@Episode1-Init
+  *then
+    //increment this count variable every time a player guesses the wrong amount of pieces of meat to throw over for the lions. This is to protect the player from getting stuck in an endless loop of guessing wrong.
+    set lion_challenge_fails_count as 0
+    
+    // Treasures that the player can find in episode 1.
+    // Reset them when the user starts episode 1 from the beginning. This will not cause the treasures to disappear from the player's collection if they have previously found the treasure.
+    unflag episode1_dragon_statue
+    unflag episode1_chinese_yoyo
+    
+    -> startEpisode1
