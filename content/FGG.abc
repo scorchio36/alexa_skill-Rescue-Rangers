@@ -1,6 +1,6 @@
 @global prepend
   *then
-    
+  
     hear scan {
       bookmark
       <-> Scan Router

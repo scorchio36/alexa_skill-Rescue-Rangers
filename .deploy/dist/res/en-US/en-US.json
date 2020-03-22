@@ -8,8 +8,13 @@
                         "tell me about {animal}",
                         "teleport to {country}",
                         "play episode {episodeNumber}",
+                        "start episode {episodeNumber}",
+                        "choose episode {episodeNumber}",
+                        "begin episode {episodeNumber}",
                         "{numberOfRoars}",
-                        "{numberOfRoars} roars"
+                        "{numberOfRoars} roars",
+                        "i heard {numberOfRoars}",
+                        "i heard {numberOfRoars} lion roars"
                     ],
                     "slots": [
                         {
@@ -35,7 +40,14 @@
                     "samples": [
                         "play the game",
                         "let's play",
-                        "i'm ready for adventure"
+                        "i'm ready for adventure",
+                        "let's do this",
+                        "start the game",
+                        "begin the episode",
+                        "begin the game",
+                        "start",
+                        "start an episode",
+                        "go to episodes"
                     ]
                 },
                 {
@@ -48,9 +60,16 @@
                     "name": "flexdIntent",
                     "samples": [
                         "confirm",
+                        "accept call",
+                        "open call",
+                        "confirm the call",
+                        "answer the phone",
+                        "answer the call",
+                        "answer",
+                        "accept",
+                        "open",
                         "listen to voicemail",
                         "confirm voicemail",
-                        "open call",
                         "open connection"
                     ]
                 },
@@ -61,7 +80,12 @@
                         "the tree",
                         "large tree",
                         "search the large tree",
-                        "search the tree"
+                        "search the tree",
+                        "look at the tree",
+                        "check out the tree",
+                        "go to the tree",
+                        "walk over to the tree",
+                        "go over to the tree"
                     ]
                 },
                 {
@@ -71,10 +95,33 @@
                         "collection of bamboo",
                         "search the bamboo",
                         "search the collection of bamboo",
+                        "search bamboo",
+                        "bamboo forest",
+                        "go into the bamboo forest",
+                        "look at the bamboo",
+                        "check out the bamboo",
+                        "go over to the bamboo collection",
                         "search the pile",
                         "search the bamboo pile",
                         "bamboo pile",
-                        "piece of bamboo"
+                        "check out the bamboo pile",
+                        "look into the bamboo pile",
+                        "look at the pile of bamboo",
+                        "check out the pile of bamboo",
+                        "piece of bamboo",
+                        "try the bamboo",
+                        "give him a piece of bamboo",
+                        "give him bamboo",
+                        "feed him a piece of bamboo",
+                        "feed him bamboo",
+                        "feed the panda some bamboo",
+                        "feed the panda bear some bamboo",
+                        "see if he likes bamboo",
+                        "how about bamboo",
+                        "how about a slice of bamboo",
+                        "feed the baby panda bamboo",
+                        "feed the baby bamboo",
+                        "try giving him bamboo"
                     ]
                 },
                 {
@@ -83,7 +130,19 @@
                         "stream of water",
                         "search the water",
                         "search the stream of water",
-                        "search the stream"
+                        "search the stream",
+                        "check out the stream",
+                        "look inside the stream",
+                        "river",
+                        "lake",
+                        "flowing water",
+                        "check out the river",
+                        "check out the creek",
+                        "creek",
+                        "look into the water",
+                        "go to stream of water",
+                        "go to the water",
+                        "go over to the stream of water"
                     ]
                 },
                 {
@@ -92,7 +151,13 @@
                         "hole",
                         "large hole",
                         "search the hole",
-                        "search the hole at the back of the enclosure"
+                        "search the hole at the back of the enclosure",
+                        "go to the hole",
+                        "go over to the hole",
+                        "check out the hole",
+                        "look into the hole",
+                        "look at hole",
+                        "what's in the hole"
                     ]
                 },
                 {
@@ -101,141 +166,284 @@
                         "pandas",
                         "the pandas",
                         "search the pandas",
-                        "search the group of pandas rolling around"
+                        "search the group of pandas rolling around",
+                        "check out the pandas",
+                        "check out the group of pandas",
+                        "go over to the pandas",
+                        "go over to the group of pandas",
+                        "search the group of pandas",
+                        "play with the pandas",
+                        "say hi to the pandas",
+                        "search panda bears",
+                        "search group of panda bears",
+                        "look at the panda bears rolling around",
+                        "look at the bears",
+                        "search the group of bears"
                     ]
                 },
                 {
                     "name": "flexjIntent",
                     "samples": [
-                        "search the air vent",
-                        "search the vent",
-                        "air vent"
+                        "can you repeat the list",
+                        "can you repeat what i can search"
                     ]
                 },
                 {
                     "name": "flexkIntent",
                     "samples": [
-                        "left"
+                        "search the air vent",
+                        "search the vent",
+                        "air vent",
+                        "check out the air vent",
+                        "look at the air vent",
+                        "go over to the air vent",
+                        "what's at the air vent",
+                        "what's in the air vent"
                     ]
                 },
                 {
                     "name": "flexlIntent",
                     "samples": [
-                        "trashcan",
-                        "search the trashcan",
-                        "search the trash",
-                        "trash"
+                        "left",
+                        "go left",
+                        "try left",
+                        "check out the left",
+                        "go to the left",
+                        "let's go left",
+                        "the left path",
+                        "i want to go left",
+                        "let's try left",
+                        "turn left"
                     ]
                 },
                 {
                     "name": "flexmIntent",
                     "samples": [
-                        "zookeeper manual",
-                        "manual",
-                        "search the cart"
+                        "go right",
+                        "try right",
+                        "check out the right",
+                        "go to the right",
+                        "let's go right",
+                        "the right path",
+                        "i want to go right",
+                        "let's try right",
+                        "turn right"
                     ]
                 },
                 {
                     "name": "flexnIntent",
                     "samples": [
-                        "bucket",
-                        "search the bucket"
+                        "try forward",
+                        "check out the forward",
+                        "go to the forward",
+                        "let's go forward",
+                        "the forward path",
+                        "i want to go forward",
+                        "let's try forward",
+                        "turn forward",
+                        "go straight",
+                        "head straight"
                     ]
                 },
                 {
                     "name": "flexoIntent",
                     "samples": [
-                        "wall",
-                        "search the wall"
+                        "trashcan",
+                        "search the trashcan",
+                        "search the trash",
+                        "trash",
+                        "go to the trashcan",
+                        "search the trash can",
+                        "check out the trash",
+                        "check out the trash can",
+                        "check out the trashcan",
+                        "what's in the trashcan",
+                        "look in the trash",
+                        "look at the trash",
+                        "search the garbage can",
+                        "search the garbage",
+                        "look in the trash bin",
+                        "search the trash bin",
+                        "check out the trash bin"
                     ]
                 },
                 {
                     "name": "flexpIntent",
                     "samples": [
-                        "watermelon"
+                        "zookeeper manual",
+                        "manual",
+                        "search the cart",
+                        "check out the manual",
+                        "check out the zookeeper book",
+                        "check out the zookeeper manual",
+                        "search the manual",
+                        "search the zookeeper cart",
+                        "search the zookeeper book",
+                        "search the book",
+                        "look at the zookeeper book",
+                        "look at the zookeeper manual",
+                        "what's in the zoopkeeper manual",
+                        "what's on the cart"
                     ]
                 },
                 {
                     "name": "flexqIntent",
                     "samples": [
-                        "slice of cheese",
-                        "cheese"
+                        "bucket",
+                        "search the bucket",
+                        "what's in the bucket",
+                        "look inside the bucket",
+                        "look at the bucket",
+                        "check out the bucket",
+                        "check the bucket",
+                        "look at bucket"
                     ]
                 },
                 {
                     "name": "flexrIntent",
                     "samples": [
-                        "mushroom"
+                        "wall",
+                        "search the wall",
+                        "look at the wall",
+                        "search wall",
+                        "check out the wall",
+                        "go over to the wall",
+                        "look at wall"
                     ]
                 },
                 {
                     "name": "flexsIntent",
                     "samples": [
-                        "activate rope",
-                        "rope",
-                        "activate ranger pack rope",
-                        "activate ranger pack",
-                        "activate parchute",
-                        "open parachute"
+                        "watermelon",
+                        "feed him a watermelon",
+                        "give him watermelon",
+                        "let's try the watermelon",
+                        "see if he likes the watermelon",
+                        "how about watermelon",
+                        "feed him watermelon",
+                        "give the panda a watermelon",
+                        "try giving the baby panda some watermelon",
+                        "feed the baby panda watermelon"
                     ]
                 },
                 {
                     "name": "flextIntent",
                     "samples": [
-                        "climb",
-                        "climb the rope",
-                        "climb up",
-                        "use the rope"
+                        "slice of cheese",
+                        "cheese",
+                        "give him a slice of cheese",
+                        "let's try the cheese",
+                        "let's try a slice of cheese",
+                        "see if he likes cheese",
+                        "see if he would like some cheese",
+                        "give him some cheese",
+                        "how about the cheese",
+                        "how about a slice of cheese",
+                        "feed him cheese",
+                        "feed him a slice of cheese",
+                        "feed him the cheese",
+                        "feed the baby panda cheese",
+                        "feed the baby panda a slice of cheese",
+                        "give the panda some cheese"
                     ]
                 },
                 {
                     "name": "flexuIntent",
                     "samples": [
-                        "feed panda",
-                        "feed the baby panda",
-                        "feed the baby",
-                        "give baby panda food",
-                        "give panda food"
+                        "mushroom",
+                        "feed him a mushroom",
+                        "feed him mushroom",
+                        "how about the mushroom",
+                        "let's try the mushroom",
+                        "try feeding him mushroom",
+                        "give him mushroom",
+                        "feed the baby panda some mushroom",
+                        "see if he likes mushroom",
+                        "try the mushroom"
                     ]
                 },
                 {
                     "name": "flexvIntent",
                     "samples": [
-                        "play with panda",
-                        "give panda toy",
-                        "play with baby panda"
+                        "activate rope",
+                        "rope",
+                        "activate ranger pack rope",
+                        "activate ranger pack",
+                        "use the rope",
+                        "throw the rope",
+                        "activate",
+                        "keep going up",
+                        "continue going up",
+                        "keep climbing",
+                        "activate parachute",
+                        "open parachute",
+                        "chute"
                     ]
                 },
                 {
                     "name": "flexwIntent",
+                    "samples": [
+                        "climb",
+                        "climb the rope",
+                        "climb up"
+                    ]
+                },
+                {
+                    "name": "flexxIntent",
+                    "samples": [
+                        "feed panda",
+                        "feed the baby panda",
+                        "feed the baby",
+                        "give baby panda food",
+                        "give panda food",
+                        "give him some food"
+                    ]
+                },
+                {
+                    "name": "flexyIntent",
+                    "samples": [
+                        "play with panda",
+                        "give panda toy",
+                        "play with baby panda",
+                        "give the baby panda a toy to play with",
+                        "play with him",
+                        "give him a toy",
+                        "distract the panda",
+                        "entertain the panda",
+                        "entertain him",
+                        "distract him"
+                    ]
+                },
+                {
+                    "name": "flexzIntent",
                     "samples": [
                         "pink",
                         "pink jacket"
                     ]
                 },
                 {
-                    "name": "flexxIntent",
+                    "name": "flexbaIntent",
                     "samples": [
                         "yellow",
                         "yellow jacket"
                     ]
                 },
                 {
-                    "name": "flexyIntent",
+                    "name": "flexbbIntent",
                     "samples": [
                         "blue",
                         "blue jacket"
                     ]
                 },
                 {
-                    "name": "flexzIntent",
+                    "name": "flexbcIntent",
                     "samples": [
                         "cereal",
                         "eat cereal"
                     ]
                 },
                 {
-                    "name": "flexbaIntent",
+                    "name": "flexbdIntent",
                     "samples": [
                         "muffin",
                         "a muffin",
@@ -243,14 +451,14 @@
                     ]
                 },
                 {
-                    "name": "flexbbIntent",
+                    "name": "flexbeIntent",
                     "samples": [
                         "eggs",
                         "eat eggs"
                     ]
                 },
                 {
-                    "name": "flexbcIntent",
+                    "name": "flexbfIntent",
                     "samples": [
                         "teleport to hq",
                         "teleport to headquarters",
@@ -258,7 +466,7 @@
                     ]
                 },
                 {
-                    "name": "flexbdIntent",
+                    "name": "flexbgIntent",
                     "samples": [
                         "teleport me to brazil",
                         "teleport to brazil",
@@ -267,13 +475,13 @@
                     ]
                 },
                 {
-                    "name": "flexbeIntent",
+                    "name": "flexbhIntent",
                     "samples": [
                         "start scan"
                     ]
                 },
                 {
-                    "name": "flexbfIntent",
+                    "name": "flexbiIntent",
                     "samples": [
                         "go to control panel",
                         "search control panel",
@@ -284,7 +492,7 @@
                     ]
                 },
                 {
-                    "name": "flexbgIntent",
+                    "name": "flexbjIntent",
                     "samples": [
                         "go to the closet",
                         "search the closet",
@@ -292,7 +500,7 @@
                     ]
                 },
                 {
-                    "name": "flexbhIntent",
+                    "name": "flexbkIntent",
                     "samples": [
                         "go through the doorway",
                         "go to hospital wing",
@@ -301,7 +509,7 @@
                     ]
                 },
                 {
-                    "name": "flexbiIntent",
+                    "name": "flexblIntent",
                     "samples": [
                         "search the shelf",
                         "search the boxes",
@@ -309,14 +517,14 @@
                     ]
                 },
                 {
-                    "name": "flexbjIntent",
+                    "name": "flexbmIntent",
                     "samples": [
                         "scan the hospital wing",
                         "try a scan"
                     ]
                 },
                 {
-                    "name": "flexbkIntent",
+                    "name": "flexbnIntent",
                     "samples": [
                         "look at monkey",
                         "go see monkey",
@@ -326,7 +534,7 @@
                     ]
                 },
                 {
-                    "name": "flexblIntent",
+                    "name": "flexboIntent",
                     "samples": [
                         "look at macaws",
                         "go see macaws",
@@ -334,7 +542,7 @@
                     ]
                 },
                 {
-                    "name": "flexbmIntent",
+                    "name": "flexbpIntent",
                     "samples": [
                         "look at giant river otter",
                         "look at otter",
@@ -343,7 +551,7 @@
                     ]
                 },
                 {
-                    "name": "flexbnIntent",
+                    "name": "flexbqIntent",
                     "samples": [
                         "go through door",
                         "go through doorway",
@@ -353,7 +561,7 @@
                     ]
                 },
                 {
-                    "name": "flexboIntent",
+                    "name": "flexbrIntent",
                     "samples": [
                         "look in the cabinet",
                         "check in the cabinet",
@@ -363,7 +571,7 @@
                     ]
                 },
                 {
-                    "name": "flexbpIntent",
+                    "name": "flexbsIntent",
                     "samples": [
                         "do a scan",
                         "run a scan",
@@ -371,7 +579,7 @@
                     ]
                 },
                 {
-                    "name": "flexbqIntent",
+                    "name": "flexbtIntent",
                     "samples": [
                         "look at the macaws",
                         "see macaws",
@@ -379,7 +587,7 @@
                     ]
                 },
                 {
-                    "name": "flexbrIntent",
+                    "name": "flexbuIntent",
                     "samples": [
                         "look at the caiman",
                         "see the caiman",
@@ -387,20 +595,20 @@
                     ]
                 },
                 {
-                    "name": "flexbsIntent",
+                    "name": "flexbvIntent",
                     "samples": [
                         "look at the lab table",
                         "search the lab table"
                     ]
                 },
                 {
-                    "name": "flexbtIntent",
+                    "name": "flexbwIntent",
                     "samples": [
                         "look at cabinet"
                     ]
                 },
                 {
-                    "name": "flexbuIntent",
+                    "name": "flexbxIntent",
                     "samples": [
                         "go through door to hospital wing",
                         "go to the hospital wing",
@@ -408,14 +616,14 @@
                     ]
                 },
                 {
-                    "name": "flexbvIntent",
+                    "name": "flexbyIntent",
                     "samples": [
                         "i think",
                         "i think so"
                     ]
                 },
                 {
-                    "name": "flexbwIntent",
+                    "name": "flexbzIntent",
                     "samples": [
                         "use a bandage",
                         "bandages",
@@ -424,7 +632,7 @@
                     ]
                 },
                 {
-                    "name": "flexbxIntent",
+                    "name": "flexcaIntent",
                     "samples": [
                         "use a cast",
                         "make a cast",
@@ -432,21 +640,21 @@
                     ]
                 },
                 {
-                    "name": "flexbyIntent",
+                    "name": "flexcbIntent",
                     "samples": [
                         "use the blue medicine",
                         "give the blue medicine"
                     ]
                 },
                 {
-                    "name": "flexbzIntent",
+                    "name": "flexccIntent",
                     "samples": [
                         "use the green medicine",
                         "give the green medicine"
                     ]
                 },
                 {
-                    "name": "flexcaIntent",
+                    "name": "flexcdIntent",
                     "samples": [
                         "read medical journal",
                         "open medical journal",
@@ -454,13 +662,13 @@
                     ]
                 },
                 {
-                    "name": "flexcbIntent",
+                    "name": "flexceIntent",
                     "samples": [
                         "keep reading"
                     ]
                 },
                 {
-                    "name": "flexccIntent",
+                    "name": "flexcfIntent",
                     "samples": [
                         "stop reading",
                         "close journal",
@@ -468,39 +676,39 @@
                     ]
                 },
                 {
-                    "name": "flexcdIntent",
+                    "name": "flexcgIntent",
                     "samples": [
                         "control panel"
                     ]
                 },
                 {
-                    "name": "flexceIntent",
+                    "name": "flexchIntent",
                     "samples": [
                         "scan"
                     ]
                 },
                 {
-                    "name": "flexcfIntent",
+                    "name": "flexciIntent",
                     "samples": [
                         "that is the right camera"
                     ]
                 },
                 {
-                    "name": "flexcgIntent",
+                    "name": "flexcjIntent",
                     "samples": [
                         "that is the wrong camera",
                         "next camera"
                     ]
                 },
                 {
-                    "name": "flexchIntent",
+                    "name": "flexckIntent",
                     "samples": [
                         "duck",
                         "duck the branch"
                     ]
                 },
                 {
-                    "name": "flexciIntent",
+                    "name": "flexclIntent",
                     "samples": [
                         "turn",
                         "dodge",
@@ -509,14 +717,14 @@
                     ]
                 },
                 {
-                    "name": "flexcjIntent",
+                    "name": "flexcmIntent",
                     "samples": [
                         "activate rescue pack",
                         "rescue pack"
                     ]
                 },
                 {
-                    "name": "flexckIntent",
+                    "name": "flexcnIntent",
                     "samples": [
                         "fire",
                         "fire the bazooka",
@@ -528,7 +736,7 @@
                     ]
                 },
                 {
-                    "name": "flexclIntent",
+                    "name": "flexcoIntent",
                     "samples": [
                         "teleport back to hq",
                         "teleport back to headquarters",
@@ -536,25 +744,24 @@
                     ]
                 },
                 {
-                    "name": "flexcmIntent",
+                    "name": "flexcpIntent",
                     "samples": [
                         "episodes",
                         "play an episode",
-                        "choose an episode"
+                        "choose an episode",
+                        "go back to menu"
                     ]
                 },
                 {
-                    "name": "flexcnIntent",
+                    "name": "flexcqIntent",
                     "samples": [
                         "collection",
                         "look at my collection",
-                        "view my collection"
-                    ]
-                },
-                {
-                    "name": "flexcoIntent",
-                    "samples": [
+                        "view my collection",
                         "treasures",
+                        "go to my collection",
+                        "show me my collection",
+                        "what's in the collection",
                         "artifacts",
                         "my treasures",
                         "my items",
@@ -563,7 +770,7 @@
                     ]
                 },
                 {
-                    "name": "flexcpIntent",
+                    "name": "flexcrIntent",
                     "samples": [
                         "badges",
                         "patches",
@@ -574,7 +781,7 @@
                     ]
                 },
                 {
-                    "name": "flexcqIntent",
+                    "name": "flexcsIntent",
                     "samples": [
                         "main menu",
                         "menu",
@@ -729,6 +936,36 @@
                         {
                             "name": {
                                 "value": "Koi Fishes"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Giraffe"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Panda"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Panda Bear"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Koi Fish"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Koi"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Lion"
                             }
                         }
                     ]

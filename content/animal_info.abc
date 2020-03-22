@@ -1,6 +1,6 @@
 @AnimalInfo Router
   *then
-    if (info_animal == 'Giraffe' || info_animal == 'Giraffes') {
+    if (info_animal == 'Giraffe' || info_animal == 'Giraffes' || info_animal == 'The Giraffes' || info_animal == 'The Giraffe') {
       if (context == 'Tutorial - Animal Info') {
         set context as 'tutorial - scan'
         <-> GiraffeInfo
@@ -11,7 +11,7 @@
         >> RETURN
       }
     }
-    if (info_animal == 'Panda' || info_animal == 'Pandas' || info_animal == 'Panda Bear' || info_animal == 'Panda Bears') {
+    if (info_animal == 'Panda' || info_animal == 'Pandas' || info_animal == 'Panda Bear' || info_animal == 'Panda Bears' || info_animal == 'The Panda Bear' || info_animal == 'The Panda') {
       if (context == 'Episode1 - Arrival in China') {
         <-> PandaInfo
         -> Episode1-Animal Info about Pandas
@@ -21,12 +21,12 @@
         >> RETURN
       }
     }
-    if (info_animal == 'Koi Fish' || info_animal == 'Koi' || info_animal == 'Koi Fishes') {
+    if (info_animal == 'Koi Fish' || info_animal == 'Koi' || info_animal == 'Koi Fishes' || info_animal == 'The Koi' || info_animal == 'The Koi Fish') {
       <-> KoiFishInfo
       >> RETURN
     }
     
-    if (info_animal == 'Lion' || info_animal == 'Lions') {
+    if (info_animal == 'Lion' || info_animal == 'Lions' || info_animal == 'The Lion' || info_animal == 'The Lions') {
       <-> LionInfo
       >> RETURN
     } 

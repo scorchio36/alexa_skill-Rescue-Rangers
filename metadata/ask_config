@@ -6,7 +6,7 @@
       "merge": {},
       "resources": {
         "manifest": {
-          "eTag": "346b3b0c7b9d2c92e68040092a1422b2"
+          "eTag": "240b7376fc880cde79a6599acf7858b1"
         },
         "lambda": [
           {
@@ -18,7 +18,7 @@
             "codeUri": "lambda/custom",
             "functionName": "ask-custom-helloworld-default",
             "handler": "index.handler",
-            "revisionId": "83810226-6d97-4dc8-b021-f252d5f6c298",
+            "revisionId": "138f25f5-85f0-45e8-97a0-e4fa4d185d9f",
             "runtime": "nodejs10.x"
           }
         ]

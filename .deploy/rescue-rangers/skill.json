@@ -3,20 +3,22 @@
     "publishingInformation": {
       "locales": {
         "en-US": {
-          "name": "rescue-rangers",
-          "summary": "Sample Short Description",
-          "description": "Sample Full Description",
+          "name": "Animal Rescue Rangers!",
+          "summary": "First-Person Animal Adventure Game.",
+          "description": "Olive, Alice, and the rest of the Animal Rescue Rangers organization need your help! There are animals in trouble all over the world and only you can save them. Use cool gadgets and your wits to rescue those in need as you teleport around the world, solve tough puzzles, and meet awesome animals face-to-face. Saddle up and get ready for a once-in-a-lifetime adventure. Good Luck out there ranger! \n\n\n\nMusic and sound credits: \n- \"Caketown\" by Matthew Pablo. Website:http://www.matthewpablo.com.\n - freesound.org\n - zapsplat.com\n - freesfx.co.uk\n Anna Nadesan as Olive",
           "examplePhrases": [
-            "Alexa open hello world",
-            "hello",
-            "help"
+            "Alexa, open rescue rangers",
+            "Alexa, start rescue rangers",
+            "Alexa, play rescue rangers"
           ],
-          "keywords": []
+          "keywords": ["animal", "animals", "adventure", "rescue", "rangers", "learning", "helping", "smart", "kids", "children", "story", "puzzles", "cool", "latest", "fun", "funny", "cute", "teaching", "brain", "game"],
+          "largeIconUri": "https://christianheckerlambda.s3.amazonaws.com/rescue_rangers/rescue-rangers/en-US/audio/Rescue+Rangers+Logo.png",
+          "smallIconUri": "https://christianheckerlambda.s3.amazonaws.com/rescue_rangers/rescue-rangers/en-US/audio/Rescue+Rangers+Logo_108.png"
         }
       },
       "isAvailableWorldwide": true,
-      "testingInstructions": "Sample Testing Instructions.",
-      "category": "KNOWLEDGE_AND_TRIVIA",
+      "testingInstructions": "Open the skill by saying \"Alexa, open rescue rangers.\" Upon opening, the skill will take you to the main menu. You will have two options. You can choose to play an episode or look at your collection. The collection option allows you to look at treasures and badges that you have collected in the game. When you first open the skill, you won't have any badges or treasures. The other option is to play an interactive episode. The only episode currently out is episode 1. Play the first episode and follow the prompts given to you to get through this first episode. When you first open the episode, the characters Olive and Alice will take you through a short tutorial where you will learn how to navigate through the game. Once you finish the tutorial the real episode will begin. You will be taken through a series situations where you have to look around for clues, solve puzzles, and interact with animals. The episode should run for about 45 minutes to an hour. If you want to take a break, just close the skill. When you open the skill back up, it will ask you whether you would like to continue where you left off. So don't worry about losing any progress if you want to take a break. If you get stuck in the episode, you can always say help. Good Luck! Please let me know if you run into any issues or if you have any suggestions. Thank you!",
+      "category": "CHILDRENS_GAMES",
       "distributionCountries": []
     },
     "apis": {
@@ -32,6 +34,13 @@
         ]
       }
     },
-    "manifestVersion": "1.0"
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "usesPersonalInfo": false,
+      "isChildDirected": true,
+      "isExportCompliant": true,
+      "containsAds": false
+    }
   }
 }

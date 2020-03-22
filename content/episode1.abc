@@ -24,7 +24,7 @@
   *recap
     You can say play the game or you can say quit.
   *then
-    hear play the game, play, let's play, I'm ready for adventure {
+    hear play the game, play, let's play, I'm ready for adventure, let's do this, start the game, begin the episode, begin the game {
       -> Episode1-Adventure Awaits
     }
     //Make quit/exit leave the episode a global action
@@ -142,7 +142,7 @@
   *recap
     There's an emergency call on the line! Say confirm to accept the call.
   *then
-    hear confirm {
+    hear confirm, accept call, open call, confirm the call, answer the phone, answer the call, answer, accept, open {
       -> Episode1-Player Accepts Animal Alert Call
     }
     
@@ -223,24 +223,24 @@
     To search something, say <break time="0.2s" />search <break time="0.5s" /> followed by the thing you would like to search.
   *then
     set context as 'Episode1 - Panda Enclosure'
-    hear tree, the tree, large tree, search the large tree, search the tree {
+    hear tree, the tree, large tree, search the large tree, search the tree, look at the tree, check out the tree, go to the tree, walk over to the tree, go over to the tree {
       -> Episode1-Panda Enclosure Player Searches Tree
     }
-    hear bamboo, collection of bamboo, search the bamboo, search the collection of bamboo {
+    hear bamboo, collection of bamboo, search the bamboo, search the collection of bamboo, search bamboo, bamboo forest, go into the bamboo forest, look at the bamboo, check out the bamboo, go over to the bamboo collection {
       -> Episode1-Panda Enclosure Player Searches Bamboo Collection
     }
-    hear stream of water, search the water, search the stream of water, search the stream {
+    hear stream of water, search the water, search the stream of water, search the stream, check out the stream, look inside the stream, river, lake, flowing water, check out the river, check out the creek , creek, look into the water, go to stream of water, go to the water, go over to the stream of water {
       -> Episode1-Panda Enclosure Player Searches Water
     }
-    hear hole, large hole, search the hole, search the hole at the back of the enclosure {
+    hear hole, large hole, search the hole, search the hole at the back of the enclosure, go to the hole, go over to the hole, check out the hole, look into the hole, look at hole, what's in the hole {
       flag treasure_dragon_statue
       flag episode1_dragon_statue
       -> Episode1-Panda Enclosure Player Searches Hole
     }
-    hear pandas, the pandas, search the pandas, search the group of pandas rolling around {
+    hear pandas, the pandas, search the pandas, search the group of pandas rolling around, check out the pandas, check out the group of pandas, go over to the pandas, go over to the group of pandas, search the group of pandas, play with the pandas, say hi to the pandas, search panda bears, search group of panda bears, look at the panda bears rolling around, look at the bears, search the group of bears {
       -> Episode1-Panda Enclosure Player Searches Pandas
     }
-    hear can you repeat that {
+    hear can you repeat that, what did you say, can you repeat the list, can you repeat what I can search, can you say that again {
       -> Episode1-Panda Enclosure Scan Recap
     }
     
@@ -252,18 +252,18 @@
     
 @Episode1-Panda Enclosure Scan Recap
   *say
-    You can search the tree, the bamboo collection, the stream of water, the hole, or the group of pandas. What would you like to search?
+    You can search the tree <break time="0.3s" />, the bamboo collection <break time="0.3s" />, the stream of water <break time="0.3s" />, the hole <break time="0.3s" />, or the group of pandas<break time="0.3s" />. What would you like to search?
   *then
-    hear tree, the tree, large tree, search the large tree, search the tree {
+    hear tree, the tree, large tree, search the large tree, search the tree, look at the tree, check out the tree, go to the tree, walk over to the tree, go over to the tree {
       -> Episode1-Panda Enclosure Player Searches Tree
     }
-    hear bamboo, collection of bamboo, search the bamboo, search the collection of bamboo {
+    hear bamboo, collection of bamboo, search the bamboo, search the collection of bamboo, search bamboo, bamboo forest, go into the bamboo forest, look at the bamboo, check out the bamboo, go over to the bamboo collection {
       -> Episode1-Panda Enclosure Player Searches Bamboo Collection
     }
-    hear stream of water, search the water, search the stream of water, search the stream {
+    hear stream of water, search the water, search the stream of water, search the stream, check out the stream, look inside the stream, river, lake, flowing water, check out the river, check out the creek , creek, look into the water, go to stream of water, go to the water, go over to the stream of water {
       -> Episode1-Panda Enclosure Player Searches Water
     }
-    hear hole, large hole, search the hole, search the hole at the back of the enclosure {
+    hear hole, large hole, search the hole, search the hole at the back of the enclosure, go to the hole, go over to the hole, check out the hole, look into the hole, look at hole, what's in the hole {
       if episode1_dragon_statue {
         -> Episode1-Dragon Statue Already Found
       }
@@ -272,10 +272,10 @@
         -> Episode1-Panda Enclosure Player Searches Hole
       }
     }
-    hear pandas, the pandas, search the pandas, search the group of pandas rolling around {
+    hear pandas, the pandas, search the pandas, search the group of pandas rolling around, check out the pandas, check out the group of pandas, go over to the pandas, go over to the group of pandas, search the group of pandas, play with the pandas, say hi to the pandas, search panda bears, search group of panda bears, look at the panda bears rolling around, look at the bears, search the group of bears {
       -> Episode1-Panda Enclosure Player Searches Pandas
     }
-    hear can you repeat that {
+    hear can you repeat that, what did you say, can you repeat the list, can you repeat what I can search, can you say that again {
       -> Episode1-Panda Enclosure Scan Recap
     }
     
@@ -325,6 +325,7 @@
     [sfx searching_speech10_without_toys_and_wwyltd.mp3]
     //{empty_string}
   *then
+    set context as 'Episode1 - Bamboo Collection'
     -> Episode1-Prompt Player for Search in Bamboo Collection
     
     
@@ -333,32 +334,34 @@
     What would you like to do ranger?
     
   *reprompt
-    Try searching the bamboo or the air vent.
+    You are in a new area. Try running another scan.
     
   *recap
-    Try searching the bamboo or the air vent.
+    You are in a new area. Try running another scan.
     
   *then
-    set context as 'Episode1 - Bamboo Collection'
+    
     hear dummyIntent {
     }
-    hear search the bamboo, search the pile, search the bamboo pile, bamboo pile {
-      -> Episode1-Player Searches Bamboo Pile
-    }
-    hear search the air vent, search the vent, air vent {
-      -> Episode1-Player Searches Air Vent
-    }
+
     
 @Episode1-Prompt Player for Search in Bamboo Collection 
   *say
     You can search the pile of bamboo or the air vent.
     [sfx wwyltd.mp3]
     [sfx offer_help1.mp3]
+    
+  *reprompt
+    Try searching the bamboo or the air vent.
+    
+  *recap
+    Try searching the bamboo or the air vent.
+    
   *then
-    hear search the bamboo, search the pile, search the bamboo pile, bamboo pile {
+    hear search the bamboo, search the pile, search the bamboo pile, bamboo pile, check out the bamboo, check out the bamboo pile, look at the bamboo, look into the bamboo pile, look at the pile of bamboo, check out the pile of bamboo {
       -> Episode1-Player Searches Bamboo Pile
     }
-    hear search the air vent, search the vent, air vent {
+    hear search the air vent, search the vent, air vent, check out the air vent, look at the air vent, go over to the air vent, what's at the air vent, what's in the air vent {
       -> Episode1-Player Searches Air Vent
     }
     
@@ -374,7 +377,7 @@
     Item obtained. A panda toy has been added to the Ranger pack.
     [sfx searching_speech12_without_wwyltd.mp3]
   *then
-    -> Episode1-Prompt Player to Scan Bamboo Collection
+    -> Episode1-Prompt Player for Search in Bamboo Collection
     
 @Episode1-Player Searches Air Vent
   *say
@@ -391,10 +394,10 @@
   *then
     set context as 'Episode1 - Air Vent'
     flag airVentCP1
-    hear left {
+    hear left, go left, try left, check out the left, go to the left, let's go left, the left path, I want to go left, let's try left, turn left {
       -> Episode1-Air Vent CP1 Player Turns Left
     }
-    hear right {
+    hear right, go right, try right, check out the right, go to the right, let's go right, the right path, I want to go right, let's try right, turn right {
       -> Episode1-Air Vent CP1 Player Turns Right
     }
     
@@ -404,10 +407,10 @@
   *say
     Would you like to go left or right?
   *then
-    hear left {
+    hear left, go left, try left, check out the left, go to the left, let's go left, the left path, I want to go left, let's try left, turn left {
       -> Episode1-Air Vent CP1 Player Turns Left
     }
-    hear right {
+    hear right, go right, try right, check out the right, go to the right, let's go right, the right path, I want to go right, let's try right, turn right {
       -> Episode1-Air Vent CP1 Player Turns Right
     }
     
@@ -417,10 +420,10 @@
     //{empty_string}
   *then
     flag airVentCP1
-    hear left {
+    hear left, go left, try left, check out the left, go to the left, let's go left, the left path, I want to go left, let's try left, turn left {
       -> Episode1-Air Vent CP1 Player Turns Left
     }
-    hear right {
+    hear right, go right, try right, check out the right, go to the right, let's go right, the right path, I want to go right, let's try right, turn right {
       -> Episode1-Air Vent CP1 Player Turns Right
     }
 
@@ -441,7 +444,7 @@
     
   *then
     unflag airVentCP1
-    hear left {
+    hear left, go left, try left, check out the left, go to the left, let's go left, the left path, I want to go left, let's try left, turn left {
       if episode1_chinese_yoyo {
         -> Episode1-Chinese Yoyo Already Found
       }
@@ -451,7 +454,7 @@
         -> Episode1-Air Vent CP2 Player Turns Left
       }
     }
-    hear right {
+    hear right, go right, try right, check out the right, go to the right, let's go right, the right path, I want to go right, let's try right, turn right {
       -> Episode1-Air Vent CP2 Player Turns Right
     }
     
@@ -473,13 +476,13 @@
     
   *then
     unflag airVentCP1
-    hear left {
+    hear left, go left, try left, check out the left, go to the left, let's go left, the left path, I want to go left, let's try left, turn left {
       -> Episode1-Air Vent CP3 Player Turns Left
     }
-    hear right {
+    hear right, go right, try right, check out the right, go to the right, let's go right, the right path, I want to go right, let's try right, turn right {
       -> Episode1-Air Vent CP3 Player Turns Right
     }
-    hear forward {
+    hear forward, go forward, try forward, check out the forward, go to the forward, let's go forward, the forward path, I want to go forward, let's try forward, turn forward, go straight, head straight {
       -> Episode1-Air Vent CP3 Player Goes Forward
     }
     
@@ -546,11 +549,11 @@
     Pick what direction you would like to travel in. Left or Right.
     
   *then
-    hear left {
+    hear left, go left, try left, check out the left, go to the left, let's go left, the left path, I want to go left, let's try left, turn left {
       -> Episode1-Air Vent CP4 Player Turns Left
     }
     
-    hear right {
+    hear right, go right, try right, check out the right, go to the right, let's go right, the right path, I want to go right, let's try right, turn right {
       -> Episode1-Air Vent CP4 Player Turns Right
     }
     
@@ -592,35 +595,41 @@
     To search something, say search and then the thing you would like to search.
   *then
     set context as 'Episode1 - Outside Lion Enclosure'
-    hear trashcan, search the trashcan, search the trash, trash {
+    hear trashcan, search the trashcan, search the trash, trash, go to the trashcan, search the trash can, check out the trash, check out the trash can, check out the trashcan, what's in the trashcan, look in the trash, look at the trash, search the garbage can, search the garbage, look in the trash bin, search the trash bin, check out the trash bin {
       -> Episode1-Outside Lion Enclosure Player Searches Trash
     }
-    hear zookeeper manual, manual, search the cart {
+    hear zookeeper manual, manual, search the cart, check out the manual, check out the zookeeper book, check out the zookeeper manual, search the manual, search the zookeeper cart, search the zookeeper book, search the book, look at the zookeeper book, look at the zookeeper manual, what's in the zoopkeeper manual, what's on the cart {
       -> Episode1-Outside Lion Enclosure Player Searches Manual
     }
-    hear bucket, search the bucket {
+    hear bucket, search the bucket, what's in the bucket, look inside the bucket, look at the bucket, check out the bucket, check the bucket, look at bucket {
       -> Episode1-Outside Lion Enclosure Player Searches Bucket
     }
-    hear wall, search the wall {
+    hear wall, search the wall, look at the wall, search wall, check out the wall, go over to the wall, look at wall  {
       -> Episode1-Outside Lion Enclosure Player Searches Wall
+    }
+    hear can you repeat that, what did you say, can you repeat the list, can you repeat what I can search, can you say that again {
+      -> Episode1-Outside Lion Enclosure Scan Recap
     }
     
 @Episode1-Outside Lion Enclosure Scan Recap
   *say
-    You can search the trashcan, the zookeeper manual, the wall, or the bucket.
+    You can search the trashcan <break time="0.3s" />, the zookeeper manual <break time="0.3s" />, the wall <break time="0.3s" />, or the bucket <break time="0.3s" />.
     What would you like to search?
   *then
-    hear trashcan, search the trashcan, search the trash, trash {
+    hear trashcan, search the trashcan, search the trash, trash, go to the trashcan, search the trash can, check out the trash, check out the trash can, check out the trashcan, what's in the trashcan, look in the trash, look at the trash, search the garbage can, search the garbage, look in the trash bin, search the trash bin, check out the trash bin {
       -> Episode1-Outside Lion Enclosure Player Searches Trash
     }
-    hear zookeeper manual, manual, search the cart {
+    hear zookeeper manual, manual, search the cart, check out the manual, check out the zookeeper book, check out the zookeeper manual, search the manual, search the zookeeper cart, search the zookeeper book, search the book, look at the zookeeper book, look at the zookeeper manual, what's in the zoopkeeper manual, what's on the cart {
       -> Episode1-Outside Lion Enclosure Player Searches Manual
     }
-    hear bucket, search the bucket {
+    hear bucket, search the bucket, what's in the bucket, look inside the bucket, look at the bucket, check out the bucket, check the bucket, look at bucket {
       -> Episode1-Outside Lion Enclosure Player Searches Bucket
     }
-    hear wall, search the wall {
+    hear wall, search the wall, look at the wall, search wall, check out the wall, go over to the wall, look at wall {
       -> Episode1-Outside Lion Enclosure Player Searches Wall
+    }
+    hear can you repeat that, what did you say, can you repeat the list, can you repeat what I can search, can you say that again {
+      -> Episode1-Outside Lion Enclosure Scan Recap
     }
     
 @Episode1-Outside Lion Enclosure Player Searches Trash
@@ -669,7 +678,7 @@
     Choose the number of pieces of meat that Olive should throw over the wall to distract the lions. It should be the same number as the number of lion roars that you hear.
   *then
     slot numberOfRoars to 'AMAZON.NUMBER'
-    hear {numberOfRoars}, {numberOfRoars} roars {
+    hear {numberOfRoars}, {numberOfRoars} roars, I heard {numberOfRoars}, I heard {numberOfRoars} lion roars {
       //There are 7 roars in the sound clip
       if numberOfRoars is 7 || lion_challenge_fails_count is 2 {
         set context as 'Episode1 - Lion Enclosure'
@@ -709,16 +718,16 @@
   *recap
     The baby panda is hungry. Should we feed him a watermelon, a piece of cheese, a piece of bamboo, or a mushroom.
   *then
-    hear watermelon {
+    hear watermelon, feed him a watermelon, give him watermelon, let's try the watermelon, see if he likes the watermelon, how about watermelon, feed him watermelon, give the panda a watermelon, try giving the baby panda some watermelon, feed the baby panda watermelon {
       -> Episode1-Lion Enclosure Player Guesses Watermelon
     }
-    hear slice of cheese, cheese {
+    hear slice of cheese, cheese, give him a slice of cheese, let's try the cheese, let's try a slice of cheese, see if he likes cheese, see if he would like some cheese, give him some cheese, how about the cheese, how about a slice of cheese, feed him cheese, feed him a slice of cheese, feed him the cheese, feed the baby panda cheese, feed the baby panda a slice of cheese, give the panda some cheese {
       -> Episode1-Lion Enclosure Player Guesses Cheese
     }
-    hear bamboo, piece of bamboo {
+    hear bamboo, piece of bamboo, try the bamboo, give him a piece of bamboo, give him bamboo, feed him a piece of bamboo, feed him bamboo, feed the panda some bamboo, feed the panda bear some bamboo, see if he likes bamboo, how about bamboo, how about a slice of bamboo {
       -> Episode1-Lion Enclosure Player Guesses Bamboo
     }
-    hear mushroom {
+    hear mushroom, feed him a mushroom, feed him mushroom, how about the mushroom, let's try the mushroom, try feeding him mushroom, give him mushroom, feed the baby panda some mushroom, see if he likes mushroom, try the mushroom {
       -> Episode1-Lion Enclosure Player Guesses Mushroom
     }
     
@@ -753,7 +762,7 @@
   *recap
     This is no time to play games, Ranger. We are surrounded by hungry Lions. You need to use your ranger pack to get us out of here. Say, Activate Rope. Hurry!
   *then
-    hear activate rope, rope, activate ranger pack rope, activate ranger pack {
+    hear activate rope, rope, activate ranger pack rope, activate ranger pack, use the rope, throw the rope, activate {
       -> Episode1-Lion Enclosure Player Activates Rope
     }
 @Episode1-Lion Enclosure Player Guesses Mushroom
@@ -782,7 +791,7 @@
     [sfx wwyltd.mp3]
     //[sfx offer_help1.mp3]
   *then
-    hear climb, climb the rope, climb up, use the rope {
+    hear climb, climb the rope, climb up, use the rope, go up, keep going up, continue going up, keep climbing, keep going up {
       if !climb_game_active {
         //set up variables for the climb game
         unflag panda_hungry
@@ -794,10 +803,10 @@
       
       -> Episode1-Update Climb Height
     }
-    hear feed panda, feed the baby panda, feed the baby, give baby panda food, give panda food {
+    hear feed panda, feed the baby panda, feed the baby, give baby panda food, give panda food, give him some food, give him bamboo, feed the baby panda bamboo, feed the baby bamboo, feed him bamboo, try giving him bamboo {
       -> Episode1-Lion Wall Player Feeds Panda
     }
-    hear play with panda, give panda toy, play with baby panda, play, give panda toy {
+    hear play with panda, give panda toy, play with baby panda, play, give panda toy, give the baby panda a toy to play with, play with him, give him a toy, distract the panda, entertain the panda, entertain him, distract him {
       -> Episode1-Lion Wall Player Plays with Panda
     }
     
@@ -901,14 +910,28 @@
     Sensors indicate that panda is no longer hungry. Nice going Ranger.
   *then
     unflag panda_hungry
+    //if the panda is hungry or bored then be sure to warn the player
+      if (panda_hungry) {
+        <-> Episode1-Tell Player Panda is Hungry
+      }
+      if (panda_bored) {
+        <-> Episode1-Tell Player Panda is Bored
+      }
     -> Episode1-Lion Enclosure Prompt Player to Climb
     
 @Episode1-Lion Wall Player Plays with Panda
   *say
     [sfx playing_panda.mp3]
-    Sensors indicate that panda is no longer bored. Good job Ranger. Keep climbing!
+    Sensors indicate that panda is no longer bored. Good job Ranger.
   *then
     unflag panda_bored
+    //if the panda is hungry or bored then be sure to warn the player
+      if (panda_hungry) {
+        <-> Episode1-Tell Player Panda is Hungry
+      }
+      if (panda_bored) {
+        <-> Episode1-Tell Player Panda is Bored
+      }s
     -> Episode1-Lion Enclosure Prompt Player to Climb
     
 @Episode1-Player Loses Climb Challenge
@@ -951,7 +974,7 @@
     We have jumped off the lion wall and are falling fast. Say, activate ranger pack, or, activate parachute to slow your fall.
     
   *then
-    hear activate ranger pack, activate parchute, open parachute {
+    hear activate ranger pack, activate parachute, open parachute, activate, chute {
       -> Episode1-Return Panda and Return to HQ
     }
     

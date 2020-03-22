@@ -4,6 +4,20 @@
   *then
    >> RETURN
    
+
+@pause
+  *say
+    See you next time Ranger!
+    ||
+    See you later alligator!
+    ||
+    Until next time ranger!
+    ||
+    Thanks for playing!
+    ||
+    You can continue where you left off when you come back. Bye Ranger!
+  *then
+    >> PAUSE
    
 @resume
     *say
@@ -30,3 +44,4 @@
     unflag episode1_chinese_yoyo
     
     -> startEpisode1
+    

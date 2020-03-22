@@ -39,10 +39,10 @@
     Would you like to play an episode. Or would you like to look at your collection.
     
   *then
-    hear episodes, play an episode, choose an episode {
+    hear episodes, play an episode, choose an episode, play the game, start the game, play, start, start an episode, go to episodes, yes {
       -> EpisodeSelect
     }
-    hear Collection, look at my collection, view my collection {
+    hear Collection, look at my collection, view my collection, treasures, badges, go to my collection, show me my collection, what's in the collection {
       -> Collection
     }
 @Collection
@@ -57,7 +57,7 @@
       -> ListBadges
     }
     
-    hear main menu, menu, main {
+    hear main menu, menu, main, episodes, back, go back, go back to menu {
       -> MainMenu
     }
     
@@ -67,7 +67,7 @@
     
   *then
     slot episodeNumber to 'AMAZON.NUMBER'
-    hear play episode {episodeNumber} {
+    hear play episode {episodeNumber}, start episode {episodeNumber}, choose episode {episodeNumber}, begin episode {episodeNumber} {
     
       if episodeNumber == 1 {
         set episode as 1
@@ -87,7 +87,7 @@
       }
     }
     // Only include this if there is only one episode available
-    hear yes, sure, alright, play {
+    hear yes, sure, alright, play, play the game {
       -> Episode1-Init
     }
     

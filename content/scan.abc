@@ -118,7 +118,7 @@
     
 @Episode1-Scan Bamboo Collection
   *say
-    We are currently in a bamboo forest surrounded by bamboo trees. There is a pile of chopped bamboo on the left and an open air vent on the right.
+    We are currently in a bamboo forest surrounded by bamboo trees. There is a pile of chopped bamboo on the left <break time="0.2s" /> and an open air vent on the right <break time="0.2s" />.
   *then
     -> Episode1-Scan used in Bamboo Collection
 
