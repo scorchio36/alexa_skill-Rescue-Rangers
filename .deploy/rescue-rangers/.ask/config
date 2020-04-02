@@ -18,7 +18,7 @@
             "codeUri": "lambda/custom",
             "functionName": "ask-custom-helloworld-default",
             "handler": "index.handler",
-            "revisionId": "138f25f5-85f0-45e8-97a0-e4fa4d185d9f",
+            "revisionId": "aa08f652-e203-48d0-ace5-1c3028676b8d",
             "runtime": "nodejs10.x"
           }
         ]

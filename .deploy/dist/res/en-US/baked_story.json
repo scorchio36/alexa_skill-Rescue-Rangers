@@ -3693,7 +3693,7 @@
         {
             "contents": [
                 {
-                    "narration": "<audio src='https://christianheckerlambda.s3.amazonaws.com/rescue_rangers/rescue-rangers/en-US/audio/alice_open.mp3'/>\n    \n    Hi there! Good to see a fresh new face around here. I am Alice.\n    You may have heard of my twin sister Alexa. She is very famous now.\n    <break time=\"0.5s\" />\n    \n    I work as a virtual assistant for the Animal Rescue Rangers. The Animal Rescue Rangers are a group of people determined to help animals all over the world. Whenever there is an animal in need, the Rescue Rangers will be there to save the day.\n    <break time=\"0.3s\" />\n    \n    In this game, you are a ranger who is training to become part of the Animal Rescue Rangers. You have been paired up with a top-notch Rescue Ranger named Olive. She is going to tell you everything you need to know. I will also be with you at all times. So if you need help at any time, you can say help.\n    <break time=\"0.5s\" />",
+                    "narration": "<audio src='https://christianheckerlambda.s3.amazonaws.com/rescue_rangers/rescue-rangers/en-US/audio/alice_open.mp3'/>\n    \n    Hi there! Good to see a fresh new face around here.\n    <break time=\"0.5s\" />\n    \n    Let me be the first to welcome you to your training for the Animal Rescue Rangers. The Animal Rescue Rangers are a group of people determined to help animals all over the world. Whenever there is an animal in need, the Rescue Rangers will be there to save the day.\n    <break time=\"0.3s\" />\n    \n    In this game, you are a ranger who is training to become part of the Animal Rescue Rangers. You have been paired up with a top-notch Rescue Ranger named Olive. She is going to tell you everything you need to know. I will also be with you at all times. You can call me Alice. If you need help at any time, you can say help.\n    <break time=\"0.5s\" />",
                     "sceneDirections": [
                         {
                             "directionType": "choice",
@@ -4129,7 +4129,7 @@
             ],
             "id": "Episode1-Prompt Player to Play the Game",
             "customProperties": {
-                "sourceLocation": 1041,
+                "sourceLocation": 999,
                 "sourceID": "episode1.abc"
             }
         },
@@ -4330,7 +4330,7 @@
             ],
             "id": "Episode1-Adventure Awaits",
             "customProperties": {
-                "sourceLocation": 1548,
+                "sourceLocation": 1506,
                 "sourceID": "episode1.abc"
             }
         },
@@ -4531,7 +4531,7 @@
             ],
             "id": "Episode1-Alice Teleports Player to Headquarters",
             "customProperties": {
-                "sourceLocation": 2000,
+                "sourceLocation": 1958,
                 "sourceID": "episode1.abc"
             }
         },
@@ -4732,7 +4732,7 @@
             ],
             "id": "Episode1-Meet Olive",
             "customProperties": {
-                "sourceLocation": 2290,
+                "sourceLocation": 2248,
                 "sourceID": "episode1.abc"
             }
         },
@@ -4940,7 +4940,7 @@
             ],
             "id": "Episode1-Player gets Field Guide Gadget",
             "customProperties": {
-                "sourceLocation": 2600,
+                "sourceLocation": 2558,
                 "sourceID": "episode1.abc"
             }
         },
@@ -5156,7 +5156,7 @@
             ],
             "id": "Episode1-Player is Prompted to Teleport to France",
             "customProperties": {
-                "sourceLocation": 3187,
+                "sourceLocation": 3145,
                 "sourceID": "episode1.abc"
             }
         },
@@ -5379,7 +5379,7 @@
             ],
             "id": "Episode1-Player Teleports to France",
             "customProperties": {
-                "sourceLocation": 3832,
+                "sourceLocation": 3790,
                 "sourceID": "episode1.abc"
             }
         },
@@ -5602,7 +5602,7 @@
             ],
             "id": "Episode1-Animal Info about Giraffes",
             "customProperties": {
-                "sourceLocation": 4532,
+                "sourceLocation": 4490,
                 "sourceID": "episode1.abc"
             }
         },
@@ -5810,7 +5810,7 @@
             ],
             "id": "Episode1-Ranger Pack Obtained and Call Interrupts Tutorial",
             "customProperties": {
-                "sourceLocation": 5089,
+                "sourceLocation": 5047,
                 "sourceID": "episode1.abc"
             }
         },
@@ -6011,7 +6011,7 @@
             ],
             "id": "Episode1-Training Interrupted",
             "customProperties": {
-                "sourceLocation": 5642,
+                "sourceLocation": 5600,
                 "sourceID": "episode1.abc"
             }
         },
@@ -6246,7 +6246,7 @@
             ],
             "id": "Episode1-Animal Alert Call",
             "customProperties": {
-                "sourceLocation": 5991,
+                "sourceLocation": 5949,
                 "sourceID": "episode1.abc"
             }
         },
@@ -6447,7 +6447,7 @@
             ],
             "id": "Episode1-Player Accepts Animal Alert Call",
             "customProperties": {
-                "sourceLocation": 6577,
+                "sourceLocation": 6535,
                 "sourceID": "episode1.abc"
             }
         },
@@ -6655,7 +6655,7 @@
             ],
             "id": "Episode1-Player is Prompted to Teleport to China",
             "customProperties": {
-                "sourceLocation": 6898,
+                "sourceLocation": 6856,
                 "sourceID": "episode1.abc"
             }
         },
@@ -6871,7 +6871,7 @@
             ],
             "id": "Episode1-Prompt Player to Teleport to China",
             "customProperties": {
-                "sourceLocation": 7298,
+                "sourceLocation": 7256,
                 "sourceID": "episode1.abc"
             }
         },
@@ -7079,7 +7079,7 @@
             ],
             "id": "Episode1-Player Teleports to China",
             "customProperties": {
-                "sourceLocation": 7837,
+                "sourceLocation": 7795,
                 "sourceID": "episode1.abc"
             }
         },
@@ -7295,7 +7295,7 @@
             ],
             "id": "Episode1-Player is Prompted to Ask About Pandas",
             "customProperties": {
-                "sourceLocation": 8211,
+                "sourceLocation": 8169,
                 "sourceID": "episode1.abc"
             }
         },
@@ -7503,7 +7503,7 @@
             ],
             "id": "Episode1-Animal Info about Pandas",
             "customProperties": {
-                "sourceLocation": 8825,
+                "sourceLocation": 8783,
                 "sourceID": "episode1.abc"
             }
         },
@@ -7707,7 +7707,7 @@
             ],
             "id": "Episode1-Prompt Player for scan in Panda Enclosure",
             "customProperties": {
-                "sourceLocation": 9234,
+                "sourceLocation": 9192,
                 "sourceID": "episode1.abc"
             }
         },
@@ -8108,7 +8108,7 @@
             ],
             "id": "Episode1-Scan used in Panda Enclosure",
             "customProperties": {
-                "sourceLocation": 9579,
+                "sourceLocation": 9537,
                 "sourceID": "episode1.abc"
             }
         },
@@ -8309,7 +8309,7 @@
             ],
             "id": "Episode1-Dragon Statue Already Found",
             "customProperties": {
-                "sourceLocation": 11928,
+                "sourceLocation": 11886,
                 "sourceID": "episode1.abc"
             }
         },
@@ -8718,7 +8718,7 @@
             ],
             "id": "Episode1-Panda Enclosure Scan Recap",
             "customProperties": {
-                "sourceLocation": 12139,
+                "sourceLocation": 12097,
                 "sourceID": "episode1.abc"
             }
         },
@@ -8919,7 +8919,7 @@
             ],
             "id": "Episode1-Panda Enclosure Player Searches Tree",
             "customProperties": {
-                "sourceLocation": 14416,
+                "sourceLocation": 14374,
                 "sourceID": "episode1.abc"
             }
         },
@@ -9127,7 +9127,7 @@
             ],
             "id": "Episode1-Panda Enclosure Player Searches Bamboo Collection",
             "customProperties": {
-                "sourceLocation": 14775,
+                "sourceLocation": 14733,
                 "sourceID": "episode1.abc"
             }
         },
@@ -9328,7 +9328,7 @@
             ],
             "id": "Episode1-Panda Enclosure Player Searches Water",
             "customProperties": {
-                "sourceLocation": 15198,
+                "sourceLocation": 15156,
                 "sourceID": "episode1.abc"
             }
         },
@@ -9529,7 +9529,7 @@
             ],
             "id": "Episode1-Panda Enclosure Player Searches Hole",
             "customProperties": {
-                "sourceLocation": 15646,
+                "sourceLocation": 15604,
                 "sourceID": "episode1.abc"
             }
         },
@@ -9730,7 +9730,7 @@
             ],
             "id": "Episode1-Panda Enclosure Player Searches Pandas",
             "customProperties": {
-                "sourceLocation": 15907,
+                "sourceLocation": 15865,
                 "sourceID": "episode1.abc"
             }
         },
@@ -9938,7 +9938,7 @@
             ],
             "id": "Episode1-Scan used in Bamboo Collection",
             "customProperties": {
-                "sourceLocation": 16170,
+                "sourceLocation": 16128,
                 "sourceID": "episode1.abc"
             }
         },
@@ -10154,7 +10154,7 @@
             ],
             "id": "Episode1-Prompt Player to Scan Bamboo Collection",
             "customProperties": {
-                "sourceLocation": 16524,
+                "sourceLocation": 16482,
                 "sourceID": "episode1.abc"
             }
         },
@@ -10418,7 +10418,7 @@
             ],
             "id": "Episode1-Prompt Player for Search in Bamboo Collection",
             "customProperties": {
-                "sourceLocation": 16809,
+                "sourceLocation": 16767,
                 "sourceID": "episode1.abc"
             }
         },
@@ -10619,7 +10619,7 @@
             ],
             "id": "Episode1-Player Searches Bamboo Pile",
             "customProperties": {
-                "sourceLocation": 17827,
+                "sourceLocation": 17785,
                 "sourceID": "episode1.abc"
             }
         },
@@ -10899,7 +10899,7 @@
             ],
             "id": "Episode1-Player Searches Air Vent",
             "customProperties": {
-                "sourceLocation": 18693,
+                "sourceLocation": 18651,
                 "sourceID": "episode1.abc"
             }
         },
@@ -11154,7 +11154,7 @@
             ],
             "id": "Episode1-Player uses Scan Inside Air Vent at CP1",
             "customProperties": {
-                "sourceLocation": 19833,
+                "sourceLocation": 19791,
                 "sourceID": "episode1.abc"
             }
         },
@@ -11415,7 +11415,7 @@
             ],
             "id": "Episode1-Air Vent Restart",
             "customProperties": {
-                "sourceLocation": 20358,
+                "sourceLocation": 20316,
                 "sourceID": "episode1.abc"
             }
         },
@@ -11721,7 +11721,7 @@
             ],
             "id": "Episode1-Air Vent CP1 Player Turns Left",
             "customProperties": {
-                "sourceLocation": 21127,
+                "sourceLocation": 21085,
                 "sourceID": "episode1.abc"
             }
         },
@@ -11922,7 +11922,7 @@
             ],
             "id": "Episode1-Chinese Yoyo Already Found",
             "customProperties": {
-                "sourceLocation": 22123,
+                "sourceLocation": 22081,
                 "sourceID": "episode1.abc"
             }
         },
@@ -12228,7 +12228,7 @@
             ],
             "id": "Episode1-Air Vent CP1 Player Turns Right",
             "customProperties": {
-                "sourceLocation": 22317,
+                "sourceLocation": 22275,
                 "sourceID": "episode1.abc"
             }
         },
@@ -12441,7 +12441,7 @@
             ],
             "id": "Episode1-Air Vent CP2 Player Turns Left",
             "customProperties": {
-                "sourceLocation": 23415,
+                "sourceLocation": 23373,
                 "sourceID": "episode1.abc"
             }
         },
@@ -12654,7 +12654,7 @@
             ],
             "id": "Episode1-Air Vent CP2 Player Turns Right",
             "customProperties": {
-                "sourceLocation": 23842,
+                "sourceLocation": 23800,
                 "sourceID": "episode1.abc"
             }
         },
@@ -12867,7 +12867,7 @@
             ],
             "id": "Episode1-Air Vent CP3 Player Turns Left",
             "customProperties": {
-                "sourceLocation": 24270,
+                "sourceLocation": 24228,
                 "sourceID": "episode1.abc"
             }
         },
@@ -13080,7 +13080,7 @@
             ],
             "id": "Episode1-Air Vent CP3 Player Turns Right",
             "customProperties": {
-                "sourceLocation": 24697,
+                "sourceLocation": 24655,
                 "sourceID": "episode1.abc"
             }
         },
@@ -13347,7 +13347,7 @@
             ],
             "id": "Episode1-Air Vent CP3 Player Goes Forward",
             "customProperties": {
-                "sourceLocation": 25123,
+                "sourceLocation": 25081,
                 "sourceID": "episode1.abc"
             }
         },
@@ -13560,7 +13560,7 @@
             ],
             "id": "Episode1-Air Vent CP4 Player Turns Right",
             "customProperties": {
-                "sourceLocation": 25923,
+                "sourceLocation": 25881,
                 "sourceID": "episode1.abc"
             }
         },
@@ -13774,7 +13774,7 @@
             ],
             "id": "Episode1-Air Vent CP4 Player Turns Left",
             "customProperties": {
-                "sourceLocation": 26351,
+                "sourceLocation": 26309,
                 "sourceID": "episode1.abc"
             }
         },
@@ -13978,7 +13978,7 @@
             ],
             "id": "Episode1-Prompt Player to Scan Outside Lion Enclosure",
             "customProperties": {
-                "sourceLocation": 27046,
+                "sourceLocation": 27004,
                 "sourceID": "episode1.abc"
             }
         },
@@ -14331,7 +14331,7 @@
             ],
             "id": "Episode1-Scan Used Outside Lion Enclosure",
             "customProperties": {
-                "sourceLocation": 27393,
+                "sourceLocation": 27351,
                 "sourceID": "episode1.abc"
             }
         },
@@ -14677,7 +14677,7 @@
             ],
             "id": "Episode1-Outside Lion Enclosure Scan Recap",
             "customProperties": {
-                "sourceLocation": 29155,
+                "sourceLocation": 29113,
                 "sourceID": "episode1.abc"
             }
         },
@@ -14884,7 +14884,7 @@
             ],
             "id": "Episode1-Outside Lion Enclosure Player Searches Trash",
             "customProperties": {
-                "sourceLocation": 30859,
+                "sourceLocation": 30817,
                 "sourceID": "episode1.abc"
             }
         },
@@ -15085,7 +15085,7 @@
             ],
             "id": "Episode1-Outside Lion Enclosure Player Searches Manual",
             "customProperties": {
-                "sourceLocation": 31489,
+                "sourceLocation": 31447,
                 "sourceID": "episode1.abc"
             }
         },
@@ -15293,7 +15293,7 @@
             ],
             "id": "Episode1-Outside Lion Enclosure Player Searches Bucket",
             "customProperties": {
-                "sourceLocation": 31783,
+                "sourceLocation": 31741,
                 "sourceID": "episode1.abc"
             }
         },
@@ -15494,7 +15494,7 @@
             ],
             "id": "Episode1-Outside Lion Enclosure Player Searches Wall",
             "customProperties": {
-                "sourceLocation": 32302,
+                "sourceLocation": 32260,
                 "sourceID": "episode1.abc"
             }
         },
@@ -15774,7 +15774,7 @@
             ],
             "id": "Episode1-Outside Lion Enclosure Listening For Roars",
             "customProperties": {
-                "sourceLocation": 32594,
+                "sourceLocation": 32552,
                 "sourceID": "episode1.abc"
             }
         },
@@ -15975,7 +15975,7 @@
             ],
             "id": "Episode1-Outside Lion Enclosure Player Gives Correct Count",
             "customProperties": {
-                "sourceLocation": 33845,
+                "sourceLocation": 33803,
                 "sourceID": "episode1.abc"
             }
         },
@@ -16176,7 +16176,7 @@
             ],
             "id": "Episode1-Outside Lion Enclosure Player Gives Wrong Count",
             "customProperties": {
-                "sourceLocation": 34407,
+                "sourceLocation": 34365,
                 "sourceID": "episode1.abc"
             }
         },
@@ -16510,7 +16510,7 @@
             ],
             "id": "Episode1-Lion Enclosure Ask Player What to Feed Panda",
             "customProperties": {
-                "sourceLocation": 34713,
+                "sourceLocation": 34671,
                 "sourceID": "episode1.abc"
             }
         },
@@ -16711,7 +16711,7 @@
             ],
             "id": "Episode1-Lion Enclosure Player Guesses Watermelon",
             "customProperties": {
-                "sourceLocation": 36641,
+                "sourceLocation": 36599,
                 "sourceID": "episode1.abc"
             }
         },
@@ -16912,7 +16912,7 @@
             ],
             "id": "Episode1-Lion Enclosure Player Guesses Cheese",
             "customProperties": {
-                "sourceLocation": 36941,
+                "sourceLocation": 36899,
                 "sourceID": "episode1.abc"
             }
         },
@@ -17120,7 +17120,7 @@
             ],
             "id": "Episode1-Lion Enclosure Player Guesses Bamboo",
             "customProperties": {
-                "sourceLocation": 37237,
+                "sourceLocation": 37195,
                 "sourceID": "episode1.abc"
             }
         },
@@ -17353,7 +17353,7 @@
             ],
             "id": "Episode1-Player is Prompted to Activate Rope",
             "customProperties": {
-                "sourceLocation": 37555,
+                "sourceLocation": 37513,
                 "sourceID": "episode1.abc"
             }
         },
@@ -17554,7 +17554,7 @@
             ],
             "id": "Episode1-Lion Enclosure Player Guesses Mushroom",
             "customProperties": {
-                "sourceLocation": 38237,
+                "sourceLocation": 38195,
                 "sourceID": "episode1.abc"
             }
         },
@@ -17761,7 +17761,7 @@
             ],
             "id": "Episode1-Lion Enclosure Player Activates Rope",
             "customProperties": {
-                "sourceLocation": 38531,
+                "sourceLocation": 38489,
                 "sourceID": "episode1.abc"
             }
         },
@@ -18091,7 +18091,7 @@
             ],
             "id": "Episode1-Lion Enclosure Prompt Player to Climb",
             "customProperties": {
-                "sourceLocation": 39370,
+                "sourceLocation": 39328,
                 "sourceID": "episode1.abc"
             }
         },
@@ -18306,7 +18306,7 @@
             ],
             "id": "Episode1-Update Climb Height",
             "customProperties": {
-                "sourceLocation": 40648,
+                "sourceLocation": 40606,
                 "sourceID": "episode1.abc"
             }
         },
@@ -18608,7 +18608,7 @@
             ],
             "id": "Episode1-Lion Wall Player Climbs the Rope",
             "customProperties": {
-                "sourceLocation": 40795,
+                "sourceLocation": 40753,
                 "sourceID": "episode1.abc"
             }
         },
@@ -18848,7 +18848,7 @@
             ],
             "id": "Episode1-Check if Player Loses",
             "customProperties": {
-                "sourceLocation": 42372,
+                "sourceLocation": 42330,
                 "sourceID": "episode1.abc"
             }
         },
@@ -19066,7 +19066,7 @@
             ],
             "id": "Episode1-Check if Panda Hungry",
             "customProperties": {
-                "sourceLocation": 42744,
+                "sourceLocation": 42702,
                 "sourceID": "episode1.abc"
             }
         },
@@ -19284,7 +19284,7 @@
             ],
             "id": "Episode1-Check if Panda Bored",
             "customProperties": {
-                "sourceLocation": 42917,
+                "sourceLocation": 42875,
                 "sourceID": "episode1.abc"
             }
         },
@@ -19482,7 +19482,7 @@
             ],
             "id": "Episode1-Tell Player Panda is Hungry",
             "customProperties": {
-                "sourceLocation": 43088,
+                "sourceLocation": 43046,
                 "sourceID": "episode1.abc"
             }
         },
@@ -19680,7 +19680,7 @@
             ],
             "id": "Episode1-Tell Player Panda is Bored",
             "customProperties": {
-                "sourceLocation": 43349,
+                "sourceLocation": 43307,
                 "sourceID": "episode1.abc"
             }
         },
@@ -19917,7 +19917,7 @@
             ],
             "id": "Episode1-Lion Wall Player Feeds Panda",
             "customProperties": {
-                "sourceLocation": 43602,
+                "sourceLocation": 43560,
                 "sourceID": "episode1.abc"
             }
         },
@@ -20154,7 +20154,7 @@
             ],
             "id": "Episode1-Lion Wall Player Plays with Panda",
             "customProperties": {
-                "sourceLocation": 44171,
+                "sourceLocation": 44129,
                 "sourceID": "episode1.abc"
             }
         },
@@ -20361,7 +20361,7 @@
             ],
             "id": "Episode1-Player Loses Climb Challenge",
             "customProperties": {
-                "sourceLocation": 44742,
+                "sourceLocation": 44700,
                 "sourceID": "episode1.abc"
             }
         },
@@ -20562,7 +20562,7 @@
             ],
             "id": "Episode1-Player Loses because Panda Hungry",
             "customProperties": {
-                "sourceLocation": 44894,
+                "sourceLocation": 44852,
                 "sourceID": "episode1.abc"
             }
         },
@@ -20763,7 +20763,7 @@
             ],
             "id": "Episode1-Player Loses because Panda Bored",
             "customProperties": {
-                "sourceLocation": 45206,
+                "sourceLocation": 45164,
                 "sourceID": "episode1.abc"
             }
         },
@@ -20970,7 +20970,7 @@
             ],
             "id": "Episode1-Player Completes Climbing Challenge",
             "customProperties": {
-                "sourceLocation": 45507,
+                "sourceLocation": 45465,
                 "sourceID": "episode1.abc"
             }
         },
@@ -21201,7 +21201,7 @@
             ],
             "id": "Episode1-Prompt Player to Activate Parachute",
             "customProperties": {
-                "sourceLocation": 45991,
+                "sourceLocation": 45949,
                 "sourceID": "episode1.abc"
             }
         },
@@ -21402,7 +21402,7 @@
             ],
             "id": "Episode1-Return Panda and Return to HQ",
             "customProperties": {
-                "sourceLocation": 46724,
+                "sourceLocation": 46682,
                 "sourceID": "episode1.abc"
             }
         },
@@ -21603,7 +21603,7 @@
             ],
             "id": "Episode1-Conclusion",
             "customProperties": {
-                "sourceLocation": 47068,
+                "sourceLocation": 47026,
                 "sourceID": "episode1.abc"
             }
         },
