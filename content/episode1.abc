@@ -2,14 +2,13 @@
   *say
     [sfx alice_open.mp3]
     
-    Hi there! Good to see a fresh new face around here. I am Alice.
-    You may have heard of my twin sister Alexa. She is very famous now.
+    Hi there! Good to see a fresh new face around here.
     <break time="0.5s" />
     
-    I work as a virtual assistant for the Animal Rescue Rangers. The Animal Rescue Rangers are a group of people determined to help animals all over the world. Whenever there is an animal in need, the Rescue Rangers will be there to save the day.
+    Let me be the first to welcome you to your training for the Animal Rescue Rangers. The Animal Rescue Rangers are a group of people determined to help animals all over the world. Whenever there is an animal in need, the Rescue Rangers will be there to save the day.
     <break time="0.3s" />
     
-    In this game, you are a ranger who is training to become part of the Animal Rescue Rangers. You have been paired up with a top-notch Rescue Ranger named Olive. She is going to tell you everything you need to know. I will also be with you at all times. So if you need help at any time, you can say help.
+    In this game, you are a ranger who is training to become part of the Animal Rescue Rangers. You have been paired up with a top-notch Rescue Ranger named Olive. She is going to tell you everything you need to know. I will also be with you at all times. You can call me Alice. If you need help at any time, you can say help.
     <break time="0.5s" />
   *then
     set context as 'Episode1 - Play the Game'
